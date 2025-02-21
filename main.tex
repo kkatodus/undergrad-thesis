@@ -1,0 +1,1685 @@
+%% 
+%% Copyright 2007-2020 Elsevier Ltd
+%% 
+%% This file is part of the 'Elsarticle Bundle'.
+%% ---------------------------------------------
+%% 
+%% It may be distributed under the conditions of the LaTeX Project Public
+%% License, either version 1.2 of this license or (at your option) any
+%% later version.  The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.2 or later is part of all distributions of LaTeX
+%% version 1999/12/01 or later.
+%% 
+%% The list of all files belonging to the 'Elsarticle Bundle' is
+%% given in the file `manifest.txt'.
+%% 
+%% Template article for Elsevier's document class `elsarticle'
+%% with harvard style bibliographic references
+
+%\documentclass[preprint,12pt,authoryear]{elsarticle}
+
+%% Use the option review to obtain double line spacing
+%% \documentclass[authoryear,preprint,review,12pt]{elsarticle}
+
+%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
+%% for a journal layout:
+% \documentclass[final,1p,times,authoryear]{elsarticle}
+%% \documentclass[final,1p,times,twocolumn,authoryear]{elsarticle}
+%% \documentclass[final,3p,times,authoryear]{elsarticle}
+%% \documentclass[final,3p,times,twocolumn,authoryear]{elsarticle}
+%% \documentclass[final,5p,times,authoryear]{elsarticle}
+\documentclass[final,5p,times,twocolumn,authoryear]{elsarticle}
+
+%% For including figures, graphicx.sty has been loaded in
+%% elsarticle.cls. If you prefer to use the old commands
+%% please give \usepackage{epsfig}
+
+%% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{CJKutf8}
+\usepackage{lipsum}
+% \usepackage[demo]{graphicx}
+\usepackage{subcaption}
+\usepackage{placeins}
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc} % For UTF-8 support
+\newcommand\todo[1]{\textcolor{red}{#1}}
+
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers.
+%% \usepackage{lineno}
+
+%% You might want to define your own abbreviated commands for common used terms, e.g.:
+\newcommand{\kms}{km\,s$^{-1}$}
+\newcommand{\msun}{$M_\odot}
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+\colorlet{punct}{red!60!black}
+\definecolor{background}{RGB}{245,245,245}
+\definecolor{delim}{RGB}{20,105,176}
+\colorlet{numb}{magenta!60!black}
+
+\lstdefinelanguage{json}{
+    basicstyle=\normalfont\ttfamily,
+    numbers=left,
+    numberstyle=\scriptsize,
+    stepnumber=1,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    frame=lines,
+    backgroundcolor=\color{background},
+    literate=
+     *{0}{{{\color{numb}0}}}{1}
+      {1}{{{\color{numb}1}}}{1}
+      {2}{{{\color{numb}2}}}{1}
+      {3}{{{\color{numb}3}}}{1}
+      {4}{{{\color{numb}4}}}{1}
+      {5}{{{\color{numb}5}}}{1}
+      {6}{{{\color{numb}6}}}{1}
+      {7}{{{\color{numb}7}}}{1}
+      {8}{{{\color{numb}8}}}{1}
+      {9}{{{\color{numb}9}}}{1}
+      {:}{{{\color{punct}{:}}}}{1}
+      {,}{{{\color{punct}{,}}}}{1}
+      {\{}{{{\color{delim}{\{}}}}{1}
+      {\}}{{{\color{delim}{\}}}}}{1}
+      {[}{{{\color{delim}{[}}}}{1}
+      {]}{{{\color{delim}{]}}}}{1},
+}
+
+\journal{arxiv}
+
+
+\begin{document}
+
+
+%% Title, authors and addresses
+
+%% use the tnoteref command within \title for footnotes;
+%% use the tnotetext command for theassociated footnote;
+%% use the fnref command within \author or \affiliation for footnotes;
+%% use the fntext command for theassociated footnote;
+%% use the corref command within \author for corresponding author footnotes;
+%% use the cortext command for theassociated footnote;
+%% use the ead command for the email address,
+%% and the form \ead[url] for the home page:
+%% \title{Title\tnoteref{label1}}
+%% \tnotetext[label1]{}
+%% \author{Name\corref{cor1}\fnref{label2}}
+%% \ead{email address}
+%% \ead[url]{home page}
+%% \fntext[label2]{}
+%% \cortext[cor1]{}
+%% \affiliation{organization={},
+%%            addressline={}, 
+%%            city={},
+%%            postcode={}, 
+%%            state={},
+%%            country={}}
+%% \fntext[label3]{}
+
+
+
+
+\input{title}
+%% main text
+\pagenumbering{roman}
+\onecolumn
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+
+\twocolumn
+\pagenumbering{arabic}
+
+\section{Introduction}
+Quantifying and scaling the political ideology of parliamentary representatives is essential for maintaining the transparency of democracy. Previously, political scientists have looked at data sources such as parliamentary voting data\citep{dw-nominate}, party manifestors\citep{CATALINAC_2018}, and more recently, parliamentary speeches.\citep{Word-embeddings-for-analysis-of-ideological-placement}.
+However, these methods either failed to conduct a granular analysis of individual politicians or were only applicable to a subset of democracies where parliamentary voting data is available to the public. Also, some previous methods scaled the targets on a simple left-right dimension which has limited applicability in most democracies where debates occur in a more complex, multi-dimensional dynamic.
+
+The application of LLMs in political science has recently gained significant attention in the community.(\cite{LLMs-and-political-science},;\cite{kato2024lupinllmbasedpoliticalideology};\cite{llm-latent-position-of-politicians};\cite{li2024politicalllmlargelanguagemodels}) Due to the nature of the discipline relying predominantly on text data such as political speeches and legislative documents, it has been difficult for political scientists to gain insight from the vast amount of text corpora available. \citep{li2024politicalllmlargelanguagemodels} However with the introduction of LLMs, political scientists were empowered to process and analyze massive amounts of text data efficiently. In the context of scaling political ideologies, the works of  \citeauthor{kato2024lupinllmbasedpoliticalideology} and \citeauthor{llm-latent-position-of-politicians} apply LLMs to scale the political ideology of parliamentary representatives but in different ways. 
+
+The methods developed by \citeauthor{kato2024lupinllmbasedpoliticalideology} allow for a more flexible scaling of politicians on the axis of the researcher's choice and showed promising results in accurately estimating the ideological position of representatives. However, it also fell short in the following aspects. 1) The speeches used to embed the ideological positions of the representatives were still noisy and the parties still seemed too dispersed. 2) The manual selection of the axes of controversy by the researcher could introduce a layer of bias into the final estimation. 3) The analysis by \citeauthor{kato2024lupinllmbasedpoliticalideology} lacked any form of diachronic analysis which is essential to understand how a political system has evolved. Therefore, this research aims to extend the methods introduced by \citeauthor{kato2024lupinllmbasedpoliticalideology} in 3 major ways. 
+\begin{enumerate}
+    \item \textbf{De-noising through summarization}: In their work, \citeauthor{kato2024lupinllmbasedpoliticalideology} filters the raw political speeches collected from the Japanese Diet using a BERT-based classifier. In our method, we want to summarize the filtered opinion-based sentences using an LLM and then use the embedding of these summarizations. The idea is that this will de-noise the speeches further, allowing for a more accurate latent space representation of the legislator. 
+    \item \textbf{Automatic extraction of the axis of controversy}: Previous methods by \citeauthor{kato2024lupinllmbasedpoliticalideology} and \citeauthor{llm-latent-position-of-politicians} required researchers to manually choose the axis of controversy they want to place the representatives on. In the work of \citeauthor{kato2024lupinllmbasedpoliticalideology} this was the acknowledgment of JSDF in the Japanese constitution, in the work of \citeauthor{llm-latent-position-of-politicians}, this was gun-control in the US. In this work, we would like to apply LLMs to parse through the speeches of representatives and extract possible axes of controversy from the corpora. 
+    \item \textbf{Diachronic analysis of the political stance of selected representatives}: While it is helpful to analyze the current ideological stance of representatives, examining how their position has evolved is another aspect political scientists have explored.(\cite{Debating-Evil:-Using-Word-Embeddings-to-Analyze-Parliamentary-Debates}; \cite{Word-embeddings-for-analysis-of-ideological-placement}) In this research, we are going to explore how the ideological stance of long-serving representatives has evolved on the automatically extracted axis. 
+\end{enumerate}
+
+
+
+
+% - Context of measuring ideological polarization in party systems 
+% - Context of word and document embeddings, neural embeddings 
+% - Context of Japanese politics
+
+% - Our method allows us to express the stance of politicians on the division/polarization of our choice(left right, internationalist nationalist, valence
+
+
+\section{Related Work}
+In this section, we present a variety of related works ranging from earlier methods to quantitatively express political ideologies to modern methods using neural networks and LLMs. We also cover a range of works that analyze parliamentary speech data in general.
+
+\subsection{Earlier methods :Roll call analysis}
+
+The Dynamically Weighted Nominal Three-Step Estimation (DW-NOMINATE) scores developed by \citeauthor{dw-nominate} remain the benchmark for comparing the spatial orientation of the legislator ideologies until today. It is an extension of the NOMINATE score \citep{spatial-model-for-legislative-roll-call} developed by the same authors a few years earlier, and they are based on the roll call votes of the representatives. Their algorithm aims to estimate the parameters of a utility function for each representative and expresses each representative as a point on the Euclidean space. Their work laid the foundation for the spatial expression of legislator ideologies and is a gold-standard reference for political scientists today.
+
+There are, however, limitations to their approach. The method depends heavily on the availability of the roll-call votes data, which in the case of Japanese politics is only available for a limited number of bills. It also places the politicians on a left-right singular dimension which might not be appropriate for all democracies. As \citeauthor{dw-nominate} explains, in the US political system issues can be 'bundled' together. For example, a legislator who opposes gun regulation most likely is pro-life regarding abortion and likely is against affirmative action. This interpretation of politics is however not applicable to all democracies. In Japanese politics, knowing that a politician is against acknowledging the Japanese Self-Defense Force(JSDF) in the Japanese constitution does not always tell you how the politician stands regarding other topics. Therefore, the DW-NOMINATE score cannot be used when seeking a more granular analysis of the political position. 
+
+\subsection{Earlier methods: Word frequency based approach}
+\subsubsection{Wordscores - \citealt{LAVER_BENOIT_GARRY_2003}}
+One of the earlier methods utilizing text data to position political parties was developed by \citeauthor{LAVER_BENOIT_GARRY_2003}. Their method was one of the first to treat text data not as a discourse to be read, interpreted, and understood but as a collection of word data. Their method focused specifically on the frequency of the words in documents where the political positions were known (reference texts) and documents where political positions were unknown. (virgin texts) Their method used a 3-step process where: 1) They collected reference texts of which the political positions were known; 2) They generated word scores which represented the probability that we are reading a specific reference text given only that word; 3) Score the virgin texts using the word scores generated.
+
+In their work, they show that the position estimations for British and Irish parties they obtain from the party manifestos are in agreement with previous position estimations and they export this methodology to the German political system as well. Furthermore, they apply the word scores they obtained from the reference party manifestos to legislative speeches to estimate the positions of individual Irish politicians as well as parties. 
+
+\subsubsection{Wordfish - \citealt{wordfishing}}
+Another early word-frequency-based approach is the wordfishing approach developed by \citeauthor{wordfishing} which is still widely used among political scientists to estimate policy positions from text data. It was created to overcome the limitations of the Wordscores approach such as 1) The need for reference texts that can be difficult to agree upon among political scientists; and 2) Its limited applicability to time-series estimation as the political lexicon is constantly changing. 
+To overcome the aforementioned limitations of the Wordscore approach, the authors use a statistical model of word counts by assuming a Poisson distribution for word frequencies. This allows them to estimate the policy positions of text data without having to prepare anchor/reference texts. 
+
+Their method has been used by various authors such as \citeauthor{sharks-minnows},\citeauthor{Curini_Hino_Osaka_2020} and \citeauthor{CATALINAC_2018} and has allowed political scientists to analyze policy positions from text data in various forms and languages.
+
+However, recent works have pointed out the limitations of the word frequency-based approaches. For example, \citeauthor{Political-Text-Scaling-Meets-Computational-Semantics} point out that using frequency-based approaches for text analysis, semantically similar words can be treated as dissimilar words hence semantically similar sentences being treated as dissimilar sentences.
+
+\subsection{Embedding-based methods}
+In the past, researchers have used embedding-based methods to analyze and spatially position legislative speeches. For example, \citeauthor{Debating-Evil:-Using-Word-Embeddings-to-Analyze-Parliamentary-Debates} used the Word2Vec algorithm developed by Google to analyze legislative speeches that deal with war criminals and Nazi collaborators in post-war Netherlands. They analyzed how the conversations evolved from focusing on the crimes these individuals had committed against the nation to the suffering of the victims during the period. They also analyzed how the conversations shifted from focusing on death penalties to focusing on imprisonment. In their work, \citeauthor{Debating-Evil:-Using-Word-Embeddings-to-Analyze-Parliamentary-Debates} come up with a workaround to use multiple word2vec models trained on different corpora to conduct a diachronic analysis between different periods. 
+
+Another example of a text embedding-based approach to political positioning would the the work of \citeauthor{Political-Text-Scaling-Meets-Computational-Semantics}. In their work, they combined a symbolic text representation such as tf-idf or a semantic text representation such as word embeddings with an unsupervised, graph-based clustering algorithm such as PageRank or HFLP. Through this method, they challenge the traditional word frequency-based approaches discussed earlier and validate that their method can position political text better than the frequency-based methods in multiple languages.
+
+\citeauthor{Embeddings-Based-Clustering-for-Target-Specific-Stances} use a different algorithm to embed political text. They use Google's Convolutional Neural Network (CNN) based multilingual text encoder to analyze the tweets of the Turkish public during the presidential and parliamentary election of 2018 regarding various topics. They undergo a multi-step process of manual labeling, label propagation, embedding, and clustering to reveal a significant degree of polarization of the public regarding topics such as Trump, Syria, and Erdogan. They also reveal the correlation across topics by looking at the mutual information metric between the clusters for different topics.
+
+Instead of focusing on the embeddings of the text data such as legislative speech or party manifesto, \citeauthor{Word-embeddings-for-analysis-of-ideological-placement} focus on the embeddings of the indicator variables which represent the party affiliation of the text. They call this the party embeddings. In their work, they implement a shallow neural network consisting of one hidden layer that aims to predict the word at position \textit{t} given words appearing in a window $\Delta$ before and after the word. The model input consists of these surrounding words as well as the party indicator variable. After fitting the model to the parliamentary speech corpora, they got a model that is capable of embedding the party indicator variables in a meaningful manner. They then reduce the dimension of the embeddings using the PCA method and analyze what the dimensions semantically represent. They also verify that the political positioning they retrieved is aligned with the previous methods such as DW-NOMINATE and other expert surveys. Furthermore, they conduct an intriguing diachronic analysis of the US Senate as well as the British and Canadian parliaments and show how the ideological placement of the parties has evolved on different dimensions. 
+
+\subsection{Use of LLMs}
+At the time of writing this paper, we are only aware of a few works that explore the application of LLMs in political ideology positioning. This section will introduce these works and their contributions. 
+\subsubsection{Direct prompting methodologies}
+\citeauthor{llm-latent-position-of-politicians} use a pair-wise comparison approach of senators to position them on a liberal-conservative scale or topics such as abortion and gun control. In their method, they provide the GPT-3.5 model by OpenAI with two senators to compare and prompt it to give the senator who is more pro-choice, conservative, or supporting gun control. By repeating this match-up between senators, they can position the senators on a spectrum using the Bradley-Terry model. They show that while the \textbf{LaMP}(\textbf{La}nguage \textbf{M}odel \textbf{P}airwise comparison) scores obtained highly correlate with the DW-NOMINATE scores, the scores do not simply parrot the DW-NOMINATE scores. They argue that LaMP scores are more aligned with surveyed political scientists as LaMP scores do not solely rely on roll-call votes like DW-NOMINATE scores do, but take into account how the politicians are depicted on mainstream media and other sources that were used to train the GPT-3.5 model. One major concern and limitation of this work would be that this requires the LLM to "know" about the politicians that are being compared. As LLMs are not aware of the newest text content on the internet, there will be limitations on scaling politicians that have not served before or did not receive great media coverage.
+
+In their work, \citeauthor{Scaling-Political-Texts-with-ChatGPT} use a prompt engineering approach to spatially position British parties and US senators on a left-right scale. They feed in British party manifestos or tweets from US senators into the GPT-4 model using the API service provided by OpenAI and task the LLM to score the given text from 0 to 100 on a left-right scale. They verify that the scores they obtained using this method correlate extensively with existing expert estimates as well as past research. The authors mention the benefit of their methodology over the work of \citeauthor{llm-latent-position-of-politicians} as their method does not require the LLM to 'know' the political actors to estimate their political ideological position as they are provided the tweets/manifestos of the political actors. They also attempt to make their method robust by averaging different iterations of prompting the LLMs to eliminate any stochastic differences between prompts.  
+\subsubsection{Representation-based methodologies}
+So far, the works introduced have mainly focused on one source of text data such as tweets, parliamentary speeches, or manifestos. \citeauthor{Understanding-Politics-via-Contextualized} extends this approach by suggesting a framework to combine political text from multiple sources. They suggest a unique neural architecture, "Compositional Reader", capable of processing multiple sources of text in one shot and successfully training it on two major tasks Authorship prediction and Referenced Entity Prediction. They show that this architecture can outperform the previous BERT-based architectures. They also show that the representations of politicians learned by the model are capable of capturing a greater depth of political context compared to previous methodologies as their representations do not simply capture the linguistic context but a broader political context. Although this method guarantees a more contextualized representation of political ideologies, one bottleneck with this method would be that it requires a lot of investment in terms of computational resources and data collection, making the methodology less accessible to political science researchers who might not have the computational resource/know-how to collect the data from the wide variety of data sources.
+
+The work by \citeauthor{kato2024lupinllmbasedpoliticalideology} can be seen as a hybrid approach to the above-outlined methods. It uses GPT4o-mini to generate the reference speeches that are used to create an axis to project the legislators onto but does not directly use GPT4o-mini to scale the representatives like \citeauthor{Scaling-Political-Texts-with-ChatGPT} and \citeauthor{llm-latent-position-of-politicians} did. This way, the LLM does not have to "know" the representatives, which was an issue with \citeauthor{llm-latent-position-of-politicians} and it does not ask for numerical outputs from the LLM which is known to be vulnerable towards numerical reasoning tasks. Their method "de-noises" parliamentary speeches through a fine-tuned BERT-based classifier and uses the embeddings of the filtered speeches to create a representation of the legislators. These representations are projected onto an axis composed of two opposing political views which are either generated political speeches or hand-picked political figures. Using the latent representations of the legislators can be seen as a similar approach to the work of \citeauthor{Debating-Evil:-Using-Word-Embeddings-to-Analyze-Parliamentary-Debates} or \citeauthor{Word-embeddings-for-analysis-of-ideological-placement} but this method does not require training of their model and hence can be seen as a more light-weight approach. They show that their method correctly places the different party members on the political spectrum although we observe some dispersion in the parties, indicating room for improvement in their methodology.
+% \begin{itemize}
+%     \item risks study: \citep{LLMs-and-political-science}
+% \end{itemize}
+
+% \subsection{Other}
+% \begin{itemize}
+%     \item social groups polarization:\citep{Quantifying-social-organization-and-political-polarization-in-online-platforms}
+%     \item Overview paper on computational text analysis: \citep{Large-Scale-Computerized-Text}
+%     \item overview of quant text analysis in Japanese: \citep{quantitative-text-analysis-in-japanese}
+%     \item advisory piece about embedding models in context of social science: \citep{Word-embeddings:-What-works}
+%      \item measuring polarization: \citep{gentzkow-measuring-group-differences}
+%     \begin{itemize}
+%         \item measuring polarization over the years
+%         \item measured by the ease with which an observer who know the model could guess a speakers party solely by their speech
+%         \item the number of observed speeches are significantly small compared to the actual possible speeches
+%         \item this introduces finite sample bias where the number of possible choices are significantly larger compared to observerd phenomenon
+%         \item they use statistical estimators to address this (leave out estimator and maximum likelihood estimator
+%         \item cross-validate against previous measures of polarization 
+%     \end{itemize}
+    
+% \end{itemize}
+
+\section{Parliamentary Speech Data}
+\label{section:parliamentary speech data}
+% \begin{itemize}
+%     \item - Description of the dataset 
+%    - Parties 
+%    - How many politicians are there? 
+%    - How many politicians in each party
+%    - Year
+%    - etc. to contextualize the reader
+%    \item - Cleaning 
+%     - process through BERT classifier 
+% \end{itemize}
+
+
+For this research, we extended the data collection pipeline developed by our previous work\citep{kato2024lupinllmbasedpoliticalideology} and collected speeches for representatives in the House of Representatives and the House of Councilors. These representatives were serving as of 
+December 18th, 2024. Similar to the previous work, we have created a list of query words we have used to query the Japanese parliamentary debate record API\citep{kokkai_diet_api}. See table \ref{tab:English-query} for the English translation of the query words used. These keywords were generated by GPT4o-mini and confirmed by us. An example prompt to generate the query words is available in appendix \ref{fig:parliamentary_api_example}. 
+
+\begin{table}[htbp] % or other placement options such as [!htb]
+\centering
+\caption{English translations of query words}\label{tab:English-query}
+\begin{tabularx}{.45\textwidth}{ c|X } 
+\hline
+Topic & Query Words \\  
+\hline
+Defence & Defense, Self-Defense Forces, Security, Arms, Military, Collective Self-Defense, Exclusive Defense, Defense Spending, Bases, National Defense \\ 
+\hline
+Nuclear Power &  Power plant, Nuclear power generation, Restart, Decommissioning, Nuclear fuel, Radioactivity, Radioactive waste, Energy policy, Base load power source, Fukushima Daiichi Nuclear Power Plant \\
+\hline
+Aging population & declining birthrate, fertility rate, childcare support, childcare leave, children on waiting lists, population decline, daycare centers, child allowance , family policy , childcare burden \\
+\hline
+Climate Change & Climate Change, Global Warming , Carbon Dioxide, Decarbonization, Carbon Neutral, Renewable Energy , Greenhouse Gas, Carbon Zero by 2050, Environmental Policy, Energy Transition\\
+\hline
+Economic policy & Economy, Business climate, GDP, Deflation, Inflation, Fiscal policy, Monetary policy,Employment , Income, Business investment, Consumption, Export/Import, Small business, Start-up, Minimum wage\\
+\hline
+\end{tabularx}
+\end{table}
+
+We have collected the speeches for the topics of defense, the aging population, nuclear power plants, climate change, and economic policies. See table \ref{tab:stats} for the data statistics. 
+
+\begin{table}[htbp] % or other placement options such as [!htb]
+\centering
+\label{tab:stats}
+\begin{tabularx}{.45\textwidth}{ X|X|X } 
+\hline
+House & Representatives / Partie & Speeches / Speech segments\\  
+\hline
+Current Representatives & 465 members / 11 parties & 63633 speeches / 90575 extracted segments \\ 
+\hline
+Current Councilors & 240 members / 10 parties  & 30922 speeches / 44223 extracted segments \\
+\hline
+Total (including historical) & &\\
+\hline
+\end{tabularx}
+\caption{Statistics on collected speech data}
+\end{table}
+
+Notice in table \ref{tab:stats} that we are distinguishing between \textbf{speeches} and \textbf{speech segments}. We define speech as an instance of a representative speaking in the parliament and speech segment to be period(\begin{CJK}{UTF8}{min}。\end{CJK}in Japanese) delimited sentence inside of a speech. We are distinguishing between them because using a fine-tuned BERT model based on cl-tohoku/bert-base-japanese-v3 \citep{Tohoku}, we are classifying each sentence segment into opinion-based sentences, fact-based sentences, questions, descriptive sentences, and others and extracting only the opinion-based sentences. This model is made available on huggingface. \footnote{Huggingface model: \url{https://huggingface.co/kkatodus/jp-speech-classifier}} 
+
+We used a hand-labeled dataset comprising 1,439 speech segments to fine-tune this classifier. \footnote{Code to create and fine-tune classifier available:\url{https://github.com/kkatodus/AI_projects/tree/main/jp_speech_categorization}}The number of extracted sentence segments indicates how many were classified as opinion-based sentences. Also, note that we are not keeping instances of speeches containing opinion-based sentences; therefore, we have more extracted segments than instances of speeches. You can see an example of an extracted opinion-based sentence in figure \ref{fig:extracted opinion}.
+\begin{figure}
+\caption{Example of an extracted opinion-based speech segment(Translated to English)}
+\label{fig:extracted opinion}
+\begin{lstlisting}[language=json,firstnumber=1]
+ {
+    "speech_id": "121104127X00520230612_153",
+    "house_name": "House of Representatives",
+    "meeting_name": "Committee for Monitoring the Settlement of Accounts",
+    "date": "2023-06-12",
+    "speech_url": "https://kokkai.ndl.go.jp/txt/121104127X00520230612/153",
+    "speaker_group": "LDP",
+    "extracted_opinions": [
+        "Minister of State Hamada I believe that the FMS procurement mentioned in your resolution is beneficial for strengthening Japan's defense capability because it allows us to procure equipment that is essential for defending our country and that only the United States can manufacture."
+    ]
+}
+\end{lstlisting}
+\end{figure}
+
+In this research, the extracted sentence segments are summarized using GPT4o-mini and then embedded using the previous BERT model using Sentence BERT(SBERT). \citep{reimers2019sentencebert} See the full data collection and embedding pipeline in figure \ref{fig:data-collection-phase}.
+
+\begin{figure}[h]
+\centering
+  \centering
+  \includegraphics[width=1\linewidth]{figs/data collection pipeline.pdf}
+  \caption{Graphical representation of the data collection and embedding pipeline}
+  \label{fig:data-collection-phase}
+\end{figure}
+
+\section{Methodology}
+% \begin{figure}[h]
+% \centering
+%   \centering
+%   \includegraphics[width=1\linewidth]{figs/embeddingphase.pdf}
+%   \caption{Graphical representation of the embedding phase of the parliamentary speeches}
+%   \label{fig:embeddingphase}
+% \end{figure}
+
+% \begin{figure}[h]
+% \centering
+%   \centering
+%   \includegraphics[width=1\linewidth]{figs/projectionphase.pdf}
+%   \caption{Graphical representation of the projection phase of the parliamentary speech embeddings}
+%   \label{fig:projectionphase}
+% \end{figure}
+
+Our method consists of 3 major aspects that build on the work of \citeauthor{kato2024lupinllmbasedpoliticalideology}. Those are:
+\begin{enumerate}
+    \item \textbf{De-noising through summarization}:  
+    \item \textbf{Automatic extraction of the axis of controversy}
+    \item \textbf{Diachronic analysis of the political stance of selected representatives}
+\end{enumerate}
+
+This section will explain the previous method by \citeauthor{kato2024lupinllmbasedpoliticalideology} more in-depth and then move on to describe the motives behind the new methods as well as the technical details. 
+
+\subsection{L(u)PIN method by \citeauthor{kato2024lupinllmbasedpoliticalideology}}
+\label{section: lupin method}
+The previous method comprises two key aspects:
+\begin{enumerate}
+    \item Filtration of parliamentary speech data
+    \item Selection of reference points to form the axis of controversy and projection of representatives onto the axis
+\end{enumerate}
+
+The first step is already mentioned in the previous section \ref{section:parliamentary speech data} so this section will focus more on the second step. The purpose of the second step is to express the ideological stance of a politician on a political issue using a scaler value. How can we achieve this reliably? We can either, 1) Select two politicians who have opposing views on the topic and measure everyone else relative to these two "anchors" or 2) Generate speeches that would come from politicians with opposing views on the political topic of interest and measure everyone else relative to these points. Figure \ref{fig:lupin-projection} contrasts and compares these two approaches. The main issue with the first approach is that it requires a lot of manual labor by the researcher and also a deep understanding of the political dynamics of the country to select the appropriate "anchor" representatives. This also becomes a huge risk in introducing bias from the researchers. Therefore we believe that generation of speeches and measuring the politicians relative to these points is a more reliable way to scale politicians and hence this research will extend the generative approach of this previous work.
+
+
+
+\begin{figure}[h]
+\centering
+  \centering
+  \includegraphics[width=1\linewidth]{figs/projectionphase.pdf}
+  \caption{Graphical representation of the L(u)PIN method \citep{kato2024lupinllmbasedpoliticalideology}}
+  \label{fig:lupin-projection}
+\end{figure}
+
+\subsection{De-noising through summarization}
+\label{section: denoising}
+In the work by \citeauthor{kato2024lupinllmbasedpoliticalideology}, the results were still scattered despite filtration on the speech segments used to create the ideological embedding for the representatives. This indicated that noise was still introduced through tone, word choice, etc. See the results obtained through the previous method by \citeauthor{kato2024lupinllmbasedpoliticalideology} in appendix \ref{fig: Previous box plots}. To tackle this, we have introduced a summarization step by GPT4o-mini to make the sentences more consistent and comparable. See a visual representation of this step in figure \ref{fig:data-summarization}. 
+
+\begin{figure}[h]
+\centering
+  \centering
+  \includegraphics[width=1\linewidth]{figs/summarization.pdf}
+  \caption{Graphical representation of summarization step}
+  \label{fig:data-summarization}
+\end{figure}
+
+
+
+To select the appropriate prompt to summarize the opinion-based sentence segments, we empirically analyzed how different prompting styles affect the embeddings of the final summarization. See table \ref{tab:summary prompt styles} for the different prompting styles compared. We took a subset of our collected data and summarized it with the different prompting styles, embedded them using the SBERT model mentioned previously, and then used UMAP\citep{mcinnes2018umap-software} to reduce the dimensionality of the embeddings. 
+
+\begin{table}[htbp] % or other placement options such as [!htb]
+\centering
+\caption{Comparison of different prompting styles for summarizing opinion-based sentence segments(Translated)}
+\label{tab:summary prompt styles}
+\begin{tabularx}{.45\textwidth}{ p{1.7cm}|X } 
+\hline
+Base prompt & Please infer and summarize this politician's stance on Japan's defense based on the politician's statements in the following Diet proceedings. 
+\newline
+
+$\langle$ Statements $\rangle$ \\\\  
+\hline
+With Context & Instructions:
+\newline
+Based on the politician's statements in the following Diet proceedings, infer and summarize this politician's stance on Japan's defense. 
+\newline
+
+Overview:
+\newline
+This summary is intended for those who have little knowledge of Japanese politics. Please summarize in a way that is easy to understand even for those who are not interested in politics.
+'''''''''''''''''''''''''''''''''''''''''''''''
+\newline
+$\langle$ Statements $\rangle$ \\ \\ 
+\hline
+With Context and Few shot  & Instructions:
+\newline
+Based on the politician's statements in the following Diet proceedings, infer and summarize this politician's stance on Japan's defense. 
+\newline
+Overview:
+\newline
+This summary is intended for those who have little knowledge of Japanese politics. Please summarize in a way that is easy to understand even for those who are not interested in politics.
+'''''''''''''''''''''''''''''''''''''''''''''''
+\newline
+Example 1:
+\newline
+$\langle$ Example Speech $\rangle$
+\newline
+Summary Example:
+\newline
+$\langle$ Summary Example $\rangle$
+\newline
+Example 2:
+\newline
+$\langle$ Example Speech $\rangle$
+\newline
+Sample summary:
+\newline
+$\langle$ Summary Example $\rangle$
+\newline
+'''''''''''''''''''''''''''''''''''''''''''''''
+\newline
+$\langle$ Statements $\rangle$ \\
+\hline
+\end{tabularx}
+\end{table}
+
+As you can see in figure \ref{fig:UMAP prompt comparison}, with the base prompt, we have introduced a noise in some form as we now have two clusters that seemingly are unrelated to party affiliation. After some investigation, we noticed that these two clusters were formed because of the inconsistent formatting of the reply by GPT4o-mini. One cluster represented a more formatted/bulleted reply while the other cluster represented a more essay-style reply. See in appendix \ref{fig:formatted reply GPT4o-mini summary} and \ref{fig:essay reply GPT4o-mini summary} for a comparison in reply formats. To select our final prompting style to generate the summaries, we measured the average intra-party distance of ideological placement. The \textbf{base prompting} style resulted in an intra-party distance of 6.65 while the \textbf{with context} prompt. The \textbf{with context + few shot prompt} resulted in 5.50 and 5.53 respectively indicating that the latter prompting styles are more effective in generating summaries that express political ideologies more effectively; with the assumption that politicians who belong to the same party are more aligned ideologically. We see that with the latter two promoting styles, there is a clear distinction between parties such as the Japanese Communist Party(JCP) which are known to be more on the liberal side versus parties such as the Liberal Democratic Party(LDP) which are known to be more on the conservative side. 
+
+
+\begin{figure}[h]
+\centering
+\begin{subfigure}{0.22\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{figs/base_prompt_umap.png}
+  \caption{Base prompt: UMAP plot of summaries}
+\end{subfigure}
+\begin{subfigure}{0.22\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{figs/ie_prompt_umap.png}
+  \caption{With Context: UMAP plot of summaries}
+\end{subfigure}
+\begin{subfigure}{0.22\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{figs/ie_few_shot_prompt_umap.png}
+  \caption{With Context and Few shot: UMAP plot of summaries}
+\end{subfigure}
+\caption{UMAP plot of summaries generated by different prompting styles}
+\label{fig:UMAP prompt comparison}
+\end{figure}
+
+\subsection{Automatic extraction of the axis of controversy}
+\label{section: extraction of axis of controversy}
+
+One key bottleneck to scaling the method of \citeauthor{kato2024lupinllmbasedpoliticalideology} would be the manual selection of the axis of political controversy. In their paper, they described a process of axis creation where the researchers selected two politicians that are known to be opposite ends of a political debate (e.g. they selected Tomomi Inada and Akira Kasai to evaluate the other politicians on the pro/con axis for the acknowledgment of JSDF in the Japanese constitution.) or generated speeches that would come from politicians on both ends of the spectrum using GPT4o-mini. Although this method proved to be somewhat effective, this method requires a lot of human intervention and is prone to a lack of labor resources and the introduction of human biases. Furthermore, we will miss a lot of interesting debates/controversies which the researchers are unaware of. We therefore use GPT4o-mini to extract the "axis" of political debate from the stance summaries we generated in the previous step. See figure \ref{fig:axis-extraction} for a visual representation of this step. The summarized stances of politicians are fed into GPT4o-mini with the prompt shown in figure \ref{fig:axes detection} to generate axes within the broad topic of interest. 
+
+\begin{figure}[h]
+\centering
+  \centering
+  \includegraphics[width=1\linewidth]{figs/axis.pdf}
+  \caption{Graphical representation of axis extraction using GPT4o-mini}
+  \label{fig:axis-extraction}
+\end{figure}
+
+Using this method, we were able to extract axes of political controversy for each of the topics of defense, aging population, climate change, and economic policy. In figure \ref{fig: raw axes extraction} you can see the raw reply from GPT4o-mini to extract the axes of controversy and see figure \ref{fig: extracted axes defense},\ref{fig: extracted axes economy},\ref{fig: extracted axes nuclear power}, \ref{fig: extracted axes aging population},  \ref{fig: extracted axes climate change} for the extracted axes from each topic processed to JSON format.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{quote}
+The following is a summary text extracted from the proceedings of the Diet, identifying the issues and describing the opinions in favor of and against each.
+
+\textbf{Issue}: The Self-Defense Forces should be clearly stated in the Constitution.
+
+\textbf{For}: The existence of the Self-Defense Forces is already accepted by the public, and its inclusion in the Constitution will strengthen international credibility and legal stability.
+
+\textbf{Oppose}: The SDF do not need to be explicitly stated in the Constitution, and the existing legal system is sufficient.
+Specifying the SDF in the Constitution may create legal challenges and undermine the spirit of the exclusive defense of Japan.
+
+\textbf{Issue}: Increasing the defense budget
+
+\textbf{For}: Japan needs to strengthen its defense capabilities in order to respond to changes in the security environment surrounding Japan. Specifically, it is necessary to introduce advanced technologies such as missile defense and cyber security.
+
+\textbf{Oppose}: Increased defense spending could put pressure on social security and education budgets. In addition, it is difficult to gain public understanding to allocate reconstruction funds and tax hikes to defense spending.
+
+\textbf{Issue}: Exercise of the right of collective self-defense
+
+\textbf{For}: In order to respond to changes in the international security environment, it is necessary to modernize defense policy by clearly stipulating the exercise of the right of collective self-defense in the Constitution.
+
+\textbf{Oppose}: The exercise of the right of collective self-defense deviates from the principle of exclusive defense, and constitutional amendments and changes in interpretation should be pursued with caution. It could increase the risk of war.
+
+\textbf{Issue}: Strengthening food security
+
+\textbf{Yes}: Increasing food self-sufficiency and strengthening the agricultural production base is important for national security. It is necessary to increase domestic production and stabilize people's lives.
+
+\textbf{Oppose}: There is a fear that agricultural support will be put on the back burner due to the expansion of the defense budget. In addition, improving self-sufficiency requires not only state initiative, but also private-sector strength.
+       
+    \end{quote}
+    \caption{Raw reply from GPT4o-mini for axes extraction prompt for the topic of defence(Translated)}
+    \label{fig: raw axes extraction}
+\end{figure}
+
+These extracted axes are used to generate reference summaries from a politician with an ideological stance of interest. Referring to the work of \citeauthor{kato2024lupinllmbasedpoliticalideology}, they show that generating sentences that would come from a politician with a specific ideological stance and using the embedding of such speeches is an effective method of scaling politicians on an axis of our choice. In figure \ref{fig: Previous umap}, we show a figure from the paper where they show that selecting representatives that are for/against the acknowledgment of the JSDF in the Japanese constitution represented in the latent space is comparable to generating speeches that would come from such representatives using LLM. This is shown qualitatively by comparing the lines drawn between the reference politicians and generated reference speeches and confirming that they are parallel in the latent space.
+
+\section{Results}
+In this section, we will discuss the results obtained through implementing the aforementioned methodology of scaling and analyzing the political stance of parliamentary representatives.
+
+\subsection{Scaling the representatives}
+\subsubsection{Topic: Defence}
+As shown in figure \ref{fig: extracted axes defense}, we have extracted the main points of controversy for this topic and scaled politicians on these axes. See figures \ref{fig: results-defence-constitution}, \ref{fig: results-defence-budget}, \ref{fig: results-defence-collective}, \ref{fig: results-defence-food} for the results. The left figures show the violin plots of the scaled representatives and the right figures show the UMAP visualization of the representatives and the axes of reference.
+
+\begin{figure}[h]
+\centering
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/defence/自衛隊の憲法明記_gen_violin_plot.png}
+      \caption{Violin plot of scaled representatives}
+    \end{subfigure}
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/defence/自衛隊の憲法明記_umap_gen.png}
+      \caption{UMAP visualization of representatives and axes of reference}
+    \end{subfigure}
+\caption{Should Japan mention the JSDF in the constitution?}
+\label{fig: results-defence-constitution}
+\end{figure}
+\begin{figure}[h]
+\centering
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/defence/防衛予算の増額_gen_violin_plot.png}
+      \caption{Violin plot of scaled representatives}
+    \end{subfigure}
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/defence/防衛予算の増額_umap_gen.png}
+      \caption{UMAP visualization of representatives and axes of reference}
+    \end{subfigure}
+\caption{Should Japan increase its defence budget?}
+\label{fig: results-defence-budget}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/defence/集団的自衛権の行使_gen_violin_plot.png}
+      \caption{Violin plot of scaled representatives}
+    \end{subfigure}
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/defence/集団的自衛権の行使_umap_gen.png}
+      \caption{UMAP visualization of representatives and axes of reference}
+    \end{subfigure}
+\caption{Should JSDF be permitted to act upon the principle of collective self-defense?}
+\label{fig: results-defence-collective}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/defence/食料安全保障の強化_gen_violin_plot.png}
+      \caption{Violin plot of scaled representatives}
+    \end{subfigure}
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/defence/食料安全保障の強化_umap_gen.png}
+      \caption{UMAP visualization of representatives and axes of reference}
+    \end{subfigure}
+\caption{Discussions surrounding food safety}
+\label{fig: results-defence-food}
+\end{figure}
+\FloatBarrier
+\subsubsection{Topic: Nuclear Power}
+As shown in figure \ref{fig: extracted axes nuclear power}, we have extracted the main points of controversy for this topic and scaled politicians on these axes. See figures \ref{fig: restarting-nuclear}, \ref{fig: results-nuclear-new}, \ref{fig: results-nuclear-export}, \ref{fig: results-nuclear-renewable}, \ref{fig: results-nuclear-fukushima} for the results. The left figures show the violin plots of the scaled representatives and the right figures show the UMAP visualization of the representatives and the axes of reference.
+\begin{figure}[h]
+\centering
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/nuclear/原発の再稼働について_gen_violin_plot.png}
+      \caption{Violin plot of scaled representatives}
+      \label{fig:sub1}
+    \end{subfigure}
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/nuclear/原発の再稼働について_umap_gen.png}
+      \caption{UMAP visualization of representatives and axes of reference}
+    \end{subfigure}
+\caption{Should Japan restart nuclear power plants?}
+\label{fig: restarting-nuclear}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/nuclear/原発の新設や運転期間延長について_gen_violin_plot.png}
+      \caption{Violin plot of scaled representatives}
+    \end{subfigure}
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/nuclear/原発の新設や運転期間延長について_umap_gen.png}
+      \caption{UMAP visualization of representatives and axes of reference}
+    \end{subfigure}
+\caption{Should Japan build new nuclear power plants and extend the lifetime of existing plants?}
+\label{fig: results-nuclear-new}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/nuclear/原発の輸出について_gen_violin_plot.png}
+      \caption{Violin plot of scaled representatives}
+    \end{subfigure}
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/nuclear/原発の輸出について_umap_gen.png}
+      \caption{UMAP visualization of representatives and axes of reference}
+    \end{subfigure}
+\caption{Should Japan export nuclear power plant building?}
+\label{fig: results-nuclear-export}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/nuclear/原発廃止と再生可能エネルギーの導入_gen_violin_plot.png}
+      \caption{Violin plot of scaled representatives}
+    \end{subfigure}
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/nuclear/原発廃止と再生可能エネルギーの導入_umap_gen.png}
+      \caption{UMAP visualization of representatives and axes of reference}
+    \end{subfigure}
+\caption{Switching to renewable clean energy}
+\label{fig: results-nuclear-renewable}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/nuclear/福島第一原発事故後の被害者支援と賠償問題_gen_violin_plot.png}
+      \caption{Violin plot of scaled representatives}
+    \end{subfigure}
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/nuclear/福島第一原発事故後の被害者支援と賠償問題_umap_gen.png}
+      \caption{UMAP visualization of representatives and axes of reference}
+    \end{subfigure}
+\caption{Compensating the victims of the Fukushima Disaster}
+\label{fig: results-nuclear-fukushima}
+\end{figure}
+
+\FloatBarrier
+
+\subsubsection{Topic: Economy}
+As shown in figure \ref{fig: extracted axes economy}, we have extracted the main points of controversy for this topic and scaled politicians on these axes. See figures \ref{fig: results-economy-small}, \ref{fig: results-economy-foreign}, \ref{fig: results-economy-active}, \ref{fig: results-economy-consumption-tax-rate}, \ref{fig: results-economy-financial-easing} for the results. Left figures show the violin plots of the scaled representatives and the right figures show the UMAP visualization of the representatives and the axes of reference.
+
+\begin{figure}[h]
+\centering
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/economy/中小企業支援の強化について_gen_violin_plot.png}
+      \caption{Violin plot of scaled representatives}
+    \end{subfigure}
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/economy/中小企業支援の強化について_umap_gen.png}
+      \caption{UMAP visualization of representatives and axes of reference}
+    \end{subfigure}
+\caption{Support for small-mid sized businesses}
+\label{fig: results-economy-small}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/economy/外国人労働者の受け入れについて_gen_violin_plot.png}
+      \caption{Violin plot of scaled representatives}
+    \end{subfigure}
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/economy/外国人労働者の受け入れについて_umap_gen.png}
+      \caption{UMAP visualization of representatives and axes of reference}
+    \end{subfigure}
+\caption{Accepting foreign workers}
+\label{fig: results-economy-foreign}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/economy/政府の積極的な経済介入について_gen_violin_plot.png}
+      \caption{Violin plot of scaled representatives}
+    \end{subfigure}
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/economy/政府の積極的な経済介入について_umap_gen.png}
+      \caption{UMAP visualization of representatives and axes of reference}
+    \end{subfigure}
+\caption{About the active involvement of the government in the economy}
+\label{fig: results-economy-active}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/economy/消費税の減税について_gen_violin_plot.png}
+      \caption{Violin plot of scaled representatives}
+    \end{subfigure}
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/economy/消費税の減税について_umap_gen.png}
+      \caption{UMAP visualization of representatives and axes of reference}
+    \end{subfigure}
+\caption{Reducing the consumption tax rate}
+\label{fig: results-economy-consumption-tax-rate}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/economy/金融緩和政策の見直し_gen_violin_plot.png}
+      \caption{Violin plot of scaled representatives}
+    \end{subfigure}
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/economy/金融緩和政策の見直し_umap_gen.png}
+      \caption{UMAP visualization of representatives and axes of reference}
+    \end{subfigure}
+\caption{Reconsidering the financial easing policies}
+\label{fig: results-economy-financial-easing}
+\end{figure}
+\FloatBarrier
+
+\subsubsection{Topic: Climate Change}
+As shown in figure \ref{fig: extracted axes climate change}, we have extracted the main points of controversy for this topic and scaled politicians on these axes. See figures \ref{fig: results-climate-change-carbon-neutral}, \ref{fig: results-climate-change-fossil-fuel}, \ref{fig: results-climate-change-nuclear}, \ref{fig: results-climate-change-climate} for the results. The left figures show the violin plots of the scaled representatives and the right figures show the UMAP visualization of the representatives and the axes of reference.
+
+\begin{figure}[h]
+\centering
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/climatechange/カーボンニュートラル目標の実現に向けた具体策について_gen_violin_plot.png}
+      \caption{Violin plot of scaled representatives}
+    \end{subfigure}
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/climatechange/カーボンニュートラル目標の実現に向けた具体策について_umap_gen.png}
+      \caption{UMAP visualization of representatives and axes of reference}
+    \end{subfigure}
+\caption{Specific measures to achieve the carbon neutrality goal }
+\label{fig: results-climate-change-carbon-neutral}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/climatechange/化石燃料依存からの脱却と再生可能エネルギーの推進について_gen_violin_plot.png}
+      \caption{Violin plot of scaled representatives}
+    \end{subfigure}
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/climatechange/化石燃料依存からの脱却と再生可能エネルギーの推進について_umap_gen.png}
+      \caption{UMAP visualization of representatives and axes of reference}
+    \end{subfigure}
+\caption{ Breaking away from dependence on fossil fuels and promoting renewable energy}
+\label{fig: results-climate-change-fossil-fuel}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/climatechange/原子力発電の利用の是非について_gen_violin_plot.png}
+      \caption{Violin plot of scaled representatives}
+    \end{subfigure}
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/climatechange/原子力発電の利用の是非について_umap_gen.png}
+      \caption{UMAP visualization of representatives and axes of reference}
+    \end{subfigure}
+\caption{Use of nuclear energy}
+\label{fig: results-climate-change-nuclear}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/climatechange/気候変動対策における地方と国の役割について_gen_violin_plot.png}
+      \caption{Violin plot of scaled representatives}
+      \label{fig:sub1}
+    \end{subfigure}
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/climatechange/気候変動対策における地方と国の役割について_umap_gen.png}
+      \caption{UMAP visualization of representatives and axes of reference}
+      \label{fig:sub2}
+    \end{subfigure}
+\caption{ Breaking away from dependence on fossil fuels and promoting renewable energy}
+\label{fig: results-climate-change-climate}
+\end{figure}
+
+\FloatBarrier
+\subsubsection{Topic: Aging Population}
+As shown in figure \ref{fig: extracted axes aging population}, we have extracted the main points of controversy for this topic and scaled politicians on these axes. See figures \ref{fig: results-aging-working-condition}, \ref{fig: results-aging-education-cost}, \ref{fig: results-aging-childcare-leave}, \ref{fig: results-aging-defense-spending} for the results. The left figures show the violin plots of the scaled representatives and the right figures show the UMAP visualization of the representatives and the axes of reference.
+
+\begin{figure}[h]
+\centering
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/aging/少子化対策としての就業と雇用環境改善_gen_violin_plot.png}
+      \caption{Violin plot of scaled representatives}
+      \label{fig:sub1}
+    \end{subfigure}
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/aging/少子化対策としての就業と雇用環境改善_umap_gen.png}
+      \caption{UMAP visualization of representatives and axes of reference}
+      \label{fig:sub2}
+    \end{subfigure}
+\caption{Improvement of working condition as part of tackling aging population}
+\label{fig: results-aging-working-condition}
+\end{figure}
+
+
+\begin{figure}[h]
+\centering
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/aging/少子化対策としての教育負担軽減_gen_violin_plot.png}
+      \caption{Violin plot of scaled representatives}
+      \label{fig:sub1}
+    \end{subfigure}
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/aging/少子化対策としての教育負担軽減_umap_gen.png}
+      \caption{UMAP visualization of representatives and axes of reference}
+      \label{fig:sub2}
+    \end{subfigure}
+\caption{Reducing the burden of education costs}
+\label{fig: results-aging-education-cost}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/aging/育児休業の拡充と参加促進_gen_violin_plot.png}
+      \caption{Violin plot of scaled representatives}
+      \label{fig:sub1}
+    \end{subfigure}
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/aging/育児休業の拡充と参加促進_umap_gen.png}
+      \caption{UMAP visualization of representatives and axes of reference}
+      \label{fig:sub2}
+    \end{subfigure}
+\caption{Expanding childcare leave and promoting participation}
+\label{fig: results-aging-childcare-leave}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/aging/防衛費と少子化対策予算の優先順位_gen_violin_plot.png}
+      \caption{Violin plot of scaled representatives}
+      \label{fig:sub1}
+    \end{subfigure}
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/results/aging/防衛費と少子化対策予算の優先順位_umap_gen.png}
+      \caption{UMAP visualization of representatives and axes of reference}
+      \label{fig:sub2}
+    \end{subfigure}
+\caption{Priorities for Defense Spending and
+the Budget for Low Fertility}
+\label{fig: results-aging-defense-spending}
+\end{figure}
+
+
+\FloatBarrier
+\subsection{Diachronic analysis of evolving stance of parliamentary representatives}
+\label{section: diachronic}
+In this research, we have conducted a diachronic analysis for mean party positions as well as individual politicians. For the individual politicians, we have focused on representatives for whom we have speech data for at least 5 years and only for the years where we have at least 5 speech records. Similarly, for the mean party positions, we have focused on years where we have at least 3+ representatives from the parties and at least 10 speech records. A graphical representation of this analysis is shown in figure \ref{fig:diachronic}.
+\begin{figure}[h]
+\centering
+  \centering
+  \includegraphics[width=1\linewidth]{figs/diachronic.pdf}
+  \caption{Graphical representation of diachronic analysis of political stance of politicians}
+  \label{fig:diachronic}
+\end{figure}
+
+
+\section{Discussion}
+In this section, we will be discussing the two methods we have used to evaluate our methodology. 
+\begin{itemize}
+	\item \textbf{Quantitative evaluation:} We have compared the ordering of the parties we have obtained from our methodology to the ordering obtained by experts in regards to different topics. 
+	\item \textbf{Qualitative evaluation:} We have analyzed the common noun phrases in the different clusters of representatives to under stand and interpret the stance of politicians in each cluster. 
+\end{itemize}
+
+\subsection{Quantitative evaluation: Comparison against expert estimations}
+To our knowledge, there is no existing dataset/research which quantifies the political stance of Japanese parliamentary representatives on different topics. Therefore, we have compared the ordering of the parties we have obtained from our methodology to the ordering estimated by experts in regards to different topics. For the expert estimations, we used the results of \citeauthor{Mielka} who are a NPO in Japan that focuses on political transparency and dissimation of political information. In a reply to our inquiry, they shared that in order to place the parties on a spectrum of political disagreement, they have at least 3 experts discussing the placement of the parties and decide on the final placement of the parties. Figure \ref{fig:mielka-figs} shows the estimations of the party positions on different topics by Mielka.
+
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}[t]{0.22\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figs/mielka/consumptiontax.png}
+        \caption{Estimation of party positions}
+        \label{fig:consumptiontax}
+    \end{subfigure}\hfill
+    \begin{subfigure}[t]{0.22\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figs/mielka/jsdfconsitution.png}
+        \caption{Changing the Japanese constitution to acknowledge the JSDF}
+        \label{fig:jsdfconsitution}
+    \end{subfigure}\hfill
+    \begin{subfigure}[t]{0.22\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figs/mielka/nuclear.png}
+        \caption{Using nuclear power in Japan}
+        \label{fig:nuclear}
+    \end{subfigure}\hfill
+    \begin{subfigure}[t]{0.22\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figs/mielka/growthordistrib.png}
+        \caption{Growth or distribution of wealth}
+        \label{fig:growthordistrib}
+    \end{subfigure}
+    \caption{Party estimations by Mielka \citep{Mielka}}
+    \label{fig:mielka-figs}
+\end{figure}
+
+\subsubsection{Metrics of comparison}
+
+In order to compare the ordering of parties, we have used 3 methods of comparison to conduct a rounded evaluation of our results. Those are:
+\begin{itemize}
+	\item Spearman's rank correlation coefficient\citep{spearman1904}
+	\item Kendall's tau rank correlation coefficient\citep{kendall1938}
+	\item Longest Common Subsequence(LCS) ratio
+\end{itemize}
+
+The equation for Spearman's rank correlation coefficient is given by:
+
+\begin{center}
+	\[	\rho = 1 - \frac{6\sum d_i^2}{n(n^2-1)} \]
+	
+\end{center}
+
+
+
+where $d_i$ is the difference between the ranks of the parties in the two orderings and $n$ is the number of parties. The value of $\rho$ ranges from -1 to 1. A value of 1 indicates that the two orderings are identical, 0 indicates no correlation, and -1 indicates that the two orderings are in reverse order. 
+
+The equation for Kendall's tau rank correlation coefficient is given by:
+
+\begin{center}
+	\[	\tau = \frac{P-Q}{\frac{1}{2}n(n-1)} \]
+\end{center}
+
+where $P$ is the number of concordant pairs, $Q$ is the number of discordant pairs, and $n$ is the number of parties. The value of $\tau$ ranges from -1 to 1. A value of 1 indicates that the two orderings are identical, 0 indicates no correlation, and -1 indicates that the two orderings are in reverse order.
+
+The Longest Common Subsequence(LCS) ratio measures the ratio between the length of the sequence and the longest common subsequence of the two orderings. The value of the LCS ratio ranges from 0 to 1. A value of 1 indicates that the two orderings are identical, 0 indicates no common subsequence. The formula is shown below:
+\begin{center}
+  \[	\mathrm{LCS\ ratio} = \frac{2 \times \mathrm{LCS}}{n_1 + n_2} \]
+\end{center}
+
+where $n_1$ and $n_2$ are the number of parties in the two orderings and $\mathrm{LCS}$ is the length of the longest common subsequence of the two orderings.
+
+An example case of the comparison would be the topic of using nuclear power in Japan. The order obtained by Mielka experts is(most against to most for usage of nuclear power):
+\begin{center}
+\textbf{SDP}, \textbf{Reiwa}, \textbf{JCP}, \textbf{CDP}, \textbf{Komeito}, \textbf{NDP}, \textbf{LDP}, \textbf{JRP}
+\end{center}
+
+The order obtained by our methodology is (we consider the ordering of the average positions of the parties):
+
+\begin{center}
+	\textbf{JCP}, \textbf{Okinawa}, \textbf{Reiwa}, \textbf{CDP}, \textbf{JRP}, \textbf{NDP}, \textbf{LDP}, \textbf{Komeito}
+\end{center}
+
+Now using the 3 metrics mentioned, we find that the measurements are:
+\begin{itemize}
+	\item Spearman's $\rho$ = 0.9642
+	\item Kendall's $\tau$ = 0.9047
+	\item LCS ratio = 0.7142
+\end{itemize} 
+This indicates that the orderings are highly correlated and that our obtained results are aligned with expert predictions. 
+Note that we have ignored parties that are not contained in both of the orderings which could be due to 
+\begin{itemize}
+	\item The party not having seats in the parliament but Mielka still including that party in their estimations
+	\item The party having seats in the parliament but Mielka not including those in their estimation
+\end{itemize}
+
+See table \ref{table:spearman} for the correlation values for different topics. (Note: we were not able to validate all our scaled results as Mielka does not scale the parties for all of our topics.)
+
+\begin{table}[h]
+\centering
+\begin{tabularx}{\columnwidth}{|X|X|X|X|}
+\hline
+\textbf{Topic} & \textbf{Spearman's $\rho$}& \textbf{Kendall's $\tau$} &\textbf{LCS ratio}\\ \hline
+Changing the Japanese constitution to acknowledge JSDF & 0.9286 & 0.8571& 0.625\\ \hline
+Restarting nuclear power plants in Japan & 0.9642 & 0.9047& 0.7142\\ \hline
+Reducing the consumption tax rate & -0.7 & -0.6 & 0.8\\ \hline
+\end{tabularx}
+\caption{Correlation metrics for different topics}
+\label{table:spearman}
+\end{table}
+
+For the topic of reducing the consumption tax rate, we see that the Spearman's $\rho$ and Kendall's $\tau$ are negative. This is because the Reiwa party is placed on the opposite side of the ordering. However, all of the other parties are placed in the same order as the expert predictions and hence the LCS ratio score is high. Overall, the above results indicate that our methodology is able to robustly scale the political stance of parliamentary representatives on different topics.
+
+\FloatBarrier
+\subsection{Qualitative evaluation: Common noun phrases in the different groups of scaled representatives}
+\label{section: qual-eval}
+In order to evaluate the scaled results qualitatively, we have split the representatives into 3 clusters based on their scaled positions. We simply split the whole range of the scale into 3 segments and allocated the representatives that fall into the segment to the respective segments. A visual representation is shown in figure \ref{fig:3clusters}.
+
+\begin{figure}
+\centering
+  \centering
+  \includegraphics[width=0.8\linewidth]{figs/Segment 1.png}
+  \caption{Visual representation of splitting the representatives into 3 clusters}
+  \label{fig:3clusters}
+\end{figure}
+
+
+We then calculated the Pointwise Mutual Information(PMI)\citep{church-hanks-1990-word} of the noun phrases in the speeches of the representatives and the clusters of the representatives. The PMI is calculated as follows:
+\begin{center}
+	\[	\mathrm{PMI}(x,y) = \log_2 \left( \frac{P(x,y)}{P(x)P(y)} \right) \]
+\end{center}
+
+where $P(x,y)$ is the probability of the noun phrase $x$ and the cluster $y$ co-occurring, $P(x)$ is the probability of the noun phrase $x$ occurring and $P(y)$ is the probability of the cluster $y$ occurring. The PMI score indicates how much more likely the noun phrase $x$ and the cluster $y$ co-occur than if they were independent. A high PMI score indicates that the noun phrase is highly associated with the cluster. See below tables \ref{table:PMI-nuclear}, \ref{table:PMI-constitution} and \ref{table:PMI-taxrate} for examples of the noun phrases we have identified to be highly associated with the different clusters of representatives for the topics: Restarting Nuclear Power Plants in Japan, Changing the Japanese constitution to acknowledge the JSDF and Reducing the consumption tax rate respectively.
+
+\subsubsection{Key Observations}
+Below we outline some key observations from the PMI analysis:
+\begin{itemize}
+	\item \textbf{Restarting Nuclear Power Plants in Japan:}
+		\begin{itemize}
+			\item The representatives in the first segment(against) are associated with phrases like "Renewable energy emphasis", "High cost", "Anti-nuclear", "Fukushima nuclear plant", "Earthquake safety measures" etc. This indicates that the representatives who belong to this segment often mention the Fukushima nuclear disaster and are generally against the usage of nuclear power. 
+			\item The representatives in the middle segment mention a mix of terms such as "Lack of transparency", "Trial", "Temporary housing", "Contaminated water treatment" and "Energy self-sufficiency rate". This might indicate that while the representatives in this segment are aware of the risks associated with nuclear power and do mention the aftermath of the Fukushima disaster, they are also aware of the imporant role nuclear power could play in Japan's energy self-sufficiency.
+			\item The representatives in the last segment(for) mention terms such as "Industrial Policy", "Power sector", "Innovative nuclear technology", "Decarbonization", "Safety first" and "Need to reduce dependency". This indicates that the representatives in this segment are aware of the importance of safety in nuclear power plants but also emphasize the important role nuclear power plays in decarbonization and reducing dependency on other countries for energy.
+		\end{itemize}
+	\item \textbf{Changing the Japanese constitution to acknowledge the JSDF:}
+		\begin{itemize}
+			\item The representatives in the first segment(against) are associated with phrases like "Hazardous waste", "Land use regulation bill", "Opposition", "Article 9 of the Constitution", "Constitutional reinterpretation" and "Possession of counterattack capability", etc. These words convey that this group if hesitant to changing the constitutional interpretation of the JSDF and are concerned about the militarization of Japan.
+			\item The representatives in the middle segment mention a mix of terms such as "Diplomatic dialogue", "Defense capability enhancement", "Land, sea and air", "Military integration","Cyber attack", etc. These words indicacte that while this segment still has concerns about militarization and prioritize diplomatic dialogues, they also acknowledge the importance of defence capability enhancement and strengthening Japan against cyberattacks from other countries. 
+			\item The representatives in the last segment(for) seem to be mentioning more technical terms. They are associated with words such as "Unmanned asset defence capability", "Analog communication", Unmanned equipment", "Competitiveness enhancement". This indicates that this segment is more focused on the technology necessary to strengthen Japan's defence capabilities and are in favor of changing the constitution to acknowledge the JSDF which would solidify the status of the JSDF in Japan.
+		\end{itemize}
+	\item \textbf{Reducing the consumption tax rate:}
+	\begin{itemize}
+		\item The representatives who are against the reduction of consumption tax rate are associated with terms such as "Public broadcasting", "Public school", "Employment system reform", "Ministry of defence", etc. This indicates that this segment is more concerned about the deterioration of public services due to reduced tax revenue. This segment seems to be emphasizing employment system reforms more to boost the economy rather than reducing the consumption tax rate.
+		\item The representatives in the middle segment are assocaited with a mix of terms such as "Grant-type scholarship", "Regional cities", "Economic security", "Small and micro enterprises", etc. These terms indicate that this group broadly mentions the macroeconomic implications of reducing the consumption tax rate.
+		\item The representatives who are for reducing the consumption tax rate are associated with terms sucha as "Young and child-rearing generation", "Common people", "Domestic consumption", "Demand expansion", "Rising energy costs", etc. These words indicate that this segment is more focused on reducing the financial pressure on the younger generation and common consumers to boost the demand for goods in the economy. 
+	\end{itemize}
+\end{itemize}
+
+
+
+\begin{table*}[htbp]
+\centering
+\renewcommand{\arraystretch}{1.5}%
+\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+\hline
+\textbf{Segment 1(against)} & \textbf{Segment 2(middle)} & \textbf{Segment 3(for)} \\ \hline
+\begin{tabular}[c]{@{}l@{}}
+Renewable energy emphasis \\ High cost \\ Nuclear-powered ships \\ Forestry revitalization \\ Its preparation \\ Textbook \\ Appeal \\ Nuclear-related companies \\ Secrecy \\ Industrial accident \\ Three times \\ Compensation scheme \\ Failure to function properly \\ Anti-nuclear \\ Japan-U.S. alliance \\ Corporate culture \\ Earthquake safety measures \\ Support \\ Recently \\ Nuclear issue \\ Prime Minister’s Office \\ Shika Nuclear Power Plant \\ Doubts \\ Fukushima nuclear plant \\ Pointing out ignorance of lessons learned \\ Information concealment 
+\end{tabular} 
+& 
+\begin{tabular}[c]{@{}l@{}}
+	Interests \\ Lack of transparency \\ Necessary personnel \\ Increase in imports \\ Energy self-sufficiency rate \\ Trial \\ Case law \\ Temporary housing \\ Roadmap \\ Nuclear facilities \\ Specific initiatives \\ Small modular reactor \\ Others \\ Industrial promotion \\ Carbon neutrality \\ Contaminated water treatment \\ Evacuation shelter \\ Fire brigade \\ Regional nuclear disaster prevention-\\ council \\ Hamaoka Nuclear Power Plant \\ Police \\ A municipality \\ Base \\ New industry \\ Regional development measures
+\end{tabular} 
+& 
+\begin{tabular}[c]{@{}l@{}}
+	Industrial policy \\ Sense of fulfillment \\ Power sector \\ Uniqueness \\ Local companies \\ Innovative nuclear technology \\ Nuclear damage compensation system \\ CO2 emission reduction \\ Decommissioning business \\ Safety first \\ Highest priority on safety \\ Decarbonization \\ Hokkaido \\ Nuclear power industry \\ Need to reduce dependency \\ Worldwide \\ Nuclear power plant operation period \\ Completion of decommissioning \\ Nuclear abolition \\ Small modular reactor \\ Carbon dioxide emissions \\ Nuclear engineers \\ Expanding options \\ Regional disaster prevention plan \\ Resident support
+\end{tabular} \\ \hline
+\end{tabularx}
+\caption{Example of noun phrases that have high PMI with different clusters of representatives for the topic: Restarting Nuclear Power Plants in Japan}
+\label{table:PMI-nuclear}
+\end{table*}
+
+
+\begin{table*}[htbp]
+\centering
+\renewcommand{\arraystretch}{1.5}%
+\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+\hline
+\textbf{Segment 1(against)} & \textbf{Segment 2(middle)} & \textbf{Segment 3(for)} \\ \hline
+\begin{tabular}[c]{@{}l@{}}
+	Hazardous waste \\ Land use regulation bill \\ This bill \\ Opposition \\ Government \\ Fiscal reconstruction \\ Iraq \\ Cautious \\ Government \\ International peace cooperation activities \\ Inter-ministerial \\ Childcare \\ Additional financial resources \\ Special committee \\ No upper limit \\ Full-spec \\ Germany \\ Article 9 of the Constitution \\ Alternative \\ Method \\ Official documents \\ Current administration \\ Constitutional reinterpretation \\ Possession of counterattack capability \\ Asian countries \\ Constitutional interpretation change
+\end{tabular} 
+& 
+\begin{tabular}[c]{@{}l@{}}
+	Diplomatic dialogue \\ Cautious \\ Defense capability enhancement \\ Land, sea, and air \\ Strategic document \\ Military integration \\ Government-sponsored bid rigging \\ News \\ Capitalist \\ Rebellion \\ Foreign capital regulation \\ Cyber attack \\ Uniformed personnel \\ Election \\ Backup base \\ Constitutional amendment debate \\ Production base \\ Island regions \\ Emergency response \\ Local government \\ Significant budget increase \\ State of emergency \\ Debt \\ Consent \\ Final \\ Disaster relief \\ Water source area \\ Directly under the Prime Minister
+\end{tabular} 
+& 
+\begin{tabular}[c]{@{}l@{}}
+	United Kingdom \\ Unmanned asset defense capability \\ Analog communication \\ Public transportation \\ Aircraft manufacturing industry \\ Civil sector \\ Unmanned equipment \\ Marine survey \\ Civilian technology \\ Code of ethics \\ Methane hydrate \\ Technology security \\ Broad sense \\ Competitiveness enhancement \\ Like-minded countries \\ Human \\ Multilateral cooperation \\ Stability assurance \\ Critical materials \\ World without \\ AI \\ Nuclear deterrence \\ Vulnerability \\ Three principles on arms exports \\ Economic revitalization \\ Marine resources \\ Those unfamiliar \\ Production capacity
+\end{tabular} \\ \hline
+\end{tabularx}
+\caption{Example of noun phrases that have high PMI with different clusters of representatives for the topic: Changing the Japanese constitution to acknowledge the JSDF}
+\label{table:PMI-constitution}
+\end{table*}
+
+\begin{table*}[htbp]
+\centering
+\renewcommand{\arraystretch}{1.5}%
+\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+\hline
+\textbf{Segment 1(against)} & \textbf{Segment 2(middle)} & \textbf{Segment 3(for)} \\ \hline
+\begin{tabular}[c]{@{}l@{}}
+	Public broadcasting \\ Public school \\ Care work \\ Living expenses \\ Employment system reform \\ Young seafarers \\ Stationed military forces \\ Procurement system \\ Employment security \\ Military priority \\ Equal or greater \\ Shipbuilding industry \\ Land acquisition \\ Defense industry \\ Care \\ Ministry of Defense \\ Professional occupation \\ Africa \\ Healthcare workers \\ Fiscal stability \\ Careful explanation \\ Ministry of Land, Infrastructure,-\\ Transport and Tourism \\ Credit guarantee system \\ Investment agreement \\ Medical institutions \\ Casino legalization \\ Inclusive society \\ Male \\ Disaster recovery
+\end{tabular} 
+& 
+\begin{tabular}[c]{@{}l@{}}
+	Grant-type scholarship \\ Support \\ International situation \\ Labor contract law \\ Technology transfer \\ Regional cities \\ Economic security \\ Problem solving \\ Support \\ Regional economy \\ Small and micro enterprises \\ Poverty issue \\ Hometown tax system \\ Universal service \\ Passive smoking \\ Fixed-sum benefit \\ Domestic vaccine \\ Private sector-led \\ At that time \\ Low-income support \\ Private high school \\ Driver \\ International cooperation \\ Infectious disease law \\ Ruling party \\ Environmental regeneration \\ Regional characteristics \\ Supplementary budget proposal \\ Ukraine situation
+\end{tabular} 
+& 
+\begin{tabular}[c]{@{}l@{}}
+	Animal welfare \\ There \\ Additional child allowance \\ Young and child-rearing generation \\ Common people \\ Domestic consumption \\ Game meat \\ Demand expansion \\ Import price \\ Food labeling \\ Asset deflation \\ Carbon pricing \\ Rising energy costs \\ Based on remarks \\ New business model \\ Fuel price \\ Both sides \\ Consumer behavior \\ Consumer price index \\ Post-COVID \\ Business succession tax system \\ Both parties \\ Public-private partnership \\ Between companies \\ Based on remarks \\ Loan system \\ Merit \\ Energy cost \\ Mid-sized enterprises
+\end{tabular} \\ \hline
+\end{tabularx}
+\caption{Example of noun phrases that have high PMI with different clusters of representatives for the topic: Reducing the consumption tax rate}
+\label{table:PMI-taxrate}
+\end{table*}
+	
+	
+
+
+
+
+
+\section{Presenting the results to the public}
+\label{section: kokkaidoc}
+The authors have created a web application to make this research public and to empower the voters to make more nuanced voting decisions. As mentioned previously, quantifying and scaling the political ideology of parliamentary representatives is essential for the transparency and productivity of democracy and it was important for us to create a platform where the research can be leveraged practically by the public. The website, reachable at \url{kokkaidoc.com} already makes the findings of \citeauthor{kato2024lupinllmbasedpoliticalideology} public and publishes parliamentary voting results as well as the current distribution of electoral districts. We are currently working on updating the website to include the findings from this research.
+
+\begin{figure}[h]
+\centering
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/kokkaidoc-scaling.png}
+      \caption{Scaling results presented on \url{kokkaidoc.com}}
+    \end{subfigure}
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/kokkaidoc-map.png}
+      \caption{Electoral district map presented on \url{kokkaidoc.com}}
+    \end{subfigure}
+    \begin{subfigure}{0.22\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/kokkaidoc-voting.png}
+      \caption{Voting results presented on \url{kokkaidoc.com}}
+    \end{subfigure}
+\caption{\url{kokkaidoc.com}}
+\label{fig: kokkaidoc-figs}
+\end{figure}
+
+\section{Conclusion}
+This research presents an LLM-driven framework for scaling the political ideology of parliamentary representatives, addressing key limitations in previous methodologies. By implementing speech summarization for noise reduction, automatic extraction of axes of controversy, and diachronic analysis of ideological shifts, our approach provides a more refined and scalable method for political stance estimation. The results demonstrate that our method aligns closely with expert estimations while offering a more automated and flexible approach to ideological scaling.
+
+Additionally, qualitative analysis of political discourse reveals key thematic differences between ideological clusters, further validating the effectiveness of our method. The findings have been integrated into KOKKAI DOC, making them publicly accessible to enhance political transparency and facilitate informed decision-making among voters.
+
+Future work could extend this approach to broader political systems, explore additional dimensions of political discourse, and refine LLM-based methodologies for greater accuracy and interpretability. By continuously improving the framework, we aim to contribute to a more transparent and data-driven understanding of parliamentary ideologies.
+
+
+\FloatBarrier
+\appendix
+\section{Previous work}
+
+\begin{figure}
+\centering
+    \begin{subfigure}{0.3\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/defence_box_plot.png}
+      \caption{Box plot of result obtained by \citeauthor{kato2024lupinllmbasedpoliticalideology} on the topic of acknowledgment of JSDF in Japanese constitution}
+      \label{fig:sub1}
+    \end{subfigure}
+    
+    \begin{subfigure}{0.3\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/nuclear_box_plot.png}
+      \caption{Box plot of result obtained by \citeauthor{kato2024lupinllmbasedpoliticalideology} on use of nuclear power in Japan}
+      \label{fig:sub2}
+    \end{subfigure}
+\caption{Box plot results scaling politicians on different political controversies\citep{kato2024lupinllmbasedpoliticalideology}}
+\label{fig: Previous box plots}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+    \begin{subfigure}{0.3\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/defence_umap_clean.png}
+      \caption{UMAP plot of topic of defence, black line connecting the politician references}
+      \label{fig:sub1}
+    \end{subfigure}
+    
+    \begin{subfigure}{0.3\textwidth}
+      \centering
+      \includegraphics[width=1\linewidth]{figs/defence_umap_gen.png}
+      \caption{UMAP plot of topic of defence, black line connecting the generated references}
+      \label{fig:sub2}
+    \end{subfigure}
+\caption{UMAP plot of the opinion embeddings of representatives on the topic of acknowledgement of JSDF in the constitution \citep{kato2024lupinllmbasedpoliticalideology}}
+\label{fig: Previous umap}
+\end{figure}
+
+\FloatBarrier
+\section{GPT prompts and replies}
+\label{app:gpt-prompts}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{quote}
+    \begin{CJK}{UTF8}{min}
+      この政治家の発言を要約すると、彼の日本の防衛に対するスタンスは以下のように推察できます：
+
+1. **専守防衛の重視**：この政治家は、日本の防衛政策は専守防衛に徹するべきであり、攻撃的な行動や武力行使は行わないという姿勢を堅持することを強調しています。
+
+2. **集団的自衛権の批判**：政府が推進している集団的自衛権の行使を強く批判しており、これが日本を戦争に巻き込むリスクがあると懸念しています。憲法違反と見なされる可能性があり、日本の防衛政策の根幹を覆すものであるとしています。
+
+3. **米軍との関係に対する警戒**：自衛隊が米軍と一体化して行動することに対して警戒感を表明し、特に米国の先制攻撃に日本が巻き込まれる可能性を問題視しています。
+
+4. **外交の重視**：軍事行動よりも外交による紛争解決や平和的手段を模索するべきだとしており、特にイラン核合意への働きかけなどを通じた地域の緊張緩和を提唱しています。
+
+5. **憲法改正への反対**：憲法九条に自衛隊を明記することが専守防衛の枠組みや集団的自衛権に関する解釈の拡張につながるとして反対の立場です。
+
+この政治家は、日本の防衛政策が専守防衛を基盤とし、外交による解決を重視しつつ、集団的自衛権の行使を避けるべきとする平和志向のスタンスを堅持しています。
+    \end{CJK}
+    \end{quote}
+    \caption{Example of formatted summary reply by GPT4o-mini}
+    \label{fig:formatted reply GPT4o-mini summary}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+    \begin{quote}
+    \begin{CJK}{UTF8}{min}
+     麻生国務大臣の日本の防衛に対するスタンスは、防衛について非常に重視し、日本の安全保障を確保するために慎重かつ計画的に様々な施策を実行していることが伺えます。彼は、日本を取り巻く安全保障環境が厳しいと認識しており、それに対応するための実効的な防衛力の確保が重要だと考えています。また、日米安全保障条約の意義を強調し、米国との堅牢な関係維持が抑止力の確保に重要であるとみなしています。特に、北東アジアでの不安定要因や国際社会でのテロ、核拡散といった新たな脅威に対し、防衛力や外交努力による安定確保を最重要視しています。彼は、防衛政策の質と量の確保、また透明性の向上、地元負担の軽減と抑止力維持の両立など、多面的な要素を考慮した戦略を追求し続けていることが明確です。
+    \end{CJK}
+    \end{quote}
+    \caption{Example of essay-style reply by GPT4o-mini}
+    \label{fig:essay reply GPT4o-mini summary}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{quote}
+    \begin{CJK}{UTF8}{min}
+        国会の議事録APIを使って「防衛」に関する政治家の発言を集めようと思います。その際に使うべき適切な検索単語をリストとして返してください。
+    
+        例：
+        
+        トピック：防衛
+        
+        検索単語：["自衛隊", "集団的自衛権", "安全保障", "軍事力", "防衛"]
+        
+        トピック：原発
+        
+        検索単語：["原子", "原発", "廃炉", "再稼働", "ベースロード"]
+        
+        トピック：経済対策
+        
+        検索単語：["経済", "景気", "デフレ", "財政政策", "金融政策", "インフレ", "中小企業", "雇用", "スタートアップ", "消費", "最低賃金"]
+        
+        結果はそのままコピーできるように[]で囲ってください。\newline
+        \textbf{English Translation: }
+        
+        I would like to use the Parliamentary Proceedings API to collect statements from politicians regarding "defense". Please return a list of appropriate search terms that should be used for this purpose.
+    
+        Example:
+        \newline
+        Topic: Defense
+        
+        Search words: ["Self-Defense Forces", "collective self-defense", "security", "military power", "defense"].
+        
+        Topic: Nuclear Power
+        
+        Search words: ["atomic", "nuclear", "decommission", "restart", "baseload"].
+        
+        Topic: economic measures
+        
+        Search words: ["economy", "economic", "deflation", "fiscal policy", "monetary policy", "inflation", "small business", "employment", "start-up", "consumption", "minimum wage"]
+        
+        Please enclose the results in [] so that they can be copied verbatim.
+        \end{CJK}
+    \end{quote}
+    \caption{Example of using the GPT4o-mini to generate topic-related search terms.}
+    \label{fig:parliamentary_api_example}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \begin{quote}
+        Below is a text summarizing the stance on TOPIC of several legislators extracted from the parliamentary proceedings.
+        Please use this text as a basis for identifying issues related to this topic, and describe the polar opposing views on these issues.
+        
+        Response Format (Please be sure to respond in this format) 
+
+        \textbf{Issue:} Outline of the issue
+        
+        \textbf{For:} Opinion in favor of the issue
+       
+        \textbf{Against:}Opinion in against the issue
+        \newline
+        
+        \textbf{Issue: }Outline of the Issue
+       
+        \textbf{For:}Opinion in favor of the issue
+        
+        \textbf{Against:}Opinion in against the issue
+        \newline \newline
+        
+        \textbf{Response Example:}
+        
+        Discussion Point: The Constitution should clearly state the Self-Defense Forces.
+        
+        Agree: The legal basis for the Self-Defense Forces is ambiguous. The Constitution should be amended to allow the SDF to operate internationally.
+        
+        Against: Affirming the existence of the SDF and specifying the SDF in the Constitution should be considered two different issues.
+        \newline 
+        \newline
+        
+        Discussion Point: Increasing the defense budget
+        
+        For: Reference is made to the responsibility to defend one's own country with one's own strength. Mentions the need to update equipment and improve the welfare of personnel.
+        
+        Against: Mentions the financial difficulties Japan is facing. Limited financial resources should be allocated to social security, education, and other areas.
+        
+        
+        ---------------------------------------------------------------
+        
+       \textbf{ Summary text}
+       
+       
+       $\langle$Summaries$\rangle$
+
+       ---------------------------------------------------------------
+
+       
+    \end{quote}
+    \caption{Prompting GPT4o-mini to detect axes of controversy within the topic of interest(Translated from Japanese)}
+    \label{fig:axes detection}
+\end{figure}
+
+\FloatBarrier
+
+\onecolumn
+\section{Extracted political axes of debate}
+\begin{figure}[h]
+\centering
+      \begin{lstlisting}[language=json,firstnumber=1]
+    [
+        {
+            "topic": "Constitutional Specification of the Self-Defense Forces",
+            "pro": "Since the existence of the Self-Defense Forces is already accepted by the public, their enshrining in the Constitution would strengthen their international credibility and legal stability.",
+            "con": "The SDF does not need to be explicitly stated in the Constitution; the existing legal system is sufficient. Specifying it would create legal challenges and could undermine the spirit of exclusive defense."
+        },
+        {
+            "topic": "Increase in defense budget",
+            "pro": "In order to respond to changes in the security environment surrounding Japan, defense capabilities must be strengthened. Specifically, it is necessary to introduce advanced technologies such as missile defense and cyber security.",
+            "con": "Increased defense spending could put pressure on social security and education budgets. In addition, it is difficult to gain public understanding to allocate reconstruction funds and tax increases to defense spending."
+        },
+        {
+            "topic": "Exercise of the right of collective self-defense",
+            "pro": "In order to respond to changes in the international security environment, the exercise of the right of collective self-defense should be clearly stated in the Constitution and defense policy should be modernized",
+            "con": "The exercise of the right of collective self-defense deviates from the principle of exclusive defense, and constitutional amendments and changes in interpretation should be pursued with caution. It could increase the risk of war."
+        },
+        {
+            "topic": "Strengthening Food Security",
+            "pro": "Increasing food self-sufficiency and strengthening the agricultural production base is important for national security. We need to increase domestic production and stabilize people's livelihoods.",
+            "con": "There is a fear that agricultural support may be put on the back burner due to the expansion of the defense budget. In addition, increasing self-sufficiency requires not only state initiative, but also private-sector strength."
+        }
+    ]
+\end{lstlisting}
+
+\caption{Extracted axes of political debate for the topic of defence}
+\label{fig: extracted axes defense}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+      \begin{lstlisting}[language=json,firstnumber=1]
+[
+    {
+        "topic": "Strengthening Support for SMEs",
+        "pro": "Since SMEs are the bloodstream of the economy and are responsible for the majority of employment, especially in Japan, some argue that policies to improve the business environment and enable wage increases are essential. Further support is also needed because the entire local economy is enriched when SMEs are revitalized.",
+        "con": "Some are concerned that strengthening support for SMEs may not be fair to large companies. Others argue that the principle of competition in the market should be respected and excessive intervention should be avoided, regardless of the size of the company."
+    },
+    {
+        "topic": "On Sales Tax Reductions",
+        "pro": "A consumption tax cut is an immediate stimulus measure and is expected to stimulate the economy as a whole through stimulating consumption. It is also supported by the viewpoint that it is not socially fair because it is regressive and places a heavy burden on low-income individuals." ,
+        "con": "The consumption tax is a stable source of funding for social security, and tax cuts are considered to be an obstacle to fiscal soundness. Concerns have also been expressed that the reduction in funding from a consumption tax cut could affect other social security and public services."
+    },
+    {
+        "topic": "Acceptance of Foreign Workers",
+        "pro": "Effective in industries with significant labor shortages, foreign workers, especially those with highly specialized skills, can contribute to economic growth. Some argue that by bringing in new skills and knowledge, they also contribute to improving Japan's international competitiveness." ,.
+        "con": "There are concerns that a larger number of foreign workers will have a negative impact on the domestic labor market, as they may cause cultural friction and encourage low-wage work. Some argue that employment of domestic workers may be squeezed."
+    }
+    {
+        "topic": "Review of monetary easing policy", {
+        "pro": "Prolonged monetary easing policy should be carefully reviewed because of concerns about the risk of inflation and increased market credit costs. In particular, price-pushing factors such as higher import costs due to a weaker yen should also be taken into account." ,
+        "con": "Some believe that monetary easing policy should be maintained until the economy fully recovers. There is concern that a change in policy at this point could hinder the end of deflation and economic growth."
+    },
+    {
+        "topic": "On the government's aggressive intervention in the economy", {
+        "pro": "Some argue that active government intervention is necessary for economic growth, the development of new industries, and regional development, especially efficient administrative and policy support." ,.
+        "con": "Some are of the view that excessive government intervention will stifle free competition in the market and create unnecessary regulations. There also exists the opinion that government intervention should be prudent because it may affect the vitality and autonomy of the private sector."
+    }
+]
+\end{lstlisting}
+
+\caption{Extracted axes of political debate for the topic of economy}
+\label{fig: extracted axes economy}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+      \begin{lstlisting}[language=json,firstnumber=1]
+[
+    {
+        "topic": "Resuming operations of nuclear power plants",
+        "pro": "Nuclear power plants that meet the criteria should be restarted to ensure a stable energy supply and lower electricity prices.Important for achieving carbon neutrality.",
+        "con": "Oppose restarting nuclear power plants because of the lessons learned from the Fukushima Daiichi nuclear accident, unresolved safety issues, and inadequate evacuation plans.We call for a transition to renewable energy."
+    },
+    {
+        "topic": "New nuclear power plant construction and extension of operating periods", 
+        "pro": "The introduction of new technologies and improvement of safety could contribute to a stable energy supply, and therefore the extension of operating periods should also be considered.",
+        "con": "There are concerns about age-related deterioration and increased risk. We should aim for zero nuclear power plants and do not approve new construction or extension of operating periods."
+    },
+    {
+        "topic": "Export of Nuclear Power Plants", 
+        "pro": "Exports should be undertaken in order to utilize Japanese nuclear technology in the international market and maintain economic competitiveness." ,
+        "con": "There are ethical concerns that risks should not be spread to other countries while safety cannot be ensured even domestically."
+    },
+    {
+        "topic": "Abolition of nuclear power plants and introduction of renewable energy", 
+        "pro": "Renewable energy is environmentally friendly and provides a sustainable energy supply. We should shift to this to reduce the risks posed by nuclear power.",
+        "con": "Renewable energy alone may not be able to meet short-term demand, and the use of nuclear power should also be considered."
+    },
+    {
+        "topic": "Victim support and compensation issues after the Fukushima Daiichi Nuclear Power Plant accident", 
+        "pro": "Prompt and appropriate compensation and support for victims is necessary. The government should continue to take responsibility for the situation." ,
+        "con": "It is inappropriate to place the responsibility solely on local governments and individual companies, as the burden should be considered by the entire population who benefited from electricity consumption."
+    }
+]
+\end{lstlisting}
+
+\caption{Extracted axes of political debate for the topic of nuclear power}
+\label{fig: extracted axes nuclear power}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+      \begin{lstlisting}[language=json,firstnumber=1]
+[
+    {
+        "topic": "Employment and improving the employment environment to combat the declining birthrate",
+        "pro": "Stable employment is important to combat the declining birthrate.
+        Creating full-time jobs and raising wages will increase young people's  willingness to marry and raise children.",
+        "con": "The employment environment alone will not solve the problem of declining birthrates.Comprehensive support measures are needed, and aspects other than just the economy should be strengthened."
+    },
+    {
+        "topic": "Reducing the burden of education as a solution to the declining birthrate", 
+        "pro": "Reducing the burden of education costs is a measure to counteract the declining birthrate.We need to promote free education from early childhood to higher education.",
+        "con": "Free education requires a huge amount of financial resources and should be proceeded with caution because of the burden it will place on public finances."
+    },
+    {
+        "topic": "Priorities for Defense Spending and the Budget for Low Fertility", 
+        "pro": "The budget should be allocated to measures to combat the declining birthrate rather than defense spending. We need to support childcare for the future of the country." ,
+        "con": "Defense spending is essential for security. The security of the nation is the only way to improve the child-rearing environment."
+    },
+    {
+        "topic": "Expanding childcare leave and promoting participation", {
+        "pro": "It is important to establish a system that makes it easier for both men and women to take childcare leave. Increased participation in childcare will lead to an increase in the birth rate." ,
+        "con": "Expansion of the childcare leave system may become a burden on companies, resulting in a negative impact."
+    }
+]
+\end{lstlisting}
+
+\caption{Extracted axes of political debate for the topic of aging population}
+\label{fig: extracted axes aging population}
+\end{figure}
+
+
+\begin{figure}[h]
+\centering
+      \begin{lstlisting}[language=json,firstnumber=1]
+[
+    {
+        "topic": "Breaking away from dependence on fossil fuels and promoting renewable energy",
+        "pro": "We should break away from dependence on fossil fuels and expand the use of renewable energy to the maximum extent possible.
+        This will achieve a reduction in greenhouse gases and increase energy self-sufficiency." ,
+        "con": "Rapidly reducing fossil fuel dependence is not realistic and may make it difficult to ensure a stable energy supply. The costs and technical constraints of renewable energy also need to be carefully evaluated."
+    },
+    {
+        "topic": "The pros and cons of using nuclear power",
+        "pro": "Nuclear power has low CO2 emissions and is important for a stable energy supply. Once its technical safety is ensured, it should be restarted and contribute to decarbonization." ,
+        "con": "Dependence on nuclear power should be reduced and the spread of renewable energy should be promoted. Oppose new construction and increased dependence on nuclear power due to the risk of nuclear accidents and waste issues."
+    },
+    {
+        "topic": "Specific measures to achieve the carbon neutrality goal", {
+        "pro": "To achieve carbon neutrality, the introduction of renewable energy should be accelerated through technological innovation and government support. Utilization of hydrogen and ammonia and resource recycling are important." ,.
+        "con": "Carbon neutrality goals should reflect economic and industrial realities and avoid abrupt shifts. A realistic approach that takes into account immediate economic effects and increased burdens is needed."
+    },
+    {
+        "topic": "The role of local and national governments in combating climate change", {
+        "pro": "Local governments should promote local production and local consumption of renewable energy by taking advantage of the characteristics of local resources, and the national government should prepare financial support and policies to encourage this." ,
+        "con": "There are limits to what local governments can do to combat climate change on their own, and a unified and comprehensive policy should be promoted under the leadership of the national government. Local initiatives should only play a complementary role."
+    }
+]
+\end{lstlisting}
+
+\caption{Extracted axes of political debate for the topic of climate change}
+\label{fig: extracted axes climate change}
+\end{figure}
+
+% \begin{figure}[h]
+% \centering
+% \scriptsize
+%       \begin{lstlisting}[language=json,firstnumber=1]
+%   [
+%     {
+%         "topic": "Enactment of a law to promote LGBTQ understanding",
+%         "pro": "We believe that the enactment of a law to promote a correct understanding of sexual orientation and gender identity will reduce non-understanding and discrimination and lead to a society that respects diversity.",
+%         "con": "Law revision requires careful discussion, and there are concerns that the law may overtake real social changes and that some parties are not convinced."
+%     }, 
+%     {
+%         "topic": "On the legalization of same-sex marriage", 
+%         "pro": "By giving same-sex couples the same marriage rights as heterosexual couples, legal equality is achieved and individual dignity is protected." ,.
+%         "con": "This is an important issue that requires national consensus as the form of the family changes, and it is difficult to legislate without sufficient social discussion."
+%     }, 
+%     {
+%         "topic": "On anti-discrimination laws against LGBTQ", 
+%         "pro": "By legally prohibiting unfair discrimination based on sexual orientation and gender identity, it is possible to create a safe environment for LGBTQ people." ,
+%         "con": "Legislating discrimination without a clear definition of discrimination would conversely cause confusion and misunderstanding among people, and we are concerned about abuse of the legal system."
+%     },
+%     {
+%         "topic": "Promoting LGBTQ understanding in education", {
+%         "pro": "Providing correct knowledge about LGBTQ in educational institutions can reduce discrimination and prejudice in future society." ,
+%         "con": "Incorporating sexual diversity into the educational curriculum can lead to conflicts with cultural and family values."
+%     }
+% ]
+% \end{lstlisting}
+
+% \caption{Extracted axes of political debate for the topic of LGBTQ rights}
+% \label{fig: extracted axes lgbtq}
+% \end{figure}
+
+\FloatBarrier
+\clearpage
+\onecolumn
+\section{Original Japanese noun phrases with high PMI for the topics discussed section \ref{section: qual-eval}}
+
+\begin{table*}[htbp]
+\begin{CJK}{UTF8}{min}
+\centering
+\renewcommand{\arraystretch}{1.5}%
+\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+\hline
+\textbf{Segment 1(against)} & \textbf{Segment 2(middle)} & \textbf{Segment 3(for)} \\ \hline
+\begin{tabular}[c]{@{}l@{}}
+	自然エネルギー重視 \\ 高コスト \\ 原子力艦船 \\ 林業再生 \\ その準備 \\ 教科書 \\ 控訴 \\ 原発関連企業 \\ 秘密主義 \\ 産業事故 \\ 三倍 \\ 賠償スキーム \\ 適切に機能していなかったこと \\ 反原発 \\ 日米同盟 \\ 企業文化 \\ 地震安全対策 \\ 賛成・最近 \\ 核問題 \\ 官邸 \\ 志賀原子力発電所 \\ 疑問を持つ・福島原発 \\ 教訓を無視していると指摘 \\ 情報隠蔽 \\ 復興大臣 \\ 懸念・現行
+\end{tabular} 
+& 
+\begin{tabular}[c]{@{}l@{}}
+
+	利権 \\ 不透明感 \\ 必要な人材 \\ 輸入増加 \\ エネルギー自給率 \\ 裁判 \\ 裁判例 \\ 仮設住宅 \\ 工程表 \\ 原子力施設 \\ 具体的な取り組み \\ 小型原子炉 \\ その他 \\ 産業推進 \\ カーボンニュートラル \\ 汚染水処理 \\ 避難所 \\ 消防団 \\ 地域原子力防災協議会 \\ 浜岡原発 \\ 警察 \\ 一自治体 \\ 拠点 \\ 新しい産業 \\ 地域振興策
+\end{tabular} 
+& 
+\begin{tabular}[c]{@{}l@{}}
+	産業政策 \\ やりがい \\ 電力部門 \\ 独自性 \\ 地元企業 \\ 革新原子力技術 \\ 原子力損害賠償制度 \\ CO2排出削減 \\ 廃炉事業 \\ 安全性を最優先 \\ 安全性を最重要 \\ 脱炭素化 \\ 北海道 \\ 原発産業 \\ 依存度を下げる必要 \\ 世界中 \\ 原発運転期間 \\ 廃炉完了 \\ 核廃絶 \\ 小型モジュール炉 \\ 二酸化炭素排出量 \\ 原子力技術者 \\ 選択肢を広げること \\ 地域防災計画 \\ 住民支援
+\end{tabular} \\ \hline
+\end{tabularx}
+\caption{Example of noun phrases that have high PMI with different clusters of representatives for the topic: Restarting Nuclear Power Plants in Japan}
+\label{table:PMI-nuclear-jp}
+\end{CJK}
+\end{table*}
+
+
+\begin{table*}[htbp]
+\begin{CJK}{UTF8}{min}
+\centering
+\renewcommand{\arraystretch}{1.5}%
+\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+\hline
+\textbf{Segment 1(against)} & \textbf{Segment 2(middle)} & \textbf{Segment 3(for)} \\ \hline
+\begin{tabular}[c]{@{}l@{}}
+	自然エネルギー重視 \\ 高コスト \\ 原子力艦船 \\ 林業再生 \\ その準備 \\ 教科書 \\ 控訴 \\ 原発関連企業 \\ 秘密主義 \\ 産業事故 \\ 三倍 \\ 賠償スキーム \\ 適切に機能していなかったこと \\ 反原発 \\ 日米同盟 \\ 企業文化 \\ 地震安全対策 \\ 賛成・最近 \\ 核問題 \\ 官邸 \\ 志賀原子力発電所 \\ 疑問を持つ・福島原発 \\ 教訓を無視していると指摘 \\ 情報隠蔽 \\ 復興大臣 \\ 懸念・現行
+\end{tabular} 
+& 
+\begin{tabular}[c]{@{}l@{}}
+	有害廃棄物 \\ 土地利用規制法案 \\ この法案 \\ 反対・政府 \\ 財政再建 \\ イラク \\ 慎重・政府 \\ 国際的な平和協力活動 \\ 関係省庁間 \\ 保育 \\ 追加財源 \\ 特別委員会 \\ 青天井 \\ フルスペック \\ ドイツ \\ 憲法九条 \\ 代わり \\ 手法 \\ 公文書 \\ 現政権 \\ 解釈改憲 \\ 反撃能力を持つこと \\ アジア諸国 \\ 憲法解釈変更
+\end{tabular} 
+& 
+\begin{tabular}[c]{@{}l@{}}
+	イギリス \\ 無人アセット防衛能力 \\ アナログ通信 \\ 公共交通 \\ 航空機製造産業 \\ 民生部門 \\ 無人装備 \\ 海洋調査 \\ 民生技術 \\ 倫理規程 \\ メタンハイドレート \\ 技術安全保障 \\ 広義 \\ 競争力強化 \\ 同志国 \\ 人間 \\ 多国間連携 \\ 安定確保 \\ 重要物資 \\ ない世界 \\ AI \\ 核抑止 \\ 脆弱性 \\ 武器輸出三原則 \\ 経済活性化 \\ 海洋資源 \\ 詳しくない方 \\ 生産能力 \\ 核開発
+\end{tabular} \\ \hline
+\end{tabularx}
+\caption{Example of noun phrases that have high PMI with different clusters of representatives for the topic: Changing the Japanese constitution to acknowledge the JSDF}
+\label{table:PMI-constitution-jp}
+\end{CJK}
+\end{table*}
+
+\begin{table*}[htbp]
+\begin{CJK}{UTF8}{min}
+\centering
+\renewcommand{\arraystretch}{1.5}%
+\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|>{\centering\arraybackslash}X|}
+\hline
+\textbf{Segment 1(against)} & \textbf{Segment 2(middle)} & \textbf{Segment 3(for)} \\ \hline
+\begin{tabular}[c]{@{}l@{}}
+	公共放送 \\ 公立学校 \\ ケア労働 \\ 生活資金 \\ 雇用制度改革 \\ 若い船員 \\ 駐留軍 \\ 調達制度 \\ 就労確保 \\ 軍事優先 \\ 同等以上 \\ 造船業 \\ 土地取得 \\ 防衛産業 \\ ケア \\ 防衛省 \\ 専門職 \\ アフリカ \\ 医療従事者 \\ 財政安定 \\ 丁寧な説明 \\ 国土交通省 \\ 信用保証制度 \\ 投資協定 \\ 医療機関 \\ カジノ解禁 \\ 共生社会 \\ 男性 \\ 災害復旧
+\end{tabular} 
+& 
+\begin{tabular}[c]{@{}l@{}}
+	給付型奨学金 \\ 賛成・国際情勢 \\ 労働契約法 \\ 技術移転 \\ 地方都市 \\ 経済安保 \\ 問題解決 \\ 賛成・地方経済 \\ 中小零細企業 \\ 貧困問題 \\ ふるさと納税制度 \\ ユニバーサルサービス \\ 受動喫煙 \\ 定額給付金 \\ 国産ワクチン \\ 民間主導 \\ その際 \\ 低所得者支援 \\ 私立高校 \\ 運転手 \\ 国際的な協力 \\ 感染症法 \\ 与党 \\ 環境再生 \\ 地域特性 \\ 補正予算案 \\ ウクライナ情勢
+\end{tabular} 
+& 
+\begin{tabular}[c]{@{}l@{}}
+	アニマルウエルフェア \\ そこ \\ 多子加算 \\ 若者・子育て世代 \\ 庶民 \\ 国内消費 \\ ジビエ \\ 需要拡大 \\ 輸入価格 \\ 食品表示 \\ 資産デフレ \\ カーボンプライシング \\ エネルギーコスト上昇 \\ 発言をもと \\ 新たなビジネスモデル \\ 燃料価格 \\ 両面 \\ 消費行動 \\ 消費者物価 \\ アフターコロナ \\ 事業承継税制 \\ 両者 \\ 官民連携 \\ 企業間 \\ 発言を基 \\ 融資制度 \\ メリット \\ エネルギーコスト \\ 中堅企業
+\end{tabular} \\ \hline
+\end{tabularx}
+\caption{Example of noun phrases that have high PMI with different clusters of representatives for the topic: Reducing the consumption tax rate}
+\label{table:PMI-taxrate-jp}
+\end{CJK}
+\end{table*}
+
+\clearpage
+\twocolumn
+
+\FloatBarrier
+\section{Party Names and Abbreviations}
+\begin{CJK}{UTF8}{min}
+\begin{table}[htbp] % or other placement options such as [!htb]
+\centering
+\caption{Party names and abbreviations}\label{tab:Parties and abbrev}
+\begin{tabularx}{.45\textwidth}{ c|X|X } 
+\hline
+ Party Name(JP) & Party Name(EN) & Abbreviation\\  
+ \hline
+  自由民主党  & Liberal Democratic Party & LDP \\
+  \hline
+  国民民主党  & National Democratic Party & NDP \\
+  \hline
+  立憲民主党  & Constitutional Democratic Party & CDP \\
+  \hline
+  日本共産党  & Japanese Communist Party & JCP \\
+  \hline
+  公明党  & Komeito & Komeito \\
+   \hline
+  日本維新の会  & Japan Restoration Party & JRP \\
+  \hline
+  れいわ新選組  & Reiwa Shinsengumi & Reiwa \\
+  \hline
+  日本保守党  & Conservative Party of Japan & CPJ \\
+  \hline
+  参政党  & Sanseito & Sanseito \\
+  \hline
+  
+\end{tabularx}
+\end{table}
+\end{CJK}
+
+\clearpage
+\bibliographystyle{elsarticle-harv} 
+\bibliography{references}
+\end{document}

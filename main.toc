@@ -1,0 +1,36 @@
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\contentsline {section}{\numberline {2}Related Work}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Earlier methods :Roll call analysis}{1}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Earlier methods: Word frequency based approach}{1}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Wordscores - \citealt {LAVER_BENOIT_GARRY_2003}}{1}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Wordfish - \citealt {wordfishing}}{2}{subsubsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.3}Embedding-based methods}{2}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Use of LLMs}{2}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Direct prompting methodologies}{2}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Representation-based methodologies}{3}{subsubsection.2.4.2}%
+\contentsline {section}{\numberline {3}Parliamentary Speech Data}{3}{section.3}%
+\contentsline {section}{\numberline {4}Methodology}{5}{section.4}%
+\contentsline {subsection}{\numberline {4.1}L(u)PIN method by \citeauthor {kato2024lupinllmbasedpoliticalideology}}{5}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}De-noising through summarization}{5}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Automatic extraction of the axis of controversy}{6}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Results}{7}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Scaling the representatives}{7}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Topic: Defence}{7}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}Topic: Nuclear Power}{9}{subsubsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.3}Topic: Economy}{9}{subsubsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.4}Topic: Climate Change}{11}{subsubsection.5.1.4}%
+\contentsline {subsubsection}{\numberline {5.1.5}Topic: Aging Population}{11}{subsubsection.5.1.5}%
+\contentsline {subsection}{\numberline {5.2}Diachronic analysis of evolving stance of parliamentary representatives}{12}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Discussion}{12}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Quantitative evaluation: Comparison against expert estimations}{12}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Metrics of comparison}{12}{subsubsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.2}Qualitative evaluation: Common noun phrases in the different groups of scaled representatives}{14}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Key Observations}{14}{subsubsection.6.2.1}%
+\contentsline {section}{\numberline {7}Presenting the results to the public}{15}{section.7}%
+\contentsline {section}{\numberline {8}Conclusion}{15}{section.8}%
+\let \numberline \tmptocnumberline 
+\contentsline {section}{\numberline {Appendix \nobreakspace {}A}Previous work}{19}{appendix.A}%
+\contentsline {section}{\numberline {Appendix \nobreakspace {}B}GPT prompts and replies}{20}{appendix.B}%
+\contentsline {section}{\numberline {Appendix \nobreakspace {}C}Extracted political axes of debate}{22}{appendix.C}%
+\contentsline {section}{\numberline {Appendix \nobreakspace {}D}Original Japanese noun phrases with high PMI for the topics discussed section \ref {section: qual-eval}}{28}{appendix.D}%
+\contentsline {section}{\numberline {Appendix \nobreakspace {}E}Party Names and Abbreviations}{31}{appendix.E}%

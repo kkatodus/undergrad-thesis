@@ -1,0 +1,253 @@
+\begin{thebibliography}{25}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\href}[2]{#2}
+\providecommand{\path}[1]{#1}
+\providecommand{\DOIprefix}{doi:}
+\providecommand{\ArXivprefix}{arXiv:}
+\providecommand{\URLprefix}{URL: }
+\providecommand{\Pubmedprefix}{pmid:}
+\providecommand{\doi}[1]{\href{http://dx.doi.org/#1}{\path{#1}}}
+\providecommand{\Pubmed}[1]{\href{pmid:#1}{\path{#1}}}
+\providecommand{\bibinfo}[2]{#2}
+\ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
+%Type = Article
+\bibitem[{Catalinac(2018)}]{CATALINAC_2018}
+\bibinfo{author}{Catalinac, A.}, \bibinfo{year}{2018}.
+\newblock \bibinfo{title}{Positioning under alternative electoral systems:
+  Evidence from japanese candidate election manifestos}.
+\newblock \bibinfo{journal}{American Political Science Review}
+  \bibinfo{volume}{112}, \bibinfo{pages}{31–48}.
+\newblock \DOIprefix\doi{10.1017/S0003055417000399}.
+%Type = Article
+\bibitem[{Church and Hanks(1990)}]{church-hanks-1990-word}
+\bibinfo{author}{Church, K.W.}, \bibinfo{author}{Hanks, P.},
+  \bibinfo{year}{1990}.
+\newblock \bibinfo{title}{Word association norms, mutual information, and
+  lexicography}.
+\newblock \bibinfo{journal}{Computational Linguistics} \bibinfo{volume}{16},
+  \bibinfo{pages}{22--29}.
+\newblock \URLprefix \url{https://aclanthology.org/J90-1003/}.
+%Type = Article
+\bibitem[{Curini et~al.(2020)Curini, Hino and Osaka}]{Curini_Hino_Osaka_2020}
+\bibinfo{author}{Curini, L.}, \bibinfo{author}{Hino, A.},
+  \bibinfo{author}{Osaka, A.}, \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{The intensity of government–opposition divide as
+  measured through legislative speeches and what we can learn from it: Analyses
+  of japanese parliamentary debates, 1953–2013}.
+\newblock \bibinfo{journal}{Government and Opposition} \bibinfo{volume}{55},
+  \bibinfo{pages}{184–201}.
+\newblock \DOIprefix\doi{10.1017/gov.2018.15}.
+%Type = Article
+\bibitem[{Diaf et~al.(2022)Diaf, Döpke, Fritsche and
+  Rockenbach}]{sharks-minnows}
+\bibinfo{author}{Diaf, S.}, \bibinfo{author}{Döpke, J.},
+  \bibinfo{author}{Fritsche, U.}, \bibinfo{author}{Rockenbach, I.},
+  \bibinfo{year}{2022}.
+\newblock \bibinfo{title}{Sharks and minnows in a shoal of words: Measuring
+  latent ideological positions based on text mining techniques}.
+\newblock \bibinfo{journal}{European Journal of Political Economy}
+  \bibinfo{volume}{75}, \bibinfo{pages}{102179}.
+\newblock \DOIprefix\doi{https://doi.org/10.1016/j.ejpoleco.2022.102179}.
+%Type = Misc
+\bibitem[{Kato et~al.(2024)Kato, Purnomo, Cochrane and
+  Saqur}]{kato2024lupinllmbasedpoliticalideology}
+\bibinfo{author}{Kato, K.}, \bibinfo{author}{Purnomo, A.},
+  \bibinfo{author}{Cochrane, C.}, \bibinfo{author}{Saqur, R.},
+  \bibinfo{year}{2024}.
+\newblock \bibinfo{title}{L(u)pin: Llm-based political ideology nowcasting}.
+\newblock \URLprefix \url{https://arxiv.org/abs/2405.07320},
+  \href{http://arxiv.org/abs/2405.07320}{{\tt arXiv:2405.07320}}.
+%Type = Article
+\bibitem[{KENDALL(1938)}]{kendall1938}
+\bibinfo{author}{KENDALL, M.G.}, \bibinfo{year}{1938}.
+\newblock \bibinfo{title}{A new measure of rank correlation}.
+\newblock \bibinfo{journal}{Biometrika} \bibinfo{volume}{30},
+  \bibinfo{pages}{81--93}.
+\newblock \URLprefix \url{https://doi.org/10.1093/biomet/30.1-2.81},
+  \DOIprefix\doi{10.1093/biomet/30.1-2.81},
+  \href{http://arxiv.org/abs/https://academic.oup.com/biomet/article-pdf/30/1-2/81/423380/30-1-2-81.pdf}{{\tt
+  arXiv:https://academic.oup.com/biomet/article-pdf/30/1-2/81/423380/30-1-2-81.pdf}}.
+%Type = Article
+\bibitem[{van Lange and
+  Futselaar(2019)}]{Debating-Evil:-Using-Word-Embeddings-to-Analyze-Parliamentary-Debates}
+\bibinfo{author}{van Lange, M.}, \bibinfo{author}{Futselaar, R.},
+  \bibinfo{year}{2019}.
+\newblock \bibinfo{title}{Debating evil: Using word embeddings to analyze
+  parliamentary debates on war criminals in the netherlands}.
+\newblock \bibinfo{journal}{Contributions to Contemporary History}
+  \bibinfo{volume}{59}, \bibinfo{pages}{140--156}.
+\newblock \DOIprefix\doi{10.51663/pnz.59.1.07}.
+%Type = Article
+\bibitem[{Laver et~al.(2003)Laver, Benoit and Garry}]{LAVER_BENOIT_GARRY_2003}
+\bibinfo{author}{Laver, M.}, \bibinfo{author}{Benoit, K.},
+  \bibinfo{author}{Garry, J.}, \bibinfo{year}{2003}.
+\newblock \bibinfo{title}{Extracting policy positions from political texts
+  using words as data}.
+\newblock \bibinfo{journal}{American Political Science Review}
+  \bibinfo{volume}{97}, \bibinfo{pages}{311–331}.
+\newblock \DOIprefix\doi{10.1017/S0003055403000698}.
+%Type = Misc
+\bibitem[{Li et~al.(2024)Li, Li, Chen, Gui, Yang, Yu, Wang, Cai, Zhou, Shen,
+  Qian, Chen, Xue, Sun, He, Chen, Ding, Du, Mu, Pei, Zhao, Swayamdipta,
+  Neiswanger, Wei, Hu, Zhu, Chen, Lu, Shi, Qin, Fu, Tu, Yang, Yoo, Zhang,
+  Rossi, Zhan, Zhao, Ferrara, Liu, Huang, Zhang, Rothenberg, Ji, Yu, Zhao and
+  Dong}]{li2024politicalllmlargelanguagemodels}
+\bibinfo{author}{Li, L.}, \bibinfo{author}{Li, J.}, \bibinfo{author}{Chen, C.},
+  \bibinfo{author}{Gui, F.}, \bibinfo{author}{Yang, H.}, \bibinfo{author}{Yu,
+  C.}, \bibinfo{author}{Wang, Z.}, \bibinfo{author}{Cai, J.},
+  \bibinfo{author}{Zhou, J.A.}, \bibinfo{author}{Shen, B.},
+  \bibinfo{author}{Qian, A.}, \bibinfo{author}{Chen, W.}, \bibinfo{author}{Xue,
+  Z.}, \bibinfo{author}{Sun, L.}, \bibinfo{author}{He, L.},
+  \bibinfo{author}{Chen, H.}, \bibinfo{author}{Ding, K.}, \bibinfo{author}{Du,
+  Z.}, \bibinfo{author}{Mu, F.}, \bibinfo{author}{Pei, J.},
+  \bibinfo{author}{Zhao, J.}, \bibinfo{author}{Swayamdipta, S.},
+  \bibinfo{author}{Neiswanger, W.}, \bibinfo{author}{Wei, H.},
+  \bibinfo{author}{Hu, X.}, \bibinfo{author}{Zhu, S.}, \bibinfo{author}{Chen,
+  T.}, \bibinfo{author}{Lu, Y.}, \bibinfo{author}{Shi, Y.},
+  \bibinfo{author}{Qin, L.}, \bibinfo{author}{Fu, T.}, \bibinfo{author}{Tu,
+  Z.}, \bibinfo{author}{Yang, Y.}, \bibinfo{author}{Yoo, J.},
+  \bibinfo{author}{Zhang, J.}, \bibinfo{author}{Rossi, R.},
+  \bibinfo{author}{Zhan, L.}, \bibinfo{author}{Zhao, L.},
+  \bibinfo{author}{Ferrara, E.}, \bibinfo{author}{Liu, Y.},
+  \bibinfo{author}{Huang, F.}, \bibinfo{author}{Zhang, X.},
+  \bibinfo{author}{Rothenberg, L.}, \bibinfo{author}{Ji, S.},
+  \bibinfo{author}{Yu, P.S.}, \bibinfo{author}{Zhao, Y.},
+  \bibinfo{author}{Dong, Y.}, \bibinfo{year}{2024}.
+\newblock \bibinfo{title}{Political-llm: Large language models in political
+  science}.
+\newblock \URLprefix \url{https://arxiv.org/abs/2412.06864},
+  \href{http://arxiv.org/abs/2412.06864}{{\tt arXiv:2412.06864}}.
+%Type = Article
+\bibitem[{Linegar et~al.(2023)Linegar, Kocielnik and
+  Alvarez}]{LLMs-and-political-science}
+\bibinfo{author}{Linegar, M.}, \bibinfo{author}{Kocielnik, R.},
+  \bibinfo{author}{Alvarez, R.M.}, \bibinfo{year}{2023}.
+\newblock \bibinfo{title}{Large language models and political science}.
+\newblock \bibinfo{journal}{Frontiers in Political Science}
+  \bibinfo{volume}{5}.
+\newblock \URLprefix
+  \url{https://www.frontiersin.org/articles/10.3389/fpos.2023.1257092},
+  \DOIprefix\doi{10.3389/fpos.2023.1257092}.
+%Type = Article
+\bibitem[{McInnes et~al.(2018)McInnes, Healy, Saul and
+  Grossberger}]{mcinnes2018umap-software}
+\bibinfo{author}{McInnes, L.}, \bibinfo{author}{Healy, J.},
+  \bibinfo{author}{Saul, N.}, \bibinfo{author}{Grossberger, L.},
+  \bibinfo{year}{2018}.
+\newblock \bibinfo{title}{Umap: Uniform manifold approximation and projection}.
+\newblock \bibinfo{journal}{The Journal of Open Source Software}
+  \bibinfo{volume}{3}, \bibinfo{pages}{861}.
+%Type = Misc
+\bibitem[{Mens and Gallego(2023)}]{Scaling-Political-Texts-with-ChatGPT}
+\bibinfo{author}{Mens, G.L.}, \bibinfo{author}{Gallego, A.},
+  \bibinfo{year}{2023}.
+\newblock \bibinfo{title}{Scaling political texts with chatgpt}.
+\newblock \href{http://arxiv.org/abs/2311.16639}{{\tt arXiv:2311.16639}}.
+%Type = Misc
+\bibitem[{{Mielka}(2024)}]{Mielka}
+\bibinfo{author}{{Mielka}}, \bibinfo{year}{2024}.
+\newblock \bibinfo{title}{{Policy Comparison}}.
+\newblock \URLprefix \url{https://japanchoice.jp/policy-comparison}.
+%Type = Misc
+\bibitem[{Nanni et~al.(2021)Nanni, Glavas, Rehbein, Ponzetto and
+  Stuckenschmidt}]{Political-Text-Scaling-Meets-Computational-Semantics}
+\bibinfo{author}{Nanni, F.}, \bibinfo{author}{Glavas, G.},
+  \bibinfo{author}{Rehbein, I.}, \bibinfo{author}{Ponzetto, S.P.},
+  \bibinfo{author}{Stuckenschmidt, H.}, \bibinfo{year}{2021}.
+\newblock \bibinfo{title}{Political text scaling meets computational
+  semantics}.
+\newblock \href{http://arxiv.org/abs/1904.06217}{{\tt arXiv:1904.06217}}.
+%Type = Misc
+\bibitem[{{National Diet Library}(2019)}]{kokkai_diet_api}
+\bibinfo{author}{{National Diet Library}}, \bibinfo{year}{2019}.
+\newblock \bibinfo{title}{Diet proceedings search system api specifications for
+  search}.
+\newblock \bibinfo{howpublished}{\url{https://kokkai.ndl.go.jp/api.html}}.
+\newblock \URLprefix \url{https://kokkai.ndl.go.jp/api.html}.
+  \bibinfo{note}{accessed: 2025-01-15}.
+%Type = Article
+\bibitem[{Poole and Rosenthal(1985)}]{spatial-model-for-legislative-roll-call}
+\bibinfo{author}{Poole, K.T.}, \bibinfo{author}{Rosenthal, H.},
+  \bibinfo{year}{1985}.
+\newblock \bibinfo{title}{A spatial model for legislative roll call analysis}.
+\newblock \bibinfo{journal}{American Journal of Political Science}
+  \bibinfo{volume}{29}, \bibinfo{pages}{357--384}.
+\newblock \URLprefix \url{http://www.jstor.org/stable/2111172}.
+%Type = Article
+\bibitem[{Poole and Rosenthal(2001)}]{dw-nominate}
+\bibinfo{author}{Poole, K.T.}, \bibinfo{author}{Rosenthal, H.},
+  \bibinfo{year}{2001}.
+\newblock \bibinfo{title}{D-nominate after 10 years: A comparative update to
+  congress: A political-economic history of roll-call voting}.
+\newblock \bibinfo{journal}{Legislative Studies Quarterly}
+  \bibinfo{volume}{26}, \bibinfo{pages}{5--29}.
+\newblock \URLprefix \url{http://www.jstor.org/stable/440401}.
+%Type = Misc
+\bibitem[{Pujari and
+  Goldwasser(2021)}]{Understanding-Politics-via-Contextualized}
+\bibinfo{author}{Pujari, R.}, \bibinfo{author}{Goldwasser, D.},
+  \bibinfo{year}{2021}.
+\newblock \bibinfo{title}{Understanding politics via contextualized discourse
+  processing}.
+\newblock \href{http://arxiv.org/abs/2012.15784}{{\tt arXiv:2012.15784}}.
+%Type = Misc
+\bibitem[{Rashed et~al.(2022)Rashed, Kutlu, Darwish, Elsayed and
+  Bayrak}]{Embeddings-Based-Clustering-for-Target-Specific-Stances}
+\bibinfo{author}{Rashed, A.}, \bibinfo{author}{Kutlu, M.},
+  \bibinfo{author}{Darwish, K.}, \bibinfo{author}{Elsayed, T.},
+  \bibinfo{author}{Bayrak, C.}, \bibinfo{year}{2022}.
+\newblock \bibinfo{title}{Embeddings-based clustering for target specific
+  stances: The case of a polarized turkey}.
+\newblock \href{http://arxiv.org/abs/2005.09649}{{\tt arXiv:2005.09649}}.
+%Type = Misc
+\bibitem[{Reimers and Gurevych(2019)}]{reimers2019sentencebert}
+\bibinfo{author}{Reimers, N.}, \bibinfo{author}{Gurevych, I.},
+  \bibinfo{year}{2019}.
+\newblock \bibinfo{title}{Sentence-bert: Sentence embeddings using siamese
+  bert-networks}.
+\newblock \href{http://arxiv.org/abs/1908.10084}{{\tt arXiv:1908.10084}}.
+%Type = Article
+\bibitem[{Rheault and
+  Cochrane(2020)}]{Word-embeddings-for-analysis-of-ideological-placement}
+\bibinfo{author}{Rheault, L.}, \bibinfo{author}{Cochrane, C.},
+  \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{Word embeddings for the analysis of ideological
+  placement in parliamentary corpora}.
+\newblock \bibinfo{journal}{Political Analysis} \bibinfo{volume}{28},
+  \bibinfo{pages}{112–133}.
+\newblock \DOIprefix\doi{10.1017/pan.2019.26}.
+%Type = Article
+\bibitem[{Slapin and Proksch(2008)}]{wordfishing}
+\bibinfo{author}{Slapin, J.B.}, \bibinfo{author}{Proksch, S.O.},
+  \bibinfo{year}{2008}.
+\newblock \bibinfo{title}{A scaling model for estimating time-series party
+  positions from texts}.
+\newblock \bibinfo{journal}{American Journal of Political Science}
+  \bibinfo{volume}{52}, \bibinfo{pages}{705--722}.
+\newblock \URLprefix \url{http://www.jstor.org/stable/25193842}.
+%Type = Article
+\bibitem[{Spearman(1904)}]{spearman1904}
+\bibinfo{author}{Spearman, C.}, \bibinfo{year}{1904}.
+\newblock \bibinfo{title}{The proof and measurement of association between two
+  things}.
+\newblock \bibinfo{journal}{American Journal of Psychology}
+  \bibinfo{volume}{15}, \bibinfo{pages}{72--101}.
+\newblock \DOIprefix\doi{10.2307/1412159}.
+%Type = Misc
+\bibitem[{{Tohoku NLP Group}(2023)}]{Tohoku}
+\bibinfo{author}{{Tohoku NLP Group}}, \bibinfo{year}{2023}.
+\newblock \bibinfo{title}{tohoku-nlp/bert-base-japanese-v3}.
+\newblock \URLprefix
+  \url{https://huggingface.co/tohoku-nlp/bert-base-japanese-v3}.
+%Type = Misc
+\bibitem[{Wu et~al.(2023)Wu, Nagler, Tucker and
+  Messing}]{llm-latent-position-of-politicians}
+\bibinfo{author}{Wu, P.Y.}, \bibinfo{author}{Nagler, J.},
+  \bibinfo{author}{Tucker, J.A.}, \bibinfo{author}{Messing, S.},
+  \bibinfo{year}{2023}.
+\newblock \bibinfo{title}{Large language models can be used to estimate the
+  latent positions of politicians}.
+\newblock \href{http://arxiv.org/abs/2303.12057}{{\tt arXiv:2303.12057}}.
+
+\end{thebibliography}
