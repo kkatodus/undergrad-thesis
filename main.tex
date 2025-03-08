@@ -147,7 +147,7 @@
 \pagenumbering{arabic}
 
 \section{Introduction}
-Quantifying and scaling the political ideology of parliamentary representatives is essential for maintaining the transparency of democracy. It will give voters a more intuitive understanding of what the politicians are thinking without having to scramble through many lines of parliamentary speech records. Previously, political scientists have looked at data sources such as parliamentary voting data\citep{dw-nominate}, party manifestos\citep{CATALINAC_2018}, and more recently, parliamentary speeches.\citep{Word-embeddings-for-analysis-of-ideological-placement}.
+Quantifying and scaling the political ideology of parliamentary representatives is essential for maintaining the transparency of democracy. It will give voters a more intuitive understanding of what the politicians are thinking without having to scramble through many lines of parliamentary speech records. Previously, political scientists have looked at data sources such as parliamentary voting data \citep{dw-nominate}, party manifestos \citep{CATALINAC_2018}, and more recently, parliamentary speeches.\citep{Word-embeddings-for-analysis-of-ideological-placement}.
 However, these methods either failed to conduct a granular analysis of individual politicians or were only applicable to a subset of democracies where parliamentary voting data is available to the public. Also, some previous methods scaled the targets on a simple left-right dimension which has limited applicability in most democracies where debates occur in a more complex, multi-dimensional dynamic.
 
 The application of LLMs in political science has recently gained significant attention in the community.(\cite{LLMs-and-political-science};\cite{kato2024lupinllmbasedpoliticalideology};\cite{llm-latent-position-of-politicians};\cite{li2024politicalllmlargelanguagemodels}) Due to the nature of the discipline relying predominantly on text data such as political speeches and legislative documents, it has been difficult for political scientists to gain insight from the vast amount of textual data available. \citep{li2024politicalllmlargelanguagemodels} However with the introduction of LLMs, political scientists were empowered to process and analyze massive amounts of text data efficiently. In the context of scaling political ideologies, the works of  \citeauthor{kato2024lupinllmbasedpoliticalideology} and \citeauthor{llm-latent-position-of-politicians} apply LLMs to scale the political ideology of parliamentary representatives but in different ways. 
@@ -156,10 +156,10 @@ The methods developed by \citeauthor{kato2024lupinllmbasedpoliticalideology} all
 \begin{enumerate}
     \item \textbf{De-noising through summarization}: In their work, \citeauthor{kato2024lupinllmbasedpoliticalideology} filters the raw political speeches collected from the Japanese Diet using a BERT-based classifier. In our method, we want to summarize the filtered opinion-based sentences using an LLM and then use the embedding of these summarizations. The idea is that this will de-noise the speeches further, allowing for a more accurate latent space representation of the legislator. 
     \item \textbf{Automatic extraction of the axis of controversy}: Previous methods by \citeauthor{kato2024lupinllmbasedpoliticalideology} and \citeauthor{llm-latent-position-of-politicians} required researchers to manually choose the axis of controversy they want to place the representatives on. In the work of \citeauthor{kato2024lupinllmbasedpoliticalideology} this was the acknowledgment of JSDF in the Japanese constitution, in the work of \citeauthor{llm-latent-position-of-politicians}, this was gun-control in the US. In this work, we would like to apply LLMs to parse through the speeches of representatives and extract possible axes of controversy from the corpora. 
-    \item \textbf{Diachronic analysis of party positions on political axes}: While it is helpful to analyze the current ideological stance of representatives, examining how their position has evolved is another aspect political scientists have explored.(\cite{Debating-Evil:-Using-Word-Embeddings-to-Analyze-Parliamentary-Debates}; \cite{Word-embeddings-for-analysis-of-ideological-placement}) In this research, we have explored how the ideological stance of parties have evolved over time on certain political topics. 
+    \item \textbf{Diachronic analysis of party positions on political axes}: While it is helpful to analyze the current ideological stance of representatives, examining how their position has evolved is another aspect political scientists have explored.(\cite{Debating-Evil:-Using-Word-Embeddings-to-Analyze-Parliamentary-Debates}; \cite{Word-embeddings-for-analysis-of-ideological-placement}) In this research, we have explored how the ideological stance of parties have evolved over time on the extracted political topics. 
 \end{enumerate}
 
-We believe that these extensions will allow for a more accurate and reliable scaling of political ideologies of parliamentary representatives and will provide a more comprehensive analysis of any political system.
+We believe that these extensions will allow for a more accurate and reliable scaling of political ideologies of parliamentary representatives with reduced human intervention and will provide a more comprehensive analysis of any political system where parliamentary speeches are available.
 
 
 
@@ -171,7 +171,7 @@ In this section, we present a variety of related works ranging from earlier meth
 
 The Dynamically Weighted Nominal Three-Step Estimation (DW-NOMINATE) scores developed by \citeauthor{dw-nominate} remain the benchmark for comparing the spatial orientation of the legislator ideologies until today. It is an extension of the NOMINATE score \citep{spatial-model-for-legislative-roll-call} developed by the same authors a few years earlier, and they are based on the roll call votes of the representatives. Their algorithm aims to estimate the parameters of a utility function for each representative and expresses each representative as a point on the Euclidean space. Their work laid the foundation for the spatial expression of legislator ideologies and is a gold-standard reference for political scientists today.
 
-There are, however, limitations to their approach. The method depends heavily on the availability of the roll-call votes data, which in the case of Japanese politics is only available for a limited number of bills. It also places the politicians on a left-right singular dimension which might not be appropriate for all democracies. As \citeauthor{dw-nominate} explains, in the US political system issues can be 'bundled' together. For example, a legislator who opposes gun regulation most likely is pro-life regarding abortion and likely is against affirmative action. This interpretation of politics is however not applicable to all democracies. In Japanese politics, knowing that a politician is against acknowledging the Japanese Self-Defense Force(JSDF) in the Japanese constitution does not always tell you how the politician stands regarding other topics. Therefore, the DW-NOMINATE score cannot be used when seeking a more granular analysis of the political position. 
+There are, however, limitations to their approach. The method depends heavily on the availability of the roll-call votes data, which in the case of Japanese politics is only available for a limited number of bills. It also places the politicians on a left-right singular dimension which might not be appropriate for all democracies. As \citeauthor{dw-nominate} explains, in the US political system issues can be 'bundled' together. For example, a legislator who opposes gun regulation most likely is pro-life regarding abortion and likely is against affirmative action. This interpretation of politics is however not applicable to all democracies. In Japanese politics, for example, knowing that a politician is against acknowledging the Japanese Self-Defense Force(JSDF) in the Japanese constitution does not always tell you how the politician stands regarding other topics. Therefore, the DW-NOMINATE score cannot be used when seeking a more granular analysis of the political position of representatives in regards to various political topics. 
 
 \subsection{Earlier methods: Word frequency based approach}
 \subsubsection{Wordscores - \citealt{LAVER_BENOIT_GARRY_2003}}
@@ -198,19 +198,19 @@ Another example of a text embedding-based approach to political positioning woul
 
 Instead of focusing on the embeddings of the text data such as legislative speech or party manifesto, \citeauthor{Word-embeddings-for-analysis-of-ideological-placement} focus on the embeddings of the indicator variables which represent the party affiliation of the text. They call this the party embeddings. In their work, they implement a shallow neural network consisting of one hidden layer that aims to predict the word at position \textit{t} given words appearing in a window $\Delta$ before and after the word. The model input consists of these surrounding words as well as the party indicator variable. After fitting the model to the parliamentary speech corpora, they got a model that is capable of embedding the party indicator variables in a meaningful manner. They then reduce the dimension of the embeddings using the PCA method and analyze what the dimensions semantically represent. They also verify that the political positioning they retrieved is aligned with the previous methods such as DW-NOMINATE and other expert surveys. Furthermore, they conduct an intriguing diachronic analysis of the US Senate as well as the British and Canadian parliaments and show how the ideological placement of the parties has evolved on different dimensions. 
 
-While these embedding-based approaches proved to be powerful methods to capture a more nuanced representation of political entities, they have limitations. Most of the methods require a lot of manual labor in terms of data labeling, data cleaning, and model training. Also, the methods are computationally expensive and require a lot of computational resources to train the models. Our method aims to overcome these limitations by automating most of the steps and using pre-trained LLMs to embed the text data. Our method also allows for a more flexible scaling of the political entities on the axes of the researcher's choice.
+While these embedding-based approaches proved to be powerful methods to capture a more nuanced representation of political entities, they have limitations. Most of the methods require a lot of manual labor in terms of data labeling, data cleaning, and model training. Our method aims to overcome these limitations by automating most of the steps and using pre-trained LLMs to embed the text data. Our method also allows for a more flexible scaling of the political entities on the axes of the researcher's choice.
 
 \subsection{Use of LLMs}
 At the time of writing this paper, we are only aware of a few works that explore the application of LLMs in political ideology positioning. This section will introduce these works and their contributions. 
 \subsubsection{Direct prompting methodologies}
-\citeauthor{llm-latent-position-of-politicians} use a pair-wise comparison approach of senators to position them on a liberal-conservative scale or topics such as abortion and gun control. In their method, they provide the GPT-3.5 model by OpenAI with two senators to compare and prompt it to give the senator who is more pro-choice, conservative, or supporting gun control. By repeating this match-up between senators, they can position the senators on a spectrum using the Bradley-Terry model. They show that while the \textbf{LaMP}(\textbf{La}nguage \textbf{M}odel \textbf{P}airwise comparison) scores obtained highly correlate with the DW-NOMINATE scores, the scores do not simply parrot the DW-NOMINATE scores. They argue that LaMP scores are more aligned with surveyed political scientists because LaMP scores do not solely rely on roll-call votes like DW-NOMINATE scores. instead, it takes into account how the politicians are depicted on mainstream media and other sources that were used to train the GPT-3.5 model. One major concern and limitation of this work would be that this requires the LLM to "know" about the politicians that are being compared. As LLMs are not aware of the newest text content on the internet, there will be limitations on scaling politicians that have not served before or did not receive great media coverage.
+\citeauthor{llm-latent-position-of-politicians} use a pair-wise comparison approach to position senators on ideological scales such as liberal-conservative, abortion, and gun control. In their method, they provide the GPT-3.5 model by OpenAI with two senators to compare and prompt it to give the senator who is more pro-choice, conservative, or supporting gun control. By repeating this match-up between senators, they can position the senators on a spectrum using the Bradley-Terry model. They show that while the \textbf{LaMP}(\textbf{La}nguage \textbf{M}odel \textbf{P}airwise comparison) scores obtained highly correlate with the DW-NOMINATE scores, the scores do not simply parrot the DW-NOMINATE scores. They argue that LaMP scores are more aligned with surveyed political scientists because LaMP scores do not solely rely on roll-call votes like DW-NOMINATE scores. instead, it takes into account how the politicians are depicted on mainstream media and other sources that were used to train the GPT-3.5 model. One major concern and limitation of this work would be that this requires the LLM to "know" about the politicians that are being compared. As LLMs are not aware of the newest text content on the internet, there will be limitations on scaling politicians that have not served before or did not receive great media coverage.
 
-In their work, \citeauthor{Scaling-Political-Texts-with-ChatGPT} use a prompt engineering approach to spatially position British parties and US senators on a left-right scale. They feed in British party manifestos or tweets from US senators into the GPT-4 model using the API service provided by OpenAI and task the LLM to score the given text from 0 to 100 on a left-right scale. They verify that the scores they obtained using this method correlate extensively with existing expert estimates as well as past research. The authors mention the benefit of their methodology over the work of \citeauthor{llm-latent-position-of-politicians} as their method does not require the LLM to 'know' the political actors to estimate their political ideological position as they are provided the tweets/manifestos of the political actors. They also attempt to make their method robust by averaging different iterations of prompting the LLMs to eliminate any variability due to the randomness in prompt responses.  
+In their work, \citeauthor{Scaling-Political-Texts-with-ChatGPT} use a prompt engineering approach to spatially position British parties and US senators on a left-right scale. They feed in British party manifestos or tweets from US senators into the GPT-4 model using the API service provided by OpenAI and task the LLM to score the given text from 0 to 100 on a left-right scale. They verify that the scores they obtained using this method correlate extensively with existing expert estimates as well as past research. The authors mention the benefit of their methodology over the work of \citeauthor{llm-latent-position-of-politicians} as their method does not require the LLM to "know" the political actors to estimate their political ideological position as they are provided the tweets/manifestos of the political actors. They also attempt to make their method robust by averaging different iterations of prompting the LLMs to eliminate any variability due to the randomness in prompt responses.  
 
 \subsubsection{Representation-based methodologies}
 So far, the works introduced have mainly focused on one source of text data such as tweets, parliamentary speeches, or manifestos. \citeauthor{Understanding-Politics-via-Contextualized} extends this approach by suggesting a framework to combine political text from multiple sources. They suggest a unique neural architecture, "Compositional Reader", capable of processing multiple sources of text in one shot and successfully training it on two major tasks Authorship prediction and Referenced Entity Prediction. They show that this architecture can outperform the previous BERT-based architectures. They also show that the representations of politicians learned by the model are capable of capturing a greater depth of political context compared to previous methodologies as their representations do not simply capture the linguistic context but a broader political context. Although this method guarantees a more contextualized representation of political ideologies, one bottleneck with this method would be that it requires a lot of investment in terms of computational resources and data collection, making the methodology less accessible to political science researchers who might not have the computational resource/know-how to collect the data from the wide variety of data sources.
 
-The work by \citeauthor{kato2024lupinllmbasedpoliticalideology} can be seen as a hybrid approach to the above-outlined methods. It uses GPT4o-mini to generate the reference speeches that are used to create an axis to project the legislators onto but does not directly use GPT4o-mini to scale the representatives like \citeauthor{Scaling-Political-Texts-with-ChatGPT} and \citeauthor{llm-latent-position-of-politicians} did. This way, the LLM does not have to "know" the representatives, which was an issue with \citeauthor{llm-latent-position-of-politicians} and it does not ask for numerical outputs from the LLM which is known to be vulnerable towards numerical reasoning tasks. Their method "de-noises" parliamentary speeches through a fine-tuned BERT-based classifier and uses the embeddings of the filtered speeches to create a representation of the legislators. These representations are projected onto an axis composed of two opposing political views which are either generated political speeches or hand-picked political figures. Using the latent representations of the legislators can be seen as a similar approach to the work of \citeauthor{Debating-Evil:-Using-Word-Embeddings-to-Analyze-Parliamentary-Debates} or \citeauthor{Word-embeddings-for-analysis-of-ideological-placement} but this method does not require training of their model and hence can be seen as a more light-weight approach. They show that their method correctly places the different party members on the political spectrum although we observe some dispersion in the parties, indicating room for improvement in their methodology.
+The work by \citeauthor{kato2024lupinllmbasedpoliticalideology} can be seen as a hybrid approach to the above-outlined methods. It uses GPT4o-mini to generate the reference speeches that are used to create an axis to project the legislators onto but does not directly use GPT4o-mini to scale the representatives like \citeauthor{Scaling-Political-Texts-with-ChatGPT} and \citeauthor{llm-latent-position-of-politicians} did. This way, the LLM does not have to "know" the representatives, which was an issue with \citeauthor{llm-latent-position-of-politicians} and it does not ask for numerical outputs from the LLM which is known to be vulnerable towards numerical reasoning tasks. Their method "de-noises" parliamentary speeches through a fine-tuned BERT-based classifier and uses the embeddings of the filtered speeches to create a representation of the legislators. These representations are projected onto an axis composed of two opposing political views which are either generated political speeches or hand-picked political figures. Using the latent representations of the legislators can be seen as a similar approach to the work of \citeauthor{Debating-Evil:-Using-Word-Embeddings-to-Analyze-Parliamentary-Debates} or \citeauthor{Word-embeddings-for-analysis-of-ideological-placement} but this method does not require training of their model and hence can be seen as a more light-weight approach. They show that their method correctly places the different party members on the political spectrum although we observe some dispersion in the parties, indicating room for improvement in their methodology. This paper aims to build on this work by improving the accuracy of the ideological scaling as well as introducing a diachronic analysis of the party positions on the political axes.
 
 \section{Parliamentary speech data}
 \label{section:parliamentary speech data}
@@ -259,7 +259,7 @@ Total (including historical) & 1885 members & 207750 speeches / 304444 extracted
 
 Notice in table \ref{tab:stats} that we are distinguishing between \textbf{speeches} and \textbf{speech segments}. We define speech as an instance of a representative speaking in the parliament and speech segment to be period(\begin{CJK}{UTF8}{min}。\end{CJK}in Japanese) delimited sentence inside of a speech. We are distinguishing between them because using a fine-tuned BERT model based on cl-tohoku/bert-base-japanese-v3 \citep{Tohoku}, we are classifying each speech segment into opinion-based sentences, fact-based sentences, questions, descriptive sentences, and others and extracting only the opinion-based sentences. This model is made available on huggingface. \footnote{Huggingface model: \url{https://huggingface.co/kkatodus/jp-speech-classifier}} 
 
-We used a hand-labeled dataset comprising 1,439 speech segments to fine-tune this classifier. \footnote{Code to create and fine-tune classifier available:\url{https://github.com/kkatodus/AI_projects/tree/main/jp_speech_categorization}}The number of extracted speech segments indicates how many were classified as opinion-based sentences. Also, note that we are not keeping instances of speeches containing opinion-based sentences; therefore, we have more extracted segments than instances of speeches. You can see an example of an extracted opinion-based sentence in figure \ref{fig:extracted opinion}.
+We used a hand-labeled dataset comprising 1,439 speech segments to fine-tune this classifier. \footnote{Code to create and fine-tune classifier available:\url{https://github.com/kkatodus/AI_projects/tree/main/jp_speech_categorization}}The number of extracted speech segments indicates how many were classified as opinion-based sentences. Also, note that we are not keeping instances of speeches that did not containing opinion-based sentences; therefore, we have more extracted segments than instances of speeches. You can see an example of an extracted opinion-based sentence in figure \ref{fig:extracted opinion}.
 \begin{figure}
 
 \begin{lstlisting}[language=json,firstnumber=1]
@@ -352,8 +352,7 @@ To select the appropriate prompt to summarize the opinion-based speech segments,
 
 \begin{table}[htbp] % or other placement options such as [!htb]
 \centering
-\caption{Comparison of different prompting styles for summarizing opinion-based speech segments(Translated)}
-\label{tab:summary prompt styles}
+
 \begin{tabularx}{.45\textwidth}{ p{1.7cm}|X } 
 \hline
 Base prompt & Please infer and summarize this politician's stance on Japan's defense based on the politician's statements in the following Diet proceedings. 
@@ -403,6 +402,8 @@ $\langle$ Summary Example $\rangle$
 $\langle$ Statements $\rangle$ \\
 \hline
 \end{tabularx}
+\caption{Comparison of different prompting styles for summarizing opinion-based speech segments(Translated)}
+\label{tab:summary prompt styles}
 \end{table}
 
 As you can see in figure \ref{fig:UMAP prompt comparison}, with the base prompt, we have introduced a noise in some form as we now have two clusters that seemingly are unrelated to party affiliation. After some investigation, we noticed that these two clusters were formed because of the inconsistent formatting of the reply by GPT4o-mini. One cluster represented a more formatted/bulleted reply while the other cluster represented a more essay-style reply. See in appendix \ref{fig:formatted reply GPT4o-mini summary} and \ref{fig:essay reply GPT4o-mini summary} for a comparison in reply formats. To select our final prompting style to generate the summaries, we measured the average intra-party distance of ideological placement. The \textbf{base prompting} style resulted in an intra-party distance of 6.65 while the \textbf{with context} prompt. The \textbf{with context + few shot prompt} resulted in 5.50 and 5.53 respectively indicating that the latter prompting styles are more effective in generating summaries that express political ideologies more effectively; with the assumption that politicians who belong to the same party are more aligned ideologically. We see that with the latter two prompting styles, there is a clear distinction between parties such as the Japanese Communist Party(JCP) which are known to be more on the liberal side versus parties such as the Liberal Democratic Party(LDP) which are known to be more on the conservative side. 
@@ -442,7 +443,7 @@ One key bottleneck to scaling the method of \citeauthor{kato2024lupinllmbasedpol
   \label{fig:axis-extraction}
 \end{figure}
 
-Using this method, we were able to extract axes of political controversy for each of the topics of defense, aging population, climate change, and economic policy. In figure \ref{fig: raw axes extraction} you can see the raw reply from GPT4o-mini to extract the axes of controversy and see figure \ref{fig: extracted axes defense},\ref{fig: extracted axes economy},\ref{fig: extracted axes nuclear power}, \ref{fig: extracted axes aging population},  \ref{fig: extracted axes climate change} for the extracted axes from each topic processed to JSON format. Note that while we did scale the politicians on all of the extracted axes, some of the extracted axes were not suitable scaling as they were very vague or did not directly relate to the topic of interest. Therefore in section \ref{section:results}, we will only show the results where we decided that the extracted axes were appropriate.
+Using this method, we were able to extract axes of political controversy for each of the topics of defense, aging population, climate change, and economic policy. In figure \ref{fig: raw axes extraction} you can see the raw reply from GPT4o-mini to extract the axes of controversy and see figure \ref{fig: extracted axes defense},\ref{fig: extracted axes economy},\ref{fig: extracted axes nuclear power}, \ref{fig: extracted axes aging population},  \ref{fig: extracted axes climate change} for the extracted axes from each topic processed to JSON format. Note that while we did scale the politicians on all of the extracted axes, some of the extracted axes were not suitable for scaling as they were very vague or did not directly relate to the topic of interest. Therefore in section \ref{section:results}, we will only show the results where we decided that the extracted axes were appropriate.
 
 \begin{figure}[htbp]
     \centering
@@ -498,7 +499,9 @@ The final aspect of our methodology is to conduct a diachronic analysis of party
 	  \caption{Graphical representation of the output of diachronic analysis}
 	  \label{fig:diachronic}
 \end{figure}
-	
+
+\subsection{Computation and costs}
+We spent 103.39 USD on OpenAI API usage and the entire research was conducted on a single aorus 15p laptop with an intel i7-11800H CPU and an NVIDIA GeForce RTX 3070 Laptop GPU. 
 
 \FloatBarrier
 
@@ -728,14 +731,16 @@ We have conducted a diachronic analysis of mean party ideological positions of L
 		\begin{subfigure}{0.48\textwidth}
 		  \centering
 		  \includegraphics[width=\textwidth]{figs/results/diachronic_defence/自衛隊の憲法明記_防衛_diachronic_change.png}
-		  \caption{Visualization of mean party ideological position for years between 2000-2024 - Black: LDP, Red: JCP, Lightblue: Komeito}
+		  \caption{Visualization of mean party ideological position for years between 2000-2024 \\\hspace{\textwidth}Black: LDP, Red: JCP, Lightblue: Komeito}
 		  \label{fig:sub1}
 		\end{subfigure}
 		\hfill
 		\begin{subfigure}{0.48\textwidth}
 		  \centering
 		  \includegraphics[width=\textwidth]{figs/results/diachronic_defence/自衛隊の憲法明記_diachronic_umap.png}
-		  \caption{UMAP visualization of ideological position of parties for years between 2000-2024 - Blue point: Pro Red point: Con}
+		  \caption{UMAP visualization of ideological position of parties for years between 2000-2024 \\\hspace{\textwidth} 
+		  Black: LDP, Red: JCP, Lightblue: Komeito\\\hspace{\textwidth}
+		  Blue circle:Pro Red circle: Con}
 		  \label{fig:sub2}
 		\end{subfigure}
 	\caption{Acknowledgement of JSDF in the Japanese constitution}
@@ -747,14 +752,16 @@ We have conducted a diachronic analysis of mean party ideological positions of L
 		\begin{subfigure}{0.48\textwidth}
 		  \centering
 		  \includegraphics[width=\textwidth]{figs/results/diachronic_defence/防衛予算の増額_防衛_diachronic_change.png}
-		  \caption{Visualization of mean party ideological position for years between 2000-2024 - Black: LDP, Red: JCP, Lightblue: Komeito}
+		  \caption{Visualization of mean party ideological position for years between 2000-2024 \\\hspace{\textwidth} Black: LDP, Red: JCP, Lightblue: Komeito}
 		  \label{fig:sub1}
 		\end{subfigure}
 		\hfill
 		\begin{subfigure}{0.48\textwidth}
 		  \centering
 		  \includegraphics[width=\textwidth]{figs/results/diachronic_defence/防衛予算の増額_diachronic_umap.png}
-		  \caption{UMAP visualization of ideological position of parties for years between 2000-2024 - Blue point: Pro Red point: Con}
+		  \caption{UMAP visualization of ideological position of parties for years between 2000-2024 \\\hspace{\textwidth} 
+		  Black: LDP, Red: JCP, Lightblue: Komeito\\\hspace{\textwidth}
+		  Blue circle:Pro Red circle: Con }
 		  \label{fig:sub2}
 		\end{subfigure}
 	\caption{Increase in defense budget}
@@ -766,15 +773,16 @@ We have conducted a diachronic analysis of mean party ideological positions of L
 		\begin{subfigure}{0.48\textwidth}
 		  \centering
 		  \includegraphics[width=\textwidth]{figs/results/diachronic_nuclear/原発の再稼働について_原発_diachronic_change.png}
-		  \caption{Visualization of mean party ideological position for years between 2000-2024 - Black: LDP, Red: JCP, Lightblue: Komeito}
+		  \caption{Visualization of mean party ideological position for years between 2000-2024 \\\hspace{\textwidth}  Black: LDP, Red: JCP, Lightblue: Komeito}
 		  \label{fig:sub1}
 		\end{subfigure}
 		\hfill
 		\begin{subfigure}{0.48\textwidth}
 		  \centering
 		  \includegraphics[width=\textwidth]{figs/results/diachronic_nuclear/原発の再稼働について_diachronic_umap.png}
-		  \caption{UMAP visualization of ideological position of parties for years between 2000-2024 - Blue point: Pro Red point: Con}
-		  \label{fig:sub2}
+		  \caption{UMAP visualization of ideological position of parties for years between 2000-2024 \\\hspace{\textwidth} 
+		  Black: LDP, Red: JCP, Lightblue: Komeito\\\hspace{\textwidth}
+		  Blue circle:Pro Red circle: Con}
 		\end{subfigure}
 	\caption{Restarting nuclear powerplants}
 	\label{fig: results-diachronic-nuclear-restart}
@@ -785,14 +793,16 @@ We have conducted a diachronic analysis of mean party ideological positions of L
 		\begin{subfigure}{0.48\textwidth}
 		  \centering
 		  \includegraphics[width=\textwidth]{figs/results/diachronic_nuclear/原発の新設や運転期間延長について_原発_diachronic_change.png}
-		  \caption{Visualization of mean party ideological position for years between 2000-2024 - Black: LDP, Red: JCP, Lightblue: Komeito}
+		  \caption{Visualization of mean party ideological position for years between 2000-2024 \\\hspace{\textwidth} Black: LDP, Red: JCP, Lightblue: Komeito}
 		  \label{fig:sub1}
 		\end{subfigure}
 		\hfill
 		\begin{subfigure}{0.48\textwidth}
 		  \centering
 		  \includegraphics[width=\textwidth]{figs/results/diachronic_nuclear/原発の新設や運転期間延長について_diachronic_umap.png}
-		  \caption{UMAP visualization of ideological position of parties for years between 2000-2024 - Blue point: Pro Red point: Con}
+		  \caption{UMAP visualization of ideological position of parties for years between 2000-2024\\\hspace{\textwidth} 
+		  Black: LDP, Red: JCP, Lightblue: Komeito\\\hspace{\textwidth}
+		  Blue circle:Pro Red circle: Con}
 		  \label{fig:sub2}
 		\end{subfigure}
 	\caption{Building new nuclear powerplants or extending the lifetime of existing ones}
@@ -909,15 +919,18 @@ See table \ref{table:spearman} for the correlation values for different topics. 
 \begin{tabularx}{\columnwidth}{|X|X|X|X|}
 \hline
 \textbf{Topic} & \textbf{Spearman's $\rho$}& \textbf{Kendall's $\tau$} &\textbf{LCS ratio}\\ \hline
-Changing the Japanese constitution to acknowledge JSDF & 0.9286 & 0.8571& 0.625\\ \hline
-Restarting nuclear power plants in Japan & 0.9642 & 0.9047& 0.7142\\ \hline
+(Ours) Acknowledge JSDF in constitution & 0.9286 & 0.8571& 0.625\\ \hline
+\citep{kato2024lupinllmbasedpoliticalideology} Acknowledge JSDF in constitution & 0.8857 & 0.7333& 0.5\\ \hline
+(Ours) Restarting nuclear power plants & 0.9642 & 0.9047& 0.7142\\ \hline
+\citep{kato2024lupinllmbasedpoliticalideology} Restarting nuclear power plants & 0.4857 & 0.3333& 0.8333\\ \hline
+
 Reducing the consumption tax rate & -0.7 & -0.6 & 0.8\\ \hline
 \end{tabularx}
 \caption{Correlation metrics for different topics}
 \label{table:spearman}
 \end{table}
 
-For the topic of reducing the consumption tax rate, we see that the Spearman's $\rho$ and Kendall's $\tau$ are negative. This is because the Reiwa party is placed on the opposite side of the ordering. However, all of the other parties are placed in the same order as the expert predictions and hence the LCS ratio score is high. Overall, the above results indicate that our methodology is able to robustly scale the political stance of parliamentary representatives on different topics.
+For the topic of reducing the consumption tax rate, we see that the Spearman's $\rho$ and Kendall's $\tau$ are negative. This is because the Reiwa party is placed on the opposite side of the ordering. However, all of the other parties are placed in the same order as the expert predictions and hence the LCS ratio score is high. For the topic of acknowledgement of JSDF in constitution and restarting nuclear power plants, we have compared our correlation values to the correlation values obtained by the ordering of \citeauthor{kato2024lupinllmbasedpoliticalideology}. We see that our methodology obtains a higher correlation value when compared to the expert predictions. Overall, the above results indicate that our methodology is able to robustly scale the political stance of parliamentary representatives on different topics.
 
 \FloatBarrier
 \subsection{Qualitative evaluation: Common noun phrases in the different groups of scaled representatives}
@@ -963,6 +976,7 @@ Below we outline some key observations from the PMI analysis:
 	\end{itemize}
 \end{itemize}
 
+Overall the PMI analysis has provided us with a deeper understanding of the stance of the representatives in the different clusters. The words that are associated with the different clusters were aligned with the ideological positioning of the clusters which indicates that our scaling methodology is able to accurately capture the stance of the representatives on different topics.
 
 
 \begin{table*}[htbp]
@@ -1049,6 +1063,8 @@ See figure \ref{fig:diachronic-defence} for the diachronic analysis of party pos
 \subsubsection{Nuclear Power}
 See figure \ref{fig:diachronic-nuclear} for the diachronic analysis of party positions on topic of building new nuclear powerplants or extending the lifetime of existing ones with the key events. We see that the LDP and Komeito have been in favor of building new nuclear powerplants or extending the lifetime of existing ones until 2011. However, after the Fukushima nuclear disaster in 2011, we see that the LDP and Komeito have shifted their stance to be more cautious towards nuclear power. This cautious attitude lasted until around 2013 where we see a rebound in pro-nuclear stance by the LDP and Komeito, possibly fuelled by the energy crisis that Japan faced due to the shutdown of nuclear powerplants as well as the Russian invasion of Crimea in 2014 and invasion of mainland Ukraine in 2022. The JCP has been against building new nuclear powerplants or extending the lifetime of existing ones from around 2009 onwards. 
 
+Overall, our diachronic analysis of ideological positioning of Japanese parties were aligned with our understanding of the events that have influenced Japanese politics during the timeperiod. This indicates that our methodology can also be used to conduct a dynamic analysis of shifts in party positions on different political axes and is not limited to a static analysis concerned only with the current positions of the parties.
+
 \begin{figure}
 	\centering
 	  \centering
@@ -1089,9 +1105,11 @@ The authors have created a web application to make this research public and to e
 \end{figure}
 
 \section{Conclusion}
-This research presents an LLM-driven framework for scaling the political ideology of parliamentary representatives, addressing key limitations in previous methodologies. By implementing speech summarization for noise reduction, automatic extraction of axes of controversy, and diachronic analysis of ideological shifts, our approach provides a more refined and scalable method for political stance estimation. The results demonstrate that our method aligns closely with expert estimations while offering a more automated and flexible approach to ideological scaling. We were able to verify that the temporal shift in party positions on key political axes aligns with historical events and political developments.
+This research presents an LLM-driven framework for scaling the political ideology of parliamentary representatives, addressing key limitations in previous methodologies. By implementing speech summarization for noise reduction, automatic extraction of axes of controversy, and diachronic analysis of ideological shifts, our approach provides a more refined, rounded and scalable method for political stance estimation. 
 
-Additionally, qualitative analysis of political discourse reveals key thematic differences between ideological clusters, further validating the effectiveness of our method. The findings have been integrated into KOKKAI DOC, making them publicly accessible to enhance political transparency and facilitate informed decision-making among voters.
+During our validation process, we showed quantitatively that our estimations align with expert prediction while qualitatively, we identified the semantics associated with the different clusters of representatives. These two evaluations indicated that the proposed methodology is robust and accurate in scaling the political ideology of parliamentary representatives. Furthermore, our diachronic analysis of party positions aligned closely with political events that have influenced Japanese politics, demonstrating the effectiveness of our method in capturing dynamic shifts in party positions.
+
+Our research also went beyond the academic realm by creating a web application to make this research public to be practically leveraged by the public. This application will empower Japanese voters in the future to make a more informed and nuanced voting decision in future elections.
 
 Future work could extend this approach to broader political systems and explore ways to extract more meaningful axes of controversy. By continuously improving the framework, we aim to contribute to a more transparent and data-driven understanding of parliamentary ideologies.
 
