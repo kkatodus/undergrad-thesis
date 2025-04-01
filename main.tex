@@ -137,14 +137,21 @@
 %% main text
 \pagenumbering{roman}
 \onecolumn
-\tableofcontents
-\newpage
-\listoffigures
-\newpage
-\listoftables
+% \tableofcontents
+% \newpage
+% \listoffigures
+% \newpage
+% \listoftables
 
 \twocolumn
 \pagenumbering{arabic}
+
+\section{Abstract}
+This paper introduces an LLM-driven framework designed to accurately scale the political issue stances of parliamentary representatives. By leveraging advanced natural language processing techniques and large language models, the proposed methodology refines and enhances previous approaches by addressing key challenges such as noisy speech data, manual bias in selecting political axes, and the lack of dynamic, diachronic analysis. The framework incorporates three major innovations: (1) de-noising parliamentary speeches via summarization to produce cleaner, more consistent opinion embeddings; (2) automatic extraction of axes of political controversy from legislators’ speech summaries; and (3) a diachronic analysis that tracks the evolution of party positions over time.
+
+We conduct quantitative and qualitative evaluations to verify our methodology. Quantitative evaluations demonstrate high correlation with expert predictions across various political topics, while qualitative analyses reveal meaningful associations between language patterns and political ideologies. This research aims to have an impact beyond the field of academia by making the results accessible by the public on teh web application: kokkaidoc.com. We are hoping that through our application, Japanese voters can gain a data-driven insight into the political landscape which aids them to make more nuanced voting decisions. 
+
+Overall, this work contributes to the growing body of research that applies LLMs in political science, offering a flexible and reliable framework for scaling political positions from parliamentary speeches. But also explores the practical applications of the research in the real world to have real world impact. 
 
 \section{Introduction}
 Quantifying and scaling the issue-specific stances of parliamentary representatives is essential for maintaining the transparency of democracy. It will give voters a more intuitive understanding of what the politicians are thinking without having to search through many lines of parliamentary speech records. Previously, political scientists have looked at data sources such as parliamentary voting data \citep{dw-nominate}, party manifestos \citep{CATALINAC_2018}, and more recently, parliamentary speeches \citep{Word-embeddings-for-analysis-of-ideological-placement}. Our method builds on these previous works and aims to provide a flexible and reliable way to scale the stances of parliamentary representatives using advanced NLP techniques and Large Language Models (LLMs).
