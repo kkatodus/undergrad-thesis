@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.11.9)  1 APR 2025 16:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.11.9)  1 APR 2025 19:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1008,7 +1008,7 @@ File: utxsyc.fd 2000/12/15 v3.1
 )pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.177 
+l.179 
        [1
 
 
@@ -1016,179 +1016,179 @@ l.177
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\begingroup' on input line 187.
+(hyperref)                removing `\begingroup' on input line 189.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 187.
+(hyperref)                removing `\let' on input line 189.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 187.
+(hyperref)                removing `\<let>-command' on input line 189.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\NAT@ctype' on input line 187.
+(hyperref)                removing `\NAT@ctype' on input line 189.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 187.
+(hyperref)                removing `\z@' on input line 189.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 187.
+(hyperref)                removing `\let' on input line 189.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 187.
+(hyperref)                removing `\new@ifnextchar' on input line 189.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 187.
+(hyperref)                removing `subscript' on input line 189.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 187.
+(hyperref)                removing `subscript' on input line 189.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 187.
+(hyperref)                removing `subscript' on input line 189.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\begingroup' on input line 192.
+(hyperref)                removing `\begingroup' on input line 194.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 192.
+(hyperref)                removing `\let' on input line 194.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 192.
+(hyperref)                removing `\<let>-command' on input line 194.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\NAT@ctype' on input line 192.
+(hyperref)                removing `\NAT@ctype' on input line 194.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 192.
+(hyperref)                removing `\z@' on input line 194.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 192.
+(hyperref)                removing `\let' on input line 194.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 192.
+(hyperref)                removing `\new@ifnextchar' on input line 194.
 
 [2] [3]
-Underfull \hbox (badness 2376) in paragraph at lines 247--247
+Underfull \hbox (badness 2376) in paragraph at lines 249--249
 \OT1/txr/m/n/10 er-a-tion, Restart, De-com-mis-sion-
  []
 
 
-Underfull \hbox (badness 1264) in paragraph at lines 247--247
+Underfull \hbox (badness 1264) in paragraph at lines 249--249
 \OT1/txr/m/n/10 ing, Nu-clear fuel, Ra-dioac-tiv-ity,
  []
 
 
-Underfull \hbox (badness 3128) in paragraph at lines 247--247
+Underfull \hbox (badness 3128) in paragraph at lines 249--249
 \OT1/txr/m/n/10 Ra-dioac-tive waste, En-ergy pol-
  []
 
 
-Underfull \hbox (badness 7012) in paragraph at lines 247--247
+Underfull \hbox (badness 7012) in paragraph at lines 249--249
 \OT1/txr/m/n/10 icy, Base load power source,
  []
 
 
-Underfull \hbox (badness 1354) in paragraph at lines 247--247
+Underfull \hbox (badness 1354) in paragraph at lines 249--249
 []|\OT1/txr/m/n/10 declining birthrate, fer-til-ity rate,
  []
 
 
-Underfull \hbox (badness 1253) in paragraph at lines 247--247
+Underfull \hbox (badness 1253) in paragraph at lines 249--249
 \OT1/txr/m/n/10 , Car-bon Diox-ide, De-car-boniza-
  []
 
 
-Underfull \hbox (badness 3679) in paragraph at lines 247--247
+Underfull \hbox (badness 3679) in paragraph at lines 249--249
 \OT1/txr/m/n/10 sump-tion, Ex-port/Im-port, Small
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--265
+Underfull \hbox (badness 10000) in paragraph at lines 267--267
 []|\OT1/txr/m/n/10 Representatives
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--265
+Underfull \hbox (badness 10000) in paragraph at lines 267--267
 []|\OT1/txr/m/n/10 Speeches /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--265
+Underfull \hbox (badness 10000) in paragraph at lines 267--267
 \OT1/txr/m/n/10 Speech seg-
  []
 
 
-Underfull \hbox (badness 5696) in paragraph at lines 265--265
+Underfull \hbox (badness 5696) in paragraph at lines 267--267
 []|\OT1/txr/m/n/10 Current Rep-re-
  []
 
 
-Underfull \hbox (badness 1082) in paragraph at lines 265--265
+Underfull \hbox (badness 1082) in paragraph at lines 267--267
 []|\OT1/txr/m/n/10 465 mem-bers /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--265
+Underfull \hbox (badness 10000) in paragraph at lines 267--267
 \OT1/txr/m/n/10 / 90575 ex-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--265
+Underfull \hbox (badness 10000) in paragraph at lines 267--267
 \OT1/txr/m/n/10 tracted seg-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--265
+Underfull \hbox (badness 10000) in paragraph at lines 267--267
 []|\OT1/txr/m/n/10 Current Coun-
  []
 
 
-Underfull \hbox (badness 1082) in paragraph at lines 265--265
+Underfull \hbox (badness 1082) in paragraph at lines 267--267
 []|\OT1/txr/m/n/10 240 mem-bers /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--265
+Underfull \hbox (badness 10000) in paragraph at lines 267--267
 \OT1/txr/m/n/10 / 44223 ex-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--265
+Underfull \hbox (badness 10000) in paragraph at lines 267--267
 \OT1/txr/m/n/10 tracted seg-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--265
+Underfull \hbox (badness 10000) in paragraph at lines 267--267
 []|\OT1/txr/m/n/10 207750
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--265
+Underfull \hbox (badness 10000) in paragraph at lines 267--267
 \OT1/txr/m/n/10 speeches /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--265
+Underfull \hbox (badness 10000) in paragraph at lines 267--267
 \OT1/txr/m/n/10 304444 ex-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--265
+Underfull \hbox (badness 10000) in paragraph at lines 267--267
 \OT1/txr/m/n/10 tracted seg-
  []
 
@@ -1199,22 +1199,22 @@ File: UTF8.enc 2015/04/18 4.8.4
 ) (/usr/share/texmf/tex/latex/CJK/UTF8/UTF8.chr
 File: UTF8.chr 2015/04/18 4.8.4
 )
-LaTeX Font Info:    Trying to load font information for C70+min on input line 270.
+LaTeX Font Info:    Trying to load font information for C70+min on input line 272.
  (/usr/share/texmf/tex/latex/CJK/UTF8/c70min.fd
 File: c70min.fd 2008/12/29 4.8.2
 ) (/usr/share/texmf/tex/latex/CJK/UTF8/c70min.fdx
 File: c70min.fdx 2008/12/29 4.8.2
 )
-Underfull \hbox (badness 10000) in paragraph at lines 270--270
+Underfull \hbox (badness 10000) in paragraph at lines 272--272
 [][][]\OT1/txr/m/n/8 Huggingface model: []$\OT1/cmtt/m/n/8 https : / / huggingface . co / kkatodus /
  []
 
-LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 277.
-LaTeX Font Info:    No file OMScmtt.fd. on input line 277.
+LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 279.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 279.
 
 LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              using `OMS/txsy/m/n' instead
-(Font)              for symbol `textbraceleft' on input line 277.
+(Font)              for symbol `textbraceleft' on input line 279.
 
 [4]
 
@@ -1222,7 +1222,7 @@ pdfTeX warning: pdflatex (file ./figs/data collection pipeline.pdf): PDF inclusi
 <figs/data collection pipeline.pdf, id=315, 722.7pt x 406.51875pt>
 File: figs/data collection pipeline.pdf Graphic file (type pdf)
 <use figs/data collection pipeline.pdf>
-Package pdftex.def Info: figs/data collection pipeline.pdf  used on input line 310.
+Package pdftex.def Info: figs/data collection pipeline.pdf  used on input line 312.
 (pdftex.def)             Requested size: 252.0pt x 141.75023pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1233,36 +1233,36 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\begingroup' on input line 327.
+(hyperref)                removing `\begingroup' on input line 329.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 327.
+(hyperref)                removing `\let' on input line 329.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 327.
+(hyperref)                removing `\<let>-command' on input line 329.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\NAT@ctype' on input line 327.
+(hyperref)                removing `\NAT@ctype' on input line 329.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ne' on input line 327.
+(hyperref)                removing `\@ne' on input line 329.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\let' on input line 327.
+(hyperref)                removing `\let' on input line 329.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 327.
+(hyperref)                removing `\new@ifnextchar' on input line 329.
 
 <figs/projectionphase.pdf, id=321, 722.7pt x 406.51875pt>
 File: figs/projectionphase.pdf Graphic file (type pdf)
 <use figs/projectionphase.pdf>
-Package pdftex.def Info: figs/projectionphase.pdf  used on input line 342.
+Package pdftex.def Info: figs/projectionphase.pdf  used on input line 344.
 (pdftex.def)             Requested size: 252.0pt x 141.75023pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1273,70 +1273,70 @@ pdfTeX warning: pdflatex (file ./figs/summarization.pdf): PDF inclusion: found P
 <figs/summarization.pdf, id=393, 722.7pt x 406.51875pt>
 File: figs/summarization.pdf Graphic file (type pdf)
 <use figs/summarization.pdf>
-Package pdftex.def Info: figs/summarization.pdf  used on input line 354.
+Package pdftex.def Info: figs/summarization.pdf  used on input line 356.
 (pdftex.def)             Requested size: 252.0pt x 141.75023pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 414--414
+Underfull \hbox (badness 10000) in paragraph at lines 416--416
 []|\OT1/txr/m/n/10 Base
  []
 
 
-Underfull \hbox (badness 2111) in paragraph at lines 414--414
+Underfull \hbox (badness 2111) in paragraph at lines 416--416
 \OT1/txr/m/n/10 on the politi-cian's state-ments in the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 414--414
+Underfull \hbox (badness 10000) in paragraph at lines 416--416
 
  []
 
 
-Underfull \hbox (badness 7291) in paragraph at lines 414--414
+Underfull \hbox (badness 7291) in paragraph at lines 416--416
 []|\OT1/txr/m/n/10 With Con-
  []
 
 
-Underfull \hbox (badness 1137) in paragraph at lines 414--414
+Underfull \hbox (badness 1137) in paragraph at lines 416--416
 \OT1/txr/m/n/10 the fol-low-ing Diet pro-ceed-ings, in-fer
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 414--414
+Underfull \hbox (badness 10000) in paragraph at lines 416--416
 
  []
 
 
-Underfull \hbox (badness 2111) in paragraph at lines 414--414
+Underfull \hbox (badness 2111) in paragraph at lines 416--416
 \OT1/txr/m/n/10 This sum-mary is in-tended for those
  []
 
 
-Underfull \hbox (badness 2376) in paragraph at lines 414--414
+Underfull \hbox (badness 2376) in paragraph at lines 416--416
 \OT1/txr/m/n/10 that is easy to un-der-stand even for
  []
 
 
-Underfull \hbox (badness 7291) in paragraph at lines 414--414
+Underfull \hbox (badness 7291) in paragraph at lines 416--416
 []|\OT1/txr/m/n/10 With Con-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 414--414
+Underfull \hbox (badness 10000) in paragraph at lines 416--416
 \OT1/txr/m/n/10 text and
  []
 
 
-Underfull \hbox (badness 1137) in paragraph at lines 414--414
+Underfull \hbox (badness 1137) in paragraph at lines 416--416
 \OT1/txr/m/n/10 the fol-low-ing Diet pro-ceed-ings, in-fer
  []
 
 
-Underfull \hbox (badness 2111) in paragraph at lines 414--414
+Underfull \hbox (badness 2111) in paragraph at lines 416--416
 \OT1/txr/m/n/10 This sum-mary is in-tended for those
  []
 
 
-Underfull \hbox (badness 2376) in paragraph at lines 414--414
+Underfull \hbox (badness 2376) in paragraph at lines 416--416
 \OT1/txr/m/n/10 that is easy to un-der-stand even for
  []
 
@@ -1347,17 +1347,17 @@ pdfTeX warning: pdflatex (file ./figs/summarization.pdf): PDF inclusion: multipl
 <figs/base_prompt_umap.png, id=451, 462.528pt x 346.896pt>
 File: figs/base_prompt_umap.png Graphic file (type png)
 <use figs/base_prompt_umap.png>
-Package pdftex.def Info: figs/base_prompt_umap.png  used on input line 425.
+Package pdftex.def Info: figs/base_prompt_umap.png  used on input line 427.
 (pdftex.def)             Requested size: 114.84064pt x 86.13094pt.
 <figs/ie_prompt_umap.png, id=453, 462.528pt x 346.896pt>
 File: figs/ie_prompt_umap.png Graphic file (type png)
 <use figs/ie_prompt_umap.png>
-Package pdftex.def Info: figs/ie_prompt_umap.png  used on input line 430.
+Package pdftex.def Info: figs/ie_prompt_umap.png  used on input line 432.
 (pdftex.def)             Requested size: 114.84064pt x 86.13094pt.
 <figs/ie_few_shot_prompt_umap.png, id=454, 462.528pt x 346.896pt>
 File: figs/ie_few_shot_prompt_umap.png Graphic file (type png)
 <use figs/ie_few_shot_prompt_umap.png>
-Package pdftex.def Info: figs/ie_few_shot_prompt_umap.png  used on input line 435.
+Package pdftex.def Info: figs/ie_few_shot_prompt_umap.png  used on input line 437.
 (pdftex.def)             Requested size: 114.84064pt x 86.13094pt.
 
 
@@ -1365,7 +1365,7 @@ pdfTeX warning: pdflatex (file ./figs/axis.pdf): PDF inclusion: found PDF versio
 <figs/axis.pdf, id=458, 722.7pt x 406.51875pt>
 File: figs/axis.pdf Graphic file (type pdf)
 <use figs/axis.pdf>
-Package pdftex.def Info: figs/axis.pdf  used on input line 450.
+Package pdftex.def Info: figs/axis.pdf  used on input line 452.
 (pdftex.def)             Requested size: 252.0pt x 141.75023pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1376,7 +1376,7 @@ pdfTeX warning: pdflatex (file ./figs/diachronic projection.pdf): PDF inclusion:
 <figs/diachronic projection.pdf, id=472, 722.7pt x 406.51875pt>
 File: figs/diachronic projection.pdf Graphic file (type pdf)
 <use figs/diachronic projection.pdf>
-Package pdftex.def Info: figs/diachronic projection.pdf  used on input line 500.
+Package pdftex.def Info: figs/diachronic projection.pdf  used on input line 502.
 (pdftex.def)             Requested size: 252.0pt x 141.75023pt.
 
 
@@ -1384,7 +1384,7 @@ pdfTeX warning: pdflatex (file ./figs/diachronic vis.pdf): PDF inclusion: found 
 <figs/diachronic vis.pdf, id=473, 722.7pt x 406.51875pt>
 File: figs/diachronic vis.pdf Graphic file (type pdf)
 <use figs/diachronic vis.pdf>
-Package pdftex.def Info: figs/diachronic vis.pdf  used on input line 507.
+Package pdftex.def Info: figs/diachronic vis.pdf  used on input line 509.
 (pdftex.def)             Requested size: 252.0pt x 141.75023pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1399,12 +1399,12 @@ pdfTeX warning: pdflatex (file ./figs/diachronic vis.pdf): PDF inclusion: multip
 <figs/results/defence/自衛隊の憲法明記_gen_violin_plot.png, id=546, 722.7pt x 722.7pt>
 File: figs/results/defence/自衛隊の憲法明記_gen_violin_plot.png Graphic file (type png)
 <use figs/results/defence/自衛隊の憲法明記_gen_violin_plot.png>
-Package pdftex.def Info: figs/results/defence/自衛隊の憲法明記_gen_violin_plot.png  used on input line 531.
+Package pdftex.def Info: figs/results/defence/自衛隊の憲法明記_gen_violin_plot.png  used on input line 533.
 (pdftex.def)             Requested size: 114.84064pt x 114.84038pt.
 <figs/results/defence/自衛隊の憲法明記_umap_gen.png, id=547, 722.7pt x 722.7pt>
 File: figs/results/defence/自衛隊の憲法明記_umap_gen.png Graphic file (type png)
 <use figs/results/defence/自衛隊の憲法明記_umap_gen.png>
-Package pdftex.def Info: figs/results/defence/自衛隊の憲法明記_umap_gen.png  used on input line 536.
+Package pdftex.def Info: figs/results/defence/自衛隊の憲法明記_umap_gen.png  used on input line 538.
 (pdftex.def)             Requested size: 114.84064pt x 114.84038pt.
 
 
@@ -1413,12 +1413,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <figs/results/defence/防衛予算の増額_gen_violin_plot.png, id=548, 722.7pt x 722.7pt>
 File: figs/results/defence/防衛予算の増額_gen_violin_plot.png Graphic file (type png)
 <use figs/results/defence/防衛予算の増額_gen_violin_plot.png>
-Package pdftex.def Info: figs/results/defence/防衛予算の増額_gen_violin_plot.png  used on input line 548.
+Package pdftex.def Info: figs/results/defence/防衛予算の増額_gen_violin_plot.png  used on input line 550.
 (pdftex.def)             Requested size: 114.84064pt x 114.84038pt.
 <figs/results/defence/防衛予算の増額_umap_gen.png, id=549, 722.7pt x 722.7pt>
 File: figs/results/defence/防衛予算の増額_umap_gen.png Graphic file (type png)
 <use figs/results/defence/防衛予算の増額_umap_gen.png>
-Package pdftex.def Info: figs/results/defence/防衛予算の増額_umap_gen.png  used on input line 553.
+Package pdftex.def Info: figs/results/defence/防衛予算の増額_umap_gen.png  used on input line 555.
 (pdftex.def)             Requested size: 114.84064pt x 114.84038pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1426,12 +1426,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <figs/results/defence/集団的自衛権の行使_gen_violin_plot.png, id=550, 722.7pt x 722.7pt>
 File: figs/results/defence/集団的自衛権の行使_gen_violin_plot.png Graphic file (type png)
 <use figs/results/defence/集団的自衛権の行使_gen_violin_plot.png>
-Package pdftex.def Info: figs/results/defence/集団的自衛権の行使_gen_violin_plot.png  used on input line 566.
+Package pdftex.def Info: figs/results/defence/集団的自衛権の行使_gen_violin_plot.png  used on input line 568.
 (pdftex.def)             Requested size: 114.84064pt x 114.84038pt.
 <figs/results/defence/集団的自衛権の行使_umap_gen.png, id=551, 722.7pt x 722.7pt>
 File: figs/results/defence/集団的自衛権の行使_umap_gen.png Graphic file (type png)
 <use figs/results/defence/集団的自衛権の行使_umap_gen.png>
-Package pdftex.def Info: figs/results/defence/集団的自衛権の行使_umap_gen.png  used on input line 571.
+Package pdftex.def Info: figs/results/defence/集団的自衛権の行使_umap_gen.png  used on input line 573.
 (pdftex.def)             Requested size: 114.84064pt x 114.84038pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1440,22 +1440,22 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <figs/results/nuclear/原発の再稼働について_gen_violin_plot.png, id=564, 722.7pt x 722.7pt>
 File: figs/results/nuclear/原発の再稼働について_gen_violin_plot.png Graphic file (type png)
 <use figs/results/nuclear/原発の再稼働について_gen_violin_plot.png>
-Package pdftex.def Info: figs/results/nuclear/原発の再稼働について_gen_violin_plot.png  used on input line 589.
+Package pdftex.def Info: figs/results/nuclear/原発の再稼働について_gen_violin_plot.png  used on input line 591.
 (pdftex.def)             Requested size: 114.84064pt x 114.84038pt.
 <figs/results/nuclear/原発の再稼働について_umap_gen.png, id=565, 722.7pt x 722.7pt>
 File: figs/results/nuclear/原発の再稼働について_umap_gen.png Graphic file (type png)
 <use figs/results/nuclear/原発の再稼働について_umap_gen.png>
-Package pdftex.def Info: figs/results/nuclear/原発の再稼働について_umap_gen.png  used on input line 595.
+Package pdftex.def Info: figs/results/nuclear/原発の再稼働について_umap_gen.png  used on input line 597.
 (pdftex.def)             Requested size: 114.84064pt x 114.84038pt.
 <figs/results/nuclear/原発の新設や運転期間延長について_gen_violin_plot.png, id=566, 722.7pt x 722.7pt>
 File: figs/results/nuclear/原発の新設や運転期間延長について_gen_violin_plot.png Graphic file (type png)
 <use figs/results/nuclear/原発の新設や運転期間延長について_gen_violin_plot.png>
-Package pdftex.def Info: figs/results/nuclear/原発の新設や運転期間延長について_gen_violin_plot.png  used on input line 606.
+Package pdftex.def Info: figs/results/nuclear/原発の新設や運転期間延長について_gen_violin_plot.png  used on input line 608.
 (pdftex.def)             Requested size: 114.84064pt x 114.84038pt.
 <figs/results/nuclear/原発の新設や運転期間延長について_umap_gen.png, id=567, 722.7pt x 722.7pt>
 File: figs/results/nuclear/原発の新設や運転期間延長について_umap_gen.png Graphic file (type png)
 <use figs/results/nuclear/原発の新設や運転期間延長について_umap_gen.png>
-Package pdftex.def Info: figs/results/nuclear/原発の新設や運転期間延長について_umap_gen.png  used on input line 611.
+Package pdftex.def Info: figs/results/nuclear/原発の新設や運転期間延長について_umap_gen.png  used on input line 613.
 (pdftex.def)             Requested size: 114.84064pt x 114.84038pt.
 
 
@@ -1464,12 +1464,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <figs/results/nuclear/原発の輸出について_gen_violin_plot.png, id=568, 722.7pt x 722.7pt>
 File: figs/results/nuclear/原発の輸出について_gen_violin_plot.png Graphic file (type png)
 <use figs/results/nuclear/原発の輸出について_gen_violin_plot.png>
-Package pdftex.def Info: figs/results/nuclear/原発の輸出について_gen_violin_plot.png  used on input line 622.
+Package pdftex.def Info: figs/results/nuclear/原発の輸出について_gen_violin_plot.png  used on input line 624.
 (pdftex.def)             Requested size: 114.84064pt x 114.84038pt.
 <figs/results/nuclear/原発の輸出について_umap_gen.png, id=569, 722.7pt x 722.7pt>
 File: figs/results/nuclear/原発の輸出について_umap_gen.png Graphic file (type png)
 <use figs/results/nuclear/原発の輸出について_umap_gen.png>
-Package pdftex.def Info: figs/results/nuclear/原発の輸出について_umap_gen.png  used on input line 627.
+Package pdftex.def Info: figs/results/nuclear/原発の輸出について_umap_gen.png  used on input line 629.
 (pdftex.def)             Requested size: 114.84064pt x 114.84038pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1478,32 +1478,32 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <figs/results/economy/外国人労働者の受け入れについて_gen_violin_plot.png, id=590, 722.7pt x 722.7pt>
 File: figs/results/economy/外国人労働者の受け入れについて_gen_violin_plot.png Graphic file (type png)
 <use figs/results/economy/外国人労働者の受け入れについて_gen_violin_plot.png>
-Package pdftex.def Info: figs/results/economy/外国人労働者の受け入れについて_gen_violin_plot.png  used on input line 644.
+Package pdftex.def Info: figs/results/economy/外国人労働者の受け入れについて_gen_violin_plot.png  used on input line 646.
 (pdftex.def)             Requested size: 114.84064pt x 114.84038pt.
 <figs/results/economy/外国人労働者の受け入れについて_umap_gen.png, id=591, 722.7pt x 722.7pt>
 File: figs/results/economy/外国人労働者の受け入れについて_umap_gen.png Graphic file (type png)
 <use figs/results/economy/外国人労働者の受け入れについて_umap_gen.png>
-Package pdftex.def Info: figs/results/economy/外国人労働者の受け入れについて_umap_gen.png  used on input line 649.
+Package pdftex.def Info: figs/results/economy/外国人労働者の受け入れについて_umap_gen.png  used on input line 651.
 (pdftex.def)             Requested size: 114.84064pt x 114.84038pt.
 <figs/results/economy/消費税の減税について_gen_violin_plot.png, id=592, 722.7pt x 722.7pt>
 File: figs/results/economy/消費税の減税について_gen_violin_plot.png Graphic file (type png)
 <use figs/results/economy/消費税の減税について_gen_violin_plot.png>
-Package pdftex.def Info: figs/results/economy/消費税の減税について_gen_violin_plot.png  used on input line 660.
+Package pdftex.def Info: figs/results/economy/消費税の減税について_gen_violin_plot.png  used on input line 662.
 (pdftex.def)             Requested size: 114.84064pt x 114.84038pt.
 <figs/results/economy/消費税の減税について_umap_gen.png, id=593, 722.7pt x 722.7pt>
 File: figs/results/economy/消費税の減税について_umap_gen.png Graphic file (type png)
 <use figs/results/economy/消費税の減税について_umap_gen.png>
-Package pdftex.def Info: figs/results/economy/消費税の減税について_umap_gen.png  used on input line 665.
+Package pdftex.def Info: figs/results/economy/消費税の減税について_umap_gen.png  used on input line 667.
 (pdftex.def)             Requested size: 114.84064pt x 114.84038pt.
 <figs/results/economy/金融緩和政策の見直し_gen_violin_plot.png, id=594, 722.7pt x 722.7pt>
 File: figs/results/economy/金融緩和政策の見直し_gen_violin_plot.png Graphic file (type png)
 <use figs/results/economy/金融緩和政策の見直し_gen_violin_plot.png>
-Package pdftex.def Info: figs/results/economy/金融緩和政策の見直し_gen_violin_plot.png  used on input line 676.
+Package pdftex.def Info: figs/results/economy/金融緩和政策の見直し_gen_violin_plot.png  used on input line 678.
 (pdftex.def)             Requested size: 114.84064pt x 114.84038pt.
 <figs/results/economy/金融緩和政策の見直し_umap_gen.png, id=595, 722.7pt x 722.7pt>
 File: figs/results/economy/金融緩和政策の見直し_umap_gen.png Graphic file (type png)
 <use figs/results/economy/金融緩和政策の見直し_umap_gen.png>
-Package pdftex.def Info: figs/results/economy/金融緩和政策の見直し_umap_gen.png  used on input line 681.
+Package pdftex.def Info: figs/results/economy/金融緩和政策の見直し_umap_gen.png  used on input line 683.
 (pdftex.def)             Requested size: 114.84064pt x 114.84038pt.
 
 
@@ -1512,12 +1512,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <figs/results/aging/少子化対策としての教育負担軽減_gen_violin_plot.png, id=597, 722.7pt x 722.7pt>
 File: figs/results/aging/少子化対策としての教育負担軽減_gen_violin_plot.png Graphic file (type png)
 <use figs/results/aging/少子化対策としての教育負担軽減_gen_violin_plot.png>
-Package pdftex.def Info: figs/results/aging/少子化対策としての教育負担軽減_gen_violin_plot.png  used on input line 699.
+Package pdftex.def Info: figs/results/aging/少子化対策としての教育負担軽減_gen_violin_plot.png  used on input line 701.
 (pdftex.def)             Requested size: 114.84064pt x 114.84038pt.
 <figs/results/aging/少子化対策としての教育負担軽減_umap_gen.png, id=598, 722.7pt x 722.7pt>
 File: figs/results/aging/少子化対策としての教育負担軽減_umap_gen.png Graphic file (type png)
 <use figs/results/aging/少子化対策としての教育負担軽減_umap_gen.png>
-Package pdftex.def Info: figs/results/aging/少子化対策としての教育負担軽減_umap_gen.png  used on input line 704.
+Package pdftex.def Info: figs/results/aging/少子化対策としての教育負担軽減_umap_gen.png  used on input line 706.
 (pdftex.def)             Requested size: 114.84064pt x 114.84038pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1528,22 +1528,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <figs/results/diachronic_defence/自衛隊の憲法明記_防衛_diachronic_change.png, id=632, 722.7pt x 722.7pt>
 File: figs/results/diachronic_defence/自衛隊の憲法明記_防衛_diachronic_change.png Graphic file (type png)
 <use figs/results/diachronic_defence/自衛隊の憲法明記_防衛_diachronic_change.png>
-Package pdftex.def Info: figs/results/diachronic_defence/自衛隊の憲法明記_防衛_diachronic_change.png  used on input line 724.
+Package pdftex.def Info: figs/results/diachronic_defence/自衛隊の憲法明記_防衛_diachronic_change.png  used on input line 726.
 (pdftex.def)             Requested size: 250.55777pt x 250.55582pt.
 <figs/results/diachronic_defence/自衛隊の憲法明記_diachronic_umap.png, id=633, 722.7pt x 722.7pt>
 File: figs/results/diachronic_defence/自衛隊の憲法明記_diachronic_umap.png Graphic file (type png)
 <use figs/results/diachronic_defence/自衛隊の憲法明記_diachronic_umap.png>
-Package pdftex.def Info: figs/results/diachronic_defence/自衛隊の憲法明記_diachronic_umap.png  used on input line 731.
+Package pdftex.def Info: figs/results/diachronic_defence/自衛隊の憲法明記_diachronic_umap.png  used on input line 733.
 (pdftex.def)             Requested size: 250.55777pt x 250.55582pt.
 <figs/results/diachronic_defence/防衛予算の増額_防衛_diachronic_change.png, id=634, 722.7pt x 722.7pt>
 File: figs/results/diachronic_defence/防衛予算の増額_防衛_diachronic_change.png Graphic file (type png)
 <use figs/results/diachronic_defence/防衛予算の増額_防衛_diachronic_change.png>
-Package pdftex.def Info: figs/results/diachronic_defence/防衛予算の増額_防衛_diachronic_change.png  used on input line 745.
+Package pdftex.def Info: figs/results/diachronic_defence/防衛予算の増額_防衛_diachronic_change.png  used on input line 747.
 (pdftex.def)             Requested size: 250.55777pt x 250.55582pt.
 <figs/results/diachronic_defence/防衛予算の増額_diachronic_umap.png, id=635, 722.7pt x 722.7pt>
 File: figs/results/diachronic_defence/防衛予算の増額_diachronic_umap.png Graphic file (type png)
 <use figs/results/diachronic_defence/防衛予算の増額_diachronic_umap.png>
-Package pdftex.def Info: figs/results/diachronic_defence/防衛予算の増額_diachronic_umap.png  used on input line 752.
+Package pdftex.def Info: figs/results/diachronic_defence/防衛予算の増額_diachronic_umap.png  used on input line 754.
 (pdftex.def)             Requested size: 250.55777pt x 250.55582pt.
 
 
@@ -1552,12 +1552,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <figs/results/diachronic_nuclear/原発の再稼働について_原発_diachronic_change.png, id=636, 722.7pt x 722.7pt>
 File: figs/results/diachronic_nuclear/原発の再稼働について_原発_diachronic_change.png Graphic file (type png)
 <use figs/results/diachronic_nuclear/原発の再稼働について_原発_diachronic_change.png>
-Package pdftex.def Info: figs/results/diachronic_nuclear/原発の再稼働について_原発_diachronic_change.png  used on input line 766.
+Package pdftex.def Info: figs/results/diachronic_nuclear/原発の再稼働について_原発_diachronic_change.png  used on input line 768.
 (pdftex.def)             Requested size: 250.55777pt x 250.55582pt.
 <figs/results/diachronic_nuclear/原発の再稼働について_diachronic_umap.png, id=637, 722.7pt x 722.7pt>
 File: figs/results/diachronic_nuclear/原発の再稼働について_diachronic_umap.png Graphic file (type png)
 <use figs/results/diachronic_nuclear/原発の再稼働について_diachronic_umap.png>
-Package pdftex.def Info: figs/results/diachronic_nuclear/原発の再稼働について_diachronic_umap.png  used on input line 773.
+Package pdftex.def Info: figs/results/diachronic_nuclear/原発の再稼働について_diachronic_umap.png  used on input line 775.
 (pdftex.def)             Requested size: 250.55777pt x 250.55582pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1565,12 +1565,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <figs/results/diachronic_nuclear/原発の新設や運転期間延長について_原発_diachronic_change.png, id=638, 722.7pt x 722.7pt>
 File: figs/results/diachronic_nuclear/原発の新設や運転期間延長について_原発_diachronic_change.png Graphic file (type png)
 <use figs/results/diachronic_nuclear/原発の新設や運転期間延長について_原発_diachronic_change.png>
-Package pdftex.def Info: figs/results/diachronic_nuclear/原発の新設や運転期間延長について_原発_diachronic_change.png  used on input line 786.
+Package pdftex.def Info: figs/results/diachronic_nuclear/原発の新設や運転期間延長について_原発_diachronic_change.png  used on input line 788.
 (pdftex.def)             Requested size: 250.55777pt x 250.55582pt.
 <figs/results/diachronic_nuclear/原発の新設や運転期間延長について_diachronic_umap.png, id=639, 722.7pt x 722.7pt>
 File: figs/results/diachronic_nuclear/原発の新設や運転期間延長について_diachronic_umap.png Graphic file (type png)
 <use figs/results/diachronic_nuclear/原発の新設や運転期間延長について_diachronic_umap.png>
-Package pdftex.def Info: figs/results/diachronic_nuclear/原発の新設や運転期間延長について_diachronic_umap.png  used on input line 793.
+Package pdftex.def Info: figs/results/diachronic_nuclear/原発の新設や運転期間延長について_diachronic_umap.png  used on input line 795.
 (pdftex.def)             Requested size: 250.55777pt x 250.55582pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1578,32 +1578,32 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [13
 
  <./figs/results/diachronic_defence/自衛隊の憲法明記_防衛_diachronic_change.png> <./figs/results/diachronic_defence/自衛隊の憲法明記_diachronic_umap.png>] [14 <./figs/results/diachronic_defence/防衛予算の増額_防衛_diachronic_change.png> <./figs/results/diachronic_defence/防衛予算の増額_diachronic_umap.png> <./figs/results/diachronic_nuclear/原発の再稼働について_原発_diachronic_change.png> <./figs/results/diachronic_nuclear/原発の再稼働について_diachronic_umap.png>] [15 <./figs/results/diachronic_nuclear/原発の新設や運転期間延長について_原発_diachronic_change.png> <./figs/results/diachronic_nuclear/原発の新設や運転期間延長について_diachronic_umap.png>]
-LaTeX Font Info:    Trying to load font information for TS1+txr on input line 809.
+LaTeX Font Info:    Trying to load font information for TS1+txr on input line 811.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
 <figs/mielka/consumptiontax.png, id=662, 218.0145pt x 389.0535pt>
 File: figs/mielka/consumptiontax.png Graphic file (type png)
 <use figs/mielka/consumptiontax.png>
-Package pdftex.def Info: figs/mielka/consumptiontax.png  used on input line 821.
+Package pdftex.def Info: figs/mielka/consumptiontax.png  used on input line 823.
 (pdftex.def)             Requested size: 114.84064pt x 204.93883pt.
 <figs/mielka/jsdfconsitution.png, id=663, 221.02576pt x 392.06474pt>
 File: figs/mielka/jsdfconsitution.png Graphic file (type png)
 <use figs/mielka/jsdfconsitution.png>
-Package pdftex.def Info: figs/mielka/jsdfconsitution.png  used on input line 827.
+Package pdftex.def Info: figs/mielka/jsdfconsitution.png  used on input line 829.
 (pdftex.def)             Requested size: 114.84064pt x 203.70732pt.
 <figs/mielka/nuclear.png, id=664, 217.41225pt x 387.24675pt>
 File: figs/mielka/nuclear.png Graphic file (type png)
 <use figs/mielka/nuclear.png>
-Package pdftex.def Info: figs/mielka/nuclear.png  used on input line 833.
+Package pdftex.def Info: figs/mielka/nuclear.png  used on input line 835.
 (pdftex.def)             Requested size: 114.84064pt x 204.55435pt.
 <figs/mielka/growthordistrib.png, id=665, 219.82124pt x 391.4625pt>
 File: figs/mielka/growthordistrib.png Graphic file (type png)
 <use figs/mielka/growthordistrib.png>
-Package pdftex.def Info: figs/mielka/growthordistrib.png  used on input line 839.
+Package pdftex.def Info: figs/mielka/growthordistrib.png  used on input line 841.
 (pdftex.def)             Requested size: 114.84064pt x 204.50543pt.
 
-Underfull \hbox (badness 2027) in paragraph at lines 852--853
+Underfull \hbox (badness 2027) in paragraph at lines 854--855
 []\OT1/txr/m/n/10 Kendall's tau rank cor-re-la-tion co-ef-fi-cient([]KENDALL[],
  []
 
@@ -1611,92 +1611,92 @@ Underfull \hbox (badness 2027) in paragraph at lines 852--853
 
 
  <./figs/mielka/consumptiontax.png> <./figs/mielka/jsdfconsitution.png> <./figs/mielka/nuclear.png> <./figs/mielka/growthordistrib.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 919--919
+Underfull \hbox (badness 10000) in paragraph at lines 921--921
 []|\OT1/txr/m/n/10 Spearman's
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--919
+Underfull \hbox (badness 10000) in paragraph at lines 921--921
 []|\OT1/txr/m/n/10 (Ours) Ac-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--919
+Underfull \hbox (badness 10000) in paragraph at lines 921--921
 \OT1/txr/m/n/10 knowl-edge
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--919
+Underfull \hbox (badness 10000) in paragraph at lines 921--921
 \OT1/txr/m/n/10 JSDF in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--919
+Underfull \hbox (badness 10000) in paragraph at lines 921--921
 []\OT1/txr/m/n/10 2024[]) Ac-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--919
+Underfull \hbox (badness 10000) in paragraph at lines 921--921
 \OT1/txr/m/n/10 knowl-edge
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--919
+Underfull \hbox (badness 10000) in paragraph at lines 921--921
 \OT1/txr/m/n/10 JSDF in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--919
+Underfull \hbox (badness 10000) in paragraph at lines 921--921
 []|\OT1/txr/m/n/10 (Ours)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--919
+Underfull \hbox (badness 10000) in paragraph at lines 921--921
 \OT1/txr/m/n/10 Restart-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--919
+Underfull \hbox (badness 10000) in paragraph at lines 921--921
 \OT1/txr/m/n/10 nu-clear
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--919
+Underfull \hbox (badness 10000) in paragraph at lines 921--921
 \OT1/txr/m/n/10 power
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--919
+Underfull \hbox (badness 10000) in paragraph at lines 921--921
 []\OT1/txr/m/n/10 2024[])
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--919
+Underfull \hbox (badness 10000) in paragraph at lines 921--921
 \OT1/txr/m/n/10 Restart-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--919
+Underfull \hbox (badness 10000) in paragraph at lines 921--921
 \OT1/txr/m/n/10 nu-clear
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--919
+Underfull \hbox (badness 10000) in paragraph at lines 921--921
 \OT1/txr/m/n/10 power
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--919
+Underfull \hbox (badness 10000) in paragraph at lines 921--921
 []|\OT1/txr/m/n/10 Reducing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--919
+Underfull \hbox (badness 10000) in paragraph at lines 921--921
 \OT1/txr/m/n/10 the con-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 919--919
+Underfull \hbox (badness 10000) in paragraph at lines 921--921
 \OT1/txr/m/n/10 sump-tion
  []
 
@@ -1706,35 +1706,35 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <figs/Segment 1.png, id=705, 752.8125pt x 752.8125pt>
 File: figs/Segment 1.png Graphic file (type png)
 <use figs/Segment 1.png>
-Package pdftex.def Info: figs/Segment 1.png  used on input line 934.
+Package pdftex.def Info: figs/Segment 1.png  used on input line 936.
 (pdftex.def)             Requested size: 201.60077pt x 201.59647pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 940--941
+Underfull \hbox (badness 10000) in paragraph at lines 942--943
 []\OT1/txr/m/n/10 We then cal-cu-lated the Point-wise Mu-tual In-for-ma-
  []
 
 
-Underfull \hbox (badness 1406) in paragraph at lines 940--941
+Underfull \hbox (badness 1406) in paragraph at lines 942--943
 \OT1/txr/m/n/10 tion(PMI)([]Church and Hanks[], []1990[]) of the noun phrases
  []
 
 [17]
-Underfull \hbox (badness 2057) in paragraph at lines 954--955
+Underfull \hbox (badness 2057) in paragraph at lines 956--957
 \OT1/txr/m/n/10 tion terms such as "In-dus-trial Pol-icy", "Power
  []
 
 
-Underfull \hbox (badness 1147) in paragraph at lines 958--959
+Underfull \hbox (badness 1147) in paragraph at lines 960--961
 \OT1/txr/m/n/10 as-so-ci-ated with phrases like "Haz-ardous waste",
  []
 
 [18 <./figs/Segment 1.png>]
-Overfull \hbox (3.79335pt too wide) in paragraph at lines 990--990
+Overfull \hbox (3.79335pt too wide) in paragraph at lines 992--992
  []|[]| 
  []
 
 
-Overfull \hbox (2.96336pt too wide) in paragraph at lines 1013--1013
+Overfull \hbox (2.96336pt too wide) in paragraph at lines 1015--1015
  []|[]| 
  []
 
@@ -1742,35 +1742,35 @@ Overfull \hbox (2.96336pt too wide) in paragraph at lines 1013--1013
 <figs/defence diachronic.png, id=744, 613.54219pt x 405.76593pt>
 File: figs/defence diachronic.png Graphic file (type png)
 <use figs/defence diachronic.png>
-Package pdftex.def Info: figs/defence diachronic.png  used on input line 1049.
+Package pdftex.def Info: figs/defence diachronic.png  used on input line 1051.
 (pdftex.def)             Requested size: 252.0pt x 166.6623pt.
 <figs/nuclear diachronic.png, id=746, 554.07pt x 406.51875pt>
 File: figs/nuclear diachronic.png Graphic file (type png)
 <use figs/nuclear diachronic.png>
-Package pdftex.def Info: figs/nuclear diachronic.png  used on input line 1062.
+Package pdftex.def Info: figs/nuclear diachronic.png  used on input line 1064.
 (pdftex.def)             Requested size: 252.0pt x 184.89188pt.
 <figs/kokkaidoc-scaling.png, id=749, 1154.51324pt x 546.24075pt>
 File: figs/kokkaidoc-scaling.png Graphic file (type png)
 <use figs/kokkaidoc-scaling.png>
-Package pdftex.def Info: figs/kokkaidoc-scaling.png  used on input line 1081.
+Package pdftex.def Info: figs/kokkaidoc-scaling.png  used on input line 1083.
 (pdftex.def)             Requested size: 114.84064pt x 54.32721pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1082--1082
+Underfull \hbox (badness 10000) in paragraph at lines 1084--1084
 []\OT1/txr/m/n/7 (a) |Scal-ing re-sults pre-sented on
  []
 
 <figs/kokkaidoc-map.png, id=752, 1151.502pt x 545.03625pt>
 File: figs/kokkaidoc-map.png Graphic file (type png)
 <use figs/kokkaidoc-map.png>
-Package pdftex.def Info: figs/kokkaidoc-map.png  used on input line 1086.
+Package pdftex.def Info: figs/kokkaidoc-map.png  used on input line 1088.
 (pdftex.def)             Requested size: 114.84064pt x 54.35712pt.
 <figs/kokkaidoc-voting.png, id=755, 1149.093pt x 543.83176pt>
 File: figs/kokkaidoc-voting.png Graphic file (type png)
 <use figs/kokkaidoc-voting.png>
-Package pdftex.def Info: figs/kokkaidoc-voting.png  used on input line 1091.
+Package pdftex.def Info: figs/kokkaidoc-voting.png  used on input line 1093.
 (pdftex.def)             Requested size: 114.84064pt x 54.34486pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1092--1092
+Underfull \hbox (badness 10000) in paragraph at lines 1094--1094
 []\OT1/txr/m/n/7 (c) |Vot-ing re-sults pre-sented on
  []
 
@@ -1781,22 +1781,22 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <figs/defence_box_plot.png, id=766, 722.7pt x 722.7pt>
 File: figs/defence_box_plot.png Graphic file (type png)
 <use figs/defence_box_plot.png>
-Package pdftex.def Info: figs/defence_box_plot.png  used on input line 1117.
+Package pdftex.def Info: figs/defence_box_plot.png  used on input line 1119.
 (pdftex.def)             Requested size: 156.6016pt x 156.60152pt.
 <figs/nuclear_box_plot.png, id=769, 722.7pt x 722.7pt>
 File: figs/nuclear_box_plot.png Graphic file (type png)
 <use figs/nuclear_box_plot.png>
-Package pdftex.def Info: figs/nuclear_box_plot.png  used on input line 1124.
+Package pdftex.def Info: figs/nuclear_box_plot.png  used on input line 1126.
 (pdftex.def)             Requested size: 156.6016pt x 156.60152pt.
 <figs/defence_umap_clean.png, id=776, 722.7pt x 722.7pt>
 File: figs/defence_umap_clean.png Graphic file (type png)
 <use figs/defence_umap_clean.png>
-Package pdftex.def Info: figs/defence_umap_clean.png  used on input line 1136.
+Package pdftex.def Info: figs/defence_umap_clean.png  used on input line 1138.
 (pdftex.def)             Requested size: 156.6016pt x 156.60152pt.
 <figs/defence_umap_gen.png, id=777, 722.7pt x 722.7pt>
 File: figs/defence_umap_gen.png Graphic file (type png)
 <use figs/defence_umap_gen.png>
-Package pdftex.def Info: figs/defence_umap_gen.png  used on input line 1143.
+Package pdftex.def Info: figs/defence_umap_gen.png  used on input line 1145.
 (pdftex.def)             Requested size: 156.6016pt x 156.60152pt.
 
 
@@ -1815,37 +1815,37 @@ File: UTF8.enc 2015/04/18 4.8.4
 ) (/usr/share/texmf/tex/latex/CJK/UTF8/UTF8.chr
 File: UTF8.chr 2015/04/18 4.8.4
 )
-Underfull \hbox (badness 1803) in paragraph at lines 1217--1218
+Underfull \hbox (badness 1803) in paragraph at lines 1219--1220
 \OT1/txr/m/n/10 self-defense", "se-cu-rity", "mil-i-tary power", "de-
  []
 
 
-Underfull \hbox (badness 1077) in paragraph at lines 1225--1226
+Underfull \hbox (badness 1077) in paragraph at lines 1227--1228
 []\OT1/txr/m/n/10 Search words: ["econ-omy", "eco-nomic", "de-fla-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1246--1248
+Underfull \hbox (badness 10000) in paragraph at lines 1248--1250
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1253--1255
+Underfull \hbox (badness 10000) in paragraph at lines 1255--1257
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1253--1255
+Underfull \hbox (badness 10000) in paragraph at lines 1255--1257
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1262--1265
+Underfull \hbox (badness 10000) in paragraph at lines 1264--1267
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1262--1265
+Underfull \hbox (badness 10000) in paragraph at lines 1264--1267
 
  []
 
@@ -1854,7 +1854,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1262--1265
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Float too large for page by 92.69997pt on input line 1357.
+LaTeX Warning: Float too large for page by 92.69997pt on input line 1359.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1903,37 +1903,37 @@ File: UTF8.enc 2015/04/18 4.8.4
 ) (/usr/share/texmf/tex/latex/CJK/UTF8/UTF8.chr
 File: UTF8.chr 2015/04/18 4.8.4
 )
-Underfull \hbox (badness 10000) in paragraph at lines 1652--1652
+Underfull \hbox (badness 10000) in paragraph at lines 1654--1654
 []|\OT1/txr/m/n/10 Liberal Demo-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1652--1652
+Underfull \hbox (badness 10000) in paragraph at lines 1654--1654
 []|\OT1/txr/m/n/10 Constitutional
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1652--1652
+Underfull \hbox (badness 10000) in paragraph at lines 1654--1654
 \OT1/txr/m/n/10 Demo-cratic
  []
 
 
-Underfull \hbox (badness 8132) in paragraph at lines 1652--1652
+Underfull \hbox (badness 8132) in paragraph at lines 1654--1654
 []|\OT1/txr/m/n/10 Japanese Com-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1652--1652
+Underfull \hbox (badness 10000) in paragraph at lines 1654--1654
 []|\OT1/txr/m/n/10 Japan Restora-
  []
 
 
-Underfull \hbox (badness 2478) in paragraph at lines 1652--1652
+Underfull \hbox (badness 2478) in paragraph at lines 1654--1654
 []|\OT1/txr/m/n/10 Reiwa Shin-sen-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1652--1652
+Underfull \hbox (badness 10000) in paragraph at lines 1654--1654
 []|\OT1/txr/m/n/10 Conservative
  []
 
