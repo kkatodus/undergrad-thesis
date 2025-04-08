@@ -47,6 +47,9 @@
 \usepackage{makecell}
 \usepackage{xcolor}
 \usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext,newtxmath}
+
 \usepackage[utf8]{inputenc} % For UTF-8 support
 \newcommand\todo[1]{\textcolor{red}{#1}}
 
@@ -131,15 +134,38 @@
 %% \fntext[label3]{}
 
 
-	
+\onecolumn
+\thispagestyle{empty}
 	
 
-\input{title}
+\begin{center}
+	% -- Title --
+	\Large
+	\textbf{KOKKAI DOC}\\
+	\textbf{An LLM-driven framework for scaling parliamentary representatives}
+
+	\vspace{1.5cm}
+
+	% -- Author --
+	by\\
+	\textbf{Ken Kato}
+
+	\vspace{1.5cm}
+
+	% -- Supervisor & Date --
+	Supervisor: \textbf{Christopher Cochrane}\\
+	April 7th, 2025
+
+	\vfill % Push image to the bottom
+
+	\includegraphics[width=\textwidth]{figs/front.png}% No line break after
+
+\end{center}
 
 \clearpage
 \onecolumn
+\pagenumbering{roman}
 
-\thispagestyle{plain} % or empty if you don't want a page number
 \begin{center}
   {\Large \textbf{Abstract}}
 \end{center}
@@ -156,7 +182,17 @@
 
 \clearpage
 %% main text
-\pagenumbering{roman}
+
+\begin{center}
+	{\Large \textbf{Acknowledgements}}
+  \end{center}
+  \vspace{1em}
+  \begin{quote}
+  I would like to express my sincere gratitude to my supervisor, Christopher Cochrane, for his invaluable guidance and support throughout this research. His expertise and insights have been instrumental in shaping the direction of this work. I would also like to thank my family and friends for their unwavering support and encouragement. Their support gave me strength and inspiration to push through during the hardest times in my undergraduate degree and to improve myself both inside and outside the classroom. Finally, I would like to acknowledge the contributions of the research community and the developers of the tools and resources that made this research possible. Thank you all for your support.
+  
+  \end{quote}
+  
+  \clearpage
 
 
 
@@ -945,7 +981,6 @@ Reducing the consumption tax rate & -0.7 & -0.6 & 0.8\\ \hline
 
 For the topic of reducing the consumption tax rate, we see that the Spearman's $\rho$ and Kendall's $\tau$ are negative. This is because the Reiwa party is placed on the opposite side of the ordering. However, all of the other parties are placed in the same order as the expert predictions and hence the LCS ratio score is high. For the topic of acknowledgement of JSDF in constitution and restarting nuclear power plants, we have compared our correlation values to the correlation values obtained by the ordering of \citeauthor{kato2024lupinllmbasedpoliticalideology}. We see that our methodology obtains a higher correlation value when compared to the expert predictions. Overall, the above results indicate that our methodology is able to robustly scale the political stance of parliamentary representatives on different topics.
 
-\FloatBarrier
 \subsection{Qualitative evaluation: Common noun phrases in the different groups of scaled representatives}
 \label{section: qual-eval}
 In order to evaluate the scaled results qualitatively, we have split the representatives into 3 clusters based on their scaled positions. We simply split the whole range of the scale into 3 segments and allocated the representatives that fall into the segment to the respective segments. A visual representation is shown in figure \ref{fig:3clusters}.
