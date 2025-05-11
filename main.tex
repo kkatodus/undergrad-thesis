@@ -132,74 +132,111 @@
 %%            state={},
 %%            country={}}
 %% \fntext[label3]{}
+\begin{frontmatter}
 
-
-\onecolumn
-\thispagestyle{empty}
+	%% Title, authors and addresses
 	
-
-\begin{center}
-	% -- Title --
-	\Large
-	\textbf{KOKKAI DOC}\\
-	\textbf{An LLM-driven framework for scaling parliamentary representatives}
-
-	\vspace{1.5cm}
-
-	% -- Author --
-	by\\
-	\textbf{Ken Kato}
-
-	\vspace{1.5cm}
-
-	% -- Supervisor & Date --
-	Supervisor: \textbf{Christopher Cochrane}\\
-	April 7th, 2025
-
-	\vfill % Push image to the bottom
-
-	\includegraphics[width=\textwidth]{figs/front.png}% No line break after
-
-\end{center}
-
-\clearpage
-\onecolumn
-\pagenumbering{roman}
-
-\begin{center}
-  {\Large \textbf{Abstract}}
-\end{center}
-\vspace{1em}
-\begin{quote}
-
+	%% use the tnoteref command within \title for footnotes;
+	%% use the tnotetext command for theassociated footnote;
+	%% use the fnref command within \author or \affiliation for footnotes;
+	%% use the fntext command for theassociated footnote;
+	%% use the corref command within \author for corresponding author footnotes;
+	%% use the cortext command for theassociated footnote;
+	%% use the ead command for the email address,
+	%% and the form \ead[url] for the home page:
+	%% \title{Title\tnoteref{label1}}
+	%% \tnotetext[label1]{}
+	%% \author{Name\corref{cor1}\fnref{label2}}
+	%% \ead{email address}
+	%% \ead[url]{home page}
+	%% \fntext[label2]{}
+	%% \cortext[cor1]{}
+	%% \affiliation{organization={},
+	%%            addressline={}, 
+	%%            city={},
+	%%            postcode={}, 
+	%%            state={},
+	%%            country={}}
+	%% \fntext[label3]{}
+	
+	\title{KOKKAI DOC: An LLM-driven framework for scaling parliamentary representatives}
+	
+	%% use optional labels to link authors explicitly to addresses:
+	%% \author[label1,label2]{}
+	%% \affiliation[label1]{organization={},
+	%%             addressline={},
+	%%             city={},
+	%%             postcode={},
+	%%             state={},
+	%%             country={}}
+	%%
+	%% \affiliation[label2]{organization={},
+	%%             addressline={},
+	%%             city={},
+	%%             postcode={},
+	%%             state={},
+	%%             country={}}
+	
+	\author[first]{Ken Kato}
+	\affiliation[first]{organization={Divison of Engineering Science, University of Toronto}}
+	\author[third]{Christopher Cochrane$^*$}
+	\affiliation[third]{organization={Department of Political Science, University of Toronto Scarborough}}
+	
+	
+	\begin{abstract}
+	% Today we are living in a world where the application of LLMs in various fields are taking the world by storm. The ChatGPT platform made available by OpenAI made LLMs accessible to people without any STEM background and researchers in the field are able to download and share LLMs with the public. 
+	% In this paper, we are proposing a new method to quantitatively express political disagreement from parliamentary speech data by leveraging LLM embeddings and applying statistical methods. Results show that the ideological positions of parliamentary representatives generated from our method is aligned with the general understanding of how the parties representatives are part of are positioned within various political topics. We also validate our findings by looking at political manifestos of the parties.
+	
+	% issues/notes: 
+	% no mention of specific other methods vs our method (benchmark or contribution, like our method doesn't require training data for example, or maybe method makes it easy for everyone to use? we would need a package or user interface. kokkaidoc only allows people to view Japanese politics but not apply things on their own).  
+	% wording of our project scope: is it that we're looking specifically at Japanese politics, or using Japanese politics as an example. not every coutnry wil have the same dataset and so it's not totally valid to say it's applicable to other political contexts since we don't at all do a comparative study. we can say that japanese politics is our current and only scope, and then further research is needed to establish its robustness to other contexts and available data
+	% validation through repeated models 
+	% provide 
+	
+	%% Text of abstract
+	%intro
 	This paper introduces an LLM-driven framework designed to accurately scale the political issue stances of parliamentary representatives. By leveraging advanced natural language processing techniques and large language models, the proposed methodology refines and enhances previous approaches by addressing key challenges such as noisy speech data, manual bias in selecting political axes, and the lack of dynamic, diachronic analysis. The framework incorporates three major innovations: (1) de-noising parliamentary speeches via summarization to produce cleaner, more consistent opinion embeddings; (2) automatic extraction of axes of political controversy from legislators’ speech summaries; and (3) a diachronic analysis that tracks the evolution of party positions over time.
 	
 	We conduct quantitative and qualitative evaluations to verify our methodology. Quantitative evaluations demonstrate high correlation with expert predictions across various political topics, while qualitative analyses reveal meaningful associations between language patterns and political ideologies. This research aims to have an impact beyond the field of academia by making the results accessible by the public on teh web application: kokkaidoc.com. We are hoping that through our application, Japanese voters can gain a data-driven insight into the political landscape which aids them to make more nuanced voting decisions. 
 	
 	Overall, this work contributes to the growing body of research that applies LLMs in political science, offering a flexible and reliable framework for scaling political positions from parliamentary speeches. But also explores the practical applications of the research in the real world to have real world impact. 
 
-\end{quote}
+	
+	\end{abstract}
+	
+	%%Graphical abstract
+	%\begin{graphicalabstract}
+	%\includegraphics{grabs}
+	%\end{graphicalabstract}
+	
+	%%Research highlights
+	%\begin{highlights}
+	%\item Research highlight 1
+	%\item Research highlight 2
+	%\end{highlights}
+	
+	\begin{keyword}
+	%% keywords here, in the form: keyword \sep keyword, up to a maximum of 6 keywords
+	LLM \sep Quantitative Political Methods \sep Text as Data \sep NLP \sep Japanese Politics \sep AI \sep Document embedding
+	
+	%% PACS codes here, in the form: \PACS code \sep code
+	
+	%% MSC codes here, in the form: \MSC code \sep code
+	%% or \MSC[2008] code \sep code (2000 is the default)
+	
+	\end{keyword}
+	
+	
+\end{frontmatter}
+
+\onecolumn
+\thispagestyle{empty}
+	
+
 
 \clearpage
 %% main text
 
-\begin{center}
-	{\Large \textbf{Acknowledgements}}
-  \end{center}
-  \vspace{1em}
-  \begin{quote}
-  I would like to express my sincere gratitude to my supervisor, Christopher Cochrane, for his invaluable guidance and support throughout this research. His expertise and insights have been instrumental in shaping the direction of this work. I would also like to thank my family and friends for their unwavering support and encouragement. Their support gave me strength and inspiration to push through during the hardest times in my undergraduate degree and to improve myself both inside and outside the classroom. Finally, I would like to acknowledge the contributions of the research community and the developers of the tools and resources that made this research possible. Thank you all for your support.
-  
-  \end{quote}
-  
-  \clearpage
-
-
-
-
-
-
-\newpage
 
 
 \tableofcontents
@@ -586,12 +623,12 @@ For the topic of defence, we see a similar pattern across the axes of projection
 \centering
     \begin{subfigure}{0.22\textwidth}
       \centering
-      \includegraphics[width=1\linewidth]{figs/results/defence/自衛隊の憲法明記_gen_violin_plot.png}
+      \includegraphics[width=1\linewidth]{figs/results/defence/constitution_gen_violin_plot.png}
       \caption{Violin plot of scaled representatives}
     \end{subfigure}
     \begin{subfigure}{0.22\textwidth}
       \centering
-      \includegraphics[width=1\linewidth]{figs/results/defence/自衛隊の憲法明記_umap_gen.png}
+      \includegraphics[width=1\linewidth]{figs/results/defence/constitution_umap_gen.png}
       \caption{UMAP visualization of representatives and axes of reference}
     \end{subfigure}
 \caption{Figures relating to the topic of whether the JSDF should be explicitly stated in the constitution.
@@ -603,12 +640,12 @@ Right figure: UMAP visualization of representatives and axes of reference. Repre
 \centering
     \begin{subfigure}{0.22\textwidth}
       \centering
-      \includegraphics[width=1\linewidth]{figs/results/defence/防衛予算の増額_gen_violin_plot.png}
+      \includegraphics[width=1\linewidth]{figs/results/defence/defencebudget_gen_violin_plot.png}
       \caption{Violin plot of scaled representatives}
     \end{subfigure}
     \begin{subfigure}{0.22\textwidth}
       \centering
-      \includegraphics[width=1\linewidth]{figs/results/defence/防衛予算の増額_umap_gen.png}
+      \includegraphics[width=1\linewidth]{figs/results/defence/defencebudget_umap_gen.png}
       \caption{UMAP visualization of representatives and axes of reference}
     \end{subfigure}
 \caption{Figures relating to the topic of whether Japan should increase its defense budget.
@@ -621,12 +658,12 @@ Right figure: UMAP visualization of representatives and axes of reference. Repre
 \centering
     \begin{subfigure}{0.22\textwidth}
       \centering
-      \includegraphics[width=1\linewidth]{figs/results/defence/集団的自衛権の行使_gen_violin_plot.png}
+      \includegraphics[width=1\linewidth]{figs/results/defence/collectiveselfdefence_gen_violin_plot.png}
       \caption{Violin plot of scaled representatives}
     \end{subfigure}
     \begin{subfigure}{0.22\textwidth}
       \centering
-      \includegraphics[width=1\linewidth]{figs/results/defence/集団的自衛権の行使_umap_gen.png}
+      \includegraphics[width=1\linewidth]{figs/results/defence/collectiveselfdefence_umap_gen.png}
       \caption{UMAP visualization of representatives and axes of reference}
     \end{subfigure}
 \caption{Figures relating to the topic of whether the JSDF should be allowed to exercise collective self-defense.
@@ -644,13 +681,13 @@ The topic of nuclear power in Japan is a highly controversial one. The Fukushima
 \centering
     \begin{subfigure}{0.22\textwidth}
       \centering
-      \includegraphics[width=1\linewidth]{figs/results/nuclear/原発の再稼働について_gen_violin_plot.png}
+      \includegraphics[width=1\linewidth]{figs/results/nuclear/restarting_gen_violin_plot.png}
       \caption{Violin plot of scaled representatives}
       \label{fig:sub1}
     \end{subfigure}
     \begin{subfigure}{0.22\textwidth}
       \centering
-      \includegraphics[width=1\linewidth]{figs/results/nuclear/原発の再稼働について_umap_gen.png}
+      \includegraphics[width=1\linewidth]{figs/results/nuclear/restarting_umap_gen.png}
       \caption{UMAP visualization of representatives and axes of reference}
     \end{subfigure}
 \caption{Figures relating to the topic of whether Japan should restart nuclear power plants. Left figure: Violin plot of scaled representatives Right figure: UMAP visualization of representatives and axes of reference. Representatives who have a pro stance located on the lower left side of the UMAP visualization and representatives who have an anti stance located on the upper right side.}
@@ -661,12 +698,12 @@ The topic of nuclear power in Japan is a highly controversial one. The Fukushima
 \centering
     \begin{subfigure}{0.22\textwidth}
       \centering
-      \includegraphics[width=1\linewidth]{figs/results/nuclear/原発の新設や運転期間延長について_gen_violin_plot.png}
+      \includegraphics[width=1\linewidth]{figs/results/nuclear/buildingnew_gen_violin_plot.png}
       \caption{Violin plot of scaled representatives}
     \end{subfigure}
     \begin{subfigure}{0.22\textwidth}
       \centering
-      \includegraphics[width=1\linewidth]{figs/results/nuclear/原発の新設や運転期間延長について_umap_gen.png}
+      \includegraphics[width=1\linewidth]{figs/results/nuclear/buildingnew_umap_gen.png}
       \caption{UMAP visualization of representatives and axes of reference}
     \end{subfigure}
 \caption{Figtures relating to the topic of whether Japan should build new nuclear power plants and extend the lifetime of existing plants. Left figure: Violin plot of scaled representatives Right figure: UMAP visualization of representatives and axes of reference. Representatives who have a pro stance located on the left side of the UMAP visualization and representatives who have an anti stance located on the right}
@@ -677,12 +714,12 @@ The topic of nuclear power in Japan is a highly controversial one. The Fukushima
 \centering
     \begin{subfigure}{0.22\textwidth}
       \centering
-      \includegraphics[width=1\linewidth]{figs/results/nuclear/原発の輸出について_gen_violin_plot.png}
+      \includegraphics[width=1\linewidth]{figs/results/nuclear/exporting_gen_violin_plot.png}
       \caption{Violin plot of scaled representatives}
     \end{subfigure}
     \begin{subfigure}{0.22\textwidth}
       \centering
-      \includegraphics[width=1\linewidth]{figs/results/nuclear/原発の輸出について_umap_gen.png}
+      \includegraphics[width=1\linewidth]{figs/results/nuclear/exportingnew_umap_gen.png}
       \caption{UMAP visualization of representatives and axes of reference}
     \end{subfigure}
 \caption{Figures relating to the topic of whether Japan should export nuclear power plants. Left figure: Violin plot of scaled representatives Right figure: UMAP visualization of representatives and axes of reference. Representatives who have a pro stance located on the left side of the UMAP visualization and representatives who have an anti stance located on the right side.}
@@ -699,12 +736,12 @@ There are several axes of controversy in the topic of Japanese economy. With its
 \centering
     \begin{subfigure}{0.22\textwidth}
       \centering
-      \includegraphics[width=1\linewidth]{figs/results/economy/外国人労働者の受け入れについて_gen_violin_plot.png}
+      \includegraphics[width=1\linewidth]{figs/results/economy/foreignworkers_gen_violin_plot.png}
       \caption{Violin plot of scaled representatives}
     \end{subfigure}
     \begin{subfigure}{0.22\textwidth}
       \centering
-      \includegraphics[width=1\linewidth]{figs/results/economy/外国人労働者の受け入れについて_umap_gen.png}
+      \includegraphics[width=1\linewidth]{figs/results/economy/foreignworkers_umap_gen.png}
       \caption{UMAP visualization of representatives and axes of reference}
     \end{subfigure}
 \caption{Figures relating to the topic of accepting foreign workers in Japan. Left figure: Violin plot of scaled representatives Right figure: UMAP visualization of representatives and axes of reference. Representatives who have a pro stance located on the upper side of the UMAP visualization and representatives who have an anti stance located on the lower side.}
@@ -715,12 +752,12 @@ There are several axes of controversy in the topic of Japanese economy. With its
 \centering
     \begin{subfigure}{0.22\textwidth}
       \centering
-      \includegraphics[width=1\linewidth]{figs/results/economy/消費税の減税について_gen_violin_plot.png}
+      \includegraphics[width=1\linewidth]{figs/results/economy/consumptiontax_gen_violin_plot.png}
       \caption{Violin plot of scaled representatives}
     \end{subfigure}
     \begin{subfigure}{0.22\textwidth}
       \centering
-      \includegraphics[width=1\linewidth]{figs/results/economy/消費税の減税について_umap_gen.png}
+      \includegraphics[width=1\linewidth]{figs/results/economy/consumptiontax_umap_gen.png}
       \caption{UMAP visualization of representatives and axes of reference}
     \end{subfigure}
 \caption{Figures relating to the topic of reducing the consumption tax rate. Left figure: Violin plot of scaled representatives Right figure: UMAP visualization of representatives and axes of reference. Representatives who have a pro stance lower right on the upper side of the UMAP visualization and representatives who have an anti stance located on the upper left.}
@@ -731,12 +768,12 @@ There are several axes of controversy in the topic of Japanese economy. With its
 \centering
     \begin{subfigure}{0.22\textwidth}
       \centering
-      \includegraphics[width=1\linewidth]{figs/results/economy/金融緩和政策の見直し_gen_violin_plot.png}
+      \includegraphics[width=1\linewidth]{figs/results/economy/fiscalpolicy_gen_violin_plot.png}
       \caption{Violin plot of scaled representatives}
     \end{subfigure}
     \begin{subfigure}{0.22\textwidth}
       \centering
-      \includegraphics[width=1\linewidth]{figs/results/economy/金融緩和政策の見直し_umap_gen.png}
+      \includegraphics[width=1\linewidth]{figs/results/economy/fiscalpolicy_umap_gen.png}
       \caption{UMAP visualization of representatives and axes of reference}
     \end{subfigure}
 \caption{Figures relating to the topic of reconsidering the financial easing policies. Left figure: Violin plot of scaled representatives Right figure: UMAP visualization of representatives and axes of reference. Representatives who have a pro stance located on the upper side of the UMAP visualization and representatives who have an anti stance located on the lower side.}
@@ -754,12 +791,12 @@ In Japan, the aging population is a major concern. The birth rate is declining a
 \centering
     \begin{subfigure}{0.22\textwidth}
       \centering
-      \includegraphics[width=1\linewidth]{figs/results/aging/少子化対策としての教育負担軽減_gen_violin_plot.png}
+      \includegraphics[width=1\linewidth]{figs/results/aging/educationcost_gen_violin_plot.png}
       \caption{Violin plot of scaled representatives}
     \end{subfigure}
     \begin{subfigure}{0.22\textwidth}
       \centering
-      \includegraphics[width=\linewidth]{figs/results/aging/少子化対策としての教育負担軽減_umap_gen.png}
+      \includegraphics[width=\linewidth]{figs/results/aging/educationcost_umap_gen.png}
       \caption{UMAP visualization of representatives and axes of reference}
     \end{subfigure}
 \caption{Figures relating to the topic of decreasing the education cost for parents. Left figure: Violin plot of scaled representatives Right figure: UMAP visualization of representatives and axes of reference. Representatives who have a pro stance located on the lower side of the UMAP visualization and representatives who have an anti stance located on the upper side.}
@@ -779,14 +816,14 @@ We have conducted a diachronic analysis of mean party issue positions of LDP, JC
 	\centering
 		\begin{subfigure}{0.48\textwidth}
 		  \centering
-		  \includegraphics[width=\textwidth]{figs/results/diachronic_defence/自衛隊の憲法明記_防衛_diachronic_change.png}
+		  \includegraphics[width=\textwidth]{figs/results/diachronic_defence/constitution_diachronic_change.png}
 		  \caption{Visualization of mean party issue position for years between 2000-2024 \\\hspace{\textwidth}Black: LDP, Red: JCP, Lightblue: Komeito}
 		  \label{fig:sub1}
 		\end{subfigure}
 		\hfill
 		\begin{subfigure}{0.48\textwidth}
 		  \centering
-		  \includegraphics[width=\textwidth]{figs/results/diachronic_defence/自衛隊の憲法明記_diachronic_umap.png}
+		  \includegraphics[width=\textwidth]{figs/results/diachronic_defence/constitution_diachronic_umap.png}
 		  \caption{UMAP visualization of issue position of parties for years between 2000-2024 \\\hspace{\textwidth} 
 		  Black: LDP, Red: JCP, Lightblue: Komeito\\\hspace{\textwidth}
 		  Blue circle:Pro Red circle: Con}
@@ -800,14 +837,14 @@ We have conducted a diachronic analysis of mean party issue positions of LDP, JC
 	\centering
 		\begin{subfigure}{0.48\textwidth}
 		  \centering
-		  \includegraphics[width=\textwidth]{figs/results/diachronic_defence/防衛予算の増額_防衛_diachronic_change.png}
+		  \includegraphics[width=\textwidth]{figs/results/diachronic_defence/defencebudget_diachronic_change.png}
 		  \caption{Visualization of mean party issue position for years between 2000-2024 \\\hspace{\textwidth} Black: LDP, Red: JCP, Lightblue: Komeito}
 		  \label{fig:sub1}
 		\end{subfigure}
 		\hfill
 		\begin{subfigure}{0.48\textwidth}
 		  \centering
-		  \includegraphics[width=\textwidth]{figs/results/diachronic_defence/防衛予算の増額_diachronic_umap.png}
+		  \includegraphics[width=\textwidth]{figs/results/diachronic_defence/defencebudget_diachronic_umap.png}
 		  \caption{UMAP visualization of issue position of parties for years between 2000-2024 \\\hspace{\textwidth} 
 		  Black: LDP, Red: JCP, Lightblue: Komeito\\\hspace{\textwidth}
 		  Blue circle:Pro Red circle: Con }
@@ -821,14 +858,14 @@ We have conducted a diachronic analysis of mean party issue positions of LDP, JC
 	\centering
 		\begin{subfigure}{0.48\textwidth}
 		  \centering
-		  \includegraphics[width=\textwidth]{figs/results/diachronic_nuclear/原発の再稼働について_原発_diachronic_change.png}
+		  \includegraphics[width=\textwidth]{figs/results/diachronic_nuclear/restarting_diachronic_change.png}
 		  \caption{Visualization of mean party issue position for years between 2000-2024 \\\hspace{\textwidth}  Black: LDP, Red: JCP, Lightblue: Komeito}
 		  \label{fig:sub1}
 		\end{subfigure}
 		\hfill
 		\begin{subfigure}{0.48\textwidth}
 		  \centering
-		  \includegraphics[width=\textwidth]{figs/results/diachronic_nuclear/原発の再稼働について_diachronic_umap.png}
+		  \includegraphics[width=\textwidth]{figs/results/diachronic_nuclear/restarting_diachronic_umap.png}
 		  \caption{UMAP visualization of issue position of parties for years between 2000-2024 \\\hspace{\textwidth} 
 		  Black: LDP, Red: JCP, Lightblue: Komeito\\\hspace{\textwidth}
 		  Blue circle:Pro Red circle: Con}
@@ -841,14 +878,14 @@ We have conducted a diachronic analysis of mean party issue positions of LDP, JC
 	\centering
 		\begin{subfigure}{0.48\textwidth}
 		  \centering
-		  \includegraphics[width=\textwidth]{figs/results/diachronic_nuclear/原発の新設や運転期間延長について_原発_diachronic_change.png}
+		  \includegraphics[width=\textwidth]{figs/results/diachronic_nuclear/newplants_diachronic_change.png}
 		  \caption{Visualization of mean party issue position for years between 2000-2024 \\\hspace{\textwidth} Black: LDP, Red: JCP, Lightblue: Komeito}
 		  \label{fig:sub1}
 		\end{subfigure}
 		\hfill
 		\begin{subfigure}{0.48\textwidth}
 		  \centering
-		  \includegraphics[width=\textwidth]{figs/results/diachronic_nuclear/原発の新設や運転期間延長について_diachronic_umap.png}
+		  \includegraphics[width=\textwidth]{figs/results/diachronic_nuclear/newplants_diachronic_umap.png}
 		  \caption{UMAP visualization of issue position of parties for years between 2000-2024\\\hspace{\textwidth} 
 		  Black: LDP, Red: JCP, Lightblue: Komeito\\\hspace{\textwidth}
 		  Blue circle:Pro Red circle: Con}
